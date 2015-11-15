@@ -1,0 +1,1079 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html class="dj_gecko dj_contentbox" xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru-RU" lang="ru-RU"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Изучаем Linux, 302 (смешанные среды): Kонфигурация Samba</title>
+<link rel="schema.DC" href="http://purl.org/DC/elements/1.0/">
+<link rel="SHORTCUT ICON" href="http://www.ibm.com/favicon.ico">
+<meta name="DC.Rights" content="© Copyright&nbsp;IBM Corporation&nbsp;2012">
+<meta name="Keywords" content="linux,Linux Professional Institute, LPIC, LPI, тест, экзамен, подготовка, 302, старший, linux, сертификат, сертифицированный, сертификация, учебник, администратор, администрирование, система, gnu, unix, команда, samba, Шон Уолберг, tttlca">
+<meta name="DC.Date" scheme="iso8601" content="2012-05-24">
+<meta name="Source" content="v17 delivery:developerWorks">
+<meta name="Security" content="Public">
+<meta name="Abstract" content="Из этой статьи вы узнаете о структуре конфигурационного файла Samba и взаимодействии Samba с сетевым окружением, о настройке журналирования, а также о том, как использовать систему отладки для устранения неисправностей в работе Samba.">
+<meta name="Description" content="Из этой статьи вы узнаете о структуре конфигурационного файла Samba и взаимодействии Samba с сетевым окружением, о настройке журналирования, а также о том, как использовать систему отладки для устранения неисправностей в работе Samba.">
+<meta name="IBM.Effective" scheme="W3CDTF" content="2012-05-24">
+<meta name="Owner" content="RuAdmin DeveloperWorks/Russia/IBM">
+<meta name="DC.Language" scheme="rfc1766" content="ru-RU">
+<meta name="IBM.SpecialPurpose" content="SP001">
+<meta name="IBM.Country" content="RU">
+<meta name="Robots" content="index,follow">
+<meta name="DC.Type" scheme="IBM_ContentClassTaxonomy" content="CT316">
+<meta name="DC.Subject" scheme="IBM_SubjectTaxonomy" content="SWGC0">
+<meta name="dW.ContentArea" content="2">
+<meta name="dW.Topic" content="709,79,33">
+
+<meta scheme="IBM_WTMCategory" name="IBM.WTMCategory" content="SOFDCLNXRU">
+
+<link rel="canonical" href="http://www.ibm.com/developerworks/ru/library/l-lpic3-312-1/index.html">
+<!-- HEADER_SCRIPTS_AND_CSS_INCLUDE -->
+<link href="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/www.css" rel="stylesheet" title="www" type="text/css">
+<!-- Masthead/footer -->
+<link href="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/dw-mfN2014-05.css" media="screen,projection" rel="stylesheet" title="www" type="text/css">
+<link href="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/dw-article-6.css" rel="stylesheet" title="www" type="text/css">
+<link href="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/dw-common-features.css" rel="stylesheet" title="www" type="text/css">
+<link href="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/dw-local-site-v17-N2014-05.css" media="screen,projection" rel="stylesheet" title="www" type="text/css">
+<script type="text/javascript" src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/www.js">//</script><script type="text/javascript" src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/eluminate.js"></script><script src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/head.js"></script><script src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/50200000.js" type="text/javascript" language="javascript"></script><script src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/rules_50200000.js" type="text/javascript" language="javascript"></script><script src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/dispatcher-v3.js" type="text/javascript" language="javascript"></script><script type="text/javascript" src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/yahoo-min.js"></script><script type="text/javascript" src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/cp-v3.js"></script><script type="text/javascript" src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/json-min.js"></script>
+<script type="text/javascript" src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/dw-www.js">//</script><script src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/Dialog.js" charset="utf-8" type="text/javascript"></script>
+<script type="text/javascript">
+//  ibmweb.config.set({ sbs: { enabled: false }});
+</script>
+<!-- Exp -->
+<script type="text/javascript">dojo.addOnLoad(function(){var dw_source="dwrussia";var dw_register="Войдите, чтобы скачать<br/>бесплатную триал-версию Bluemix";var dw_connect="Связаться с<br/>разработчиками Bluemix";var dw_vp="Разработайте и разверните ваше следующее приложение на облачной платформе IBM Bluemix.";var dw_cta="Начните работу<br/>бесплатно";var dw_tile_alt="Разработайте и разверните ваше следующее приложение на облачной платформе IBM Bluemix. Начните работу бесплатно.";var dw_campaign="bluemix";var dw_content=window.location.pathname.split("/")[window.location.pathname.split("/").length-2];if(dw_content=="library"){dw_content=window.location.pathname.split("/")[window.location.pathname.split("/").length-1];dw_content=window.location.pathname.split("/")[window.location.pathname.split("/").length-3]+"-"+dw_content.substring(0,dw_content.indexOf(".html"))}var dw_medium="article";var bluDevComURL="https://developer.ibm.com/bluemix/";var bluLink="https://www.bluemix.net/";var watsonLink="https://www.bluemix.net/#/solutions/solution=watson";var lnkID;var lnkIDd;var lnkIDt;var bLinkEnd;var bLinkTemp;var idTrkr=[];var idCnt;var artTop=dojo.query("div.ibm-col-1-1")[0];var artChildren=dojo.query(artTop).children();var edgy=false;if(dojo.hasClass(artChildren[0],"ibm-inset"))edgy=true;if((artChildren[0].nodeName=="H2")&&(dojo.hasClass(artChildren[1],"ibm-inset")))edgy=true;if(dojo.hasClass(artChildren[0],"codesection"))edgy=true;if((artChildren[0].nodeName=="H5")&&(dojo.hasClass(artChildren[1],"codesection")))edgy=true;if((artChildren[0].nodeName=="H5")&&(artChildren[1].width>=701))edgy=true;if(artChildren[1].width>=701)edgy=true;if(dojo.hasClass(artChildren[0],"ibm-data-table"))edgy=true;if((artChildren[0].nodeName=="H5")&&(dojo.hasClass(artChildren[1],"ibm-data-table")))edgy=true;if(!(edgy)){var sBarAB='<div class="dw-article-sidebar dw-bluemix" id="dwc-exp-c">'+'<img src="//dw1.s81c.com/developerworks/i/bluemix-graphic.png" height="64" width="64" alt=""/>'+'<p>'+dw_vp+'</p>'+'<p class="ibm-button-link-alternate dw-button-green">'+'<a id="tutc-sbar-bmix-home-btn-ABc" href="'+bluLink+'" class="dw-button-large">'+dw_cta+'</a></p></div>';dojo.place(sBarAB,artTop,"first");}dojo.forEach(dojo.query("#ibm-content-main a"),function(item,index){var bLink=dojo.attr(item,"href");if(bLink&&(bLink.indexOf("//bluemix.net")>-1))bLink=bLink.replace("//bluemix.net","//www.bluemix.net");if(bLink&&(bLink.indexOf("//ace.ng.bluemix.net")>-1))bLink=bLink.replace("//ace.ng.bluemix.net","//www.bluemix.net");if(bLink&&(bLink.indexOf("//console.ng.bluemix.net")>-1))bLink=bLink.replace("//console.ng.bluemix.net","//www.bluemix.net");if(bLink&&((bLink.indexOf("//www.bluemix.net")>-1)||(bLink.indexOf("//www.ng.bluemix.net")>-1)||(bLink.indexOf("//hub.jazz.net")>-1))){bLinkEnd="";bLink=bLink.split("?");if((bLink[1])&&(bLink[1].indexOf("/")!=-1))bLinkEnd=bLink[1].substring(bLink[1].indexOf("/"));bLink=bLink[0];if(bLink.indexOf("//hub.jazz.net")>-1){if((bLink.indexOf("//hub.jazz.net/git")>-1)||(bLink.indexOf("//hub.jazz.net/project")>-1)){bLink="https://login.jazz.net/psso/proxy/jazzregister?utm_source="+dw_source+"&utm_medium="+dw_medium+"&utm_content="+dw_content+"&utm_campaign="+dw_campaign+"&redirect_uri="+bLink}else{bLink=bLink+"?utm_source="+dw_source+"&utm_campaign="+dw_campaign+"&utm_content="+dw_content+"&utm_medium="+dw_medium}}else{if(bLink.indexOf("/#/")==-1){if(bLink.substring(bLink.length-7)=="/docs/#"){bLink=bLink.replace("/docs/#","/docs/"+"?cm_mmc="+dw_source+"-_-"+dw_campaign+"-_-"+dw_content+"-_-"+dw_medium+"#")}else{bLink=bLink+"?cm_mmc="+dw_source+"-_-"+dw_campaign+"-_-"+dw_content+"-_-"+dw_medium}}else{bLink=bLink.substring(0,bLink.indexOf("#"))+"?cm_mmc="+dw_source+"-_-"+dw_campaign+"-_-"+dw_content+"-_-"+dw_medium+bLink.substring(bLink.indexOf("#")-1)}}if(bLinkEnd)bLink=bLink+bLinkEnd;dojo.attr(item,"href",bLink);}})});</script><!-- LEADSPACE_STYLES -->
+
+<script charset="utf-8" id="dojoIoScript1" src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/ruru-utf8.js" type="text/javascript"></script><script charset="utf-8" id="dojoIoScript2" src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/a.json" type="text/javascript"></script><script charset="utf-8" id="dojoIoScript3" src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/profiling.js" type="text/javascript"></script><script src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/move.js" charset="utf-8" type="text/javascript"></script><script src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/TimedMoveable.js" charset="utf-8" type="text/javascript"></script><script src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/_CssStateMixin.js" charset="utf-8" type="text/javascript"></script><script src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/_FormMixin.js" charset="utf-8" type="text/javascript"></script><script src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/_DialogMixin.js" charset="utf-8" type="text/javascript"></script><script src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/DialogUnderlay.js" charset="utf-8" type="text/javascript"></script><script src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/ContentPane.js" charset="utf-8" type="text/javascript"></script><script src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/common_002.js" charset="utf-8" type="text/javascript"></script><script src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/TooltipDialog.js" charset="utf-8" type="text/javascript"></script><script charset="utf-8" id="dojoIoScript4" src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/blackwhite_lists.asc" type="text/javascript"></script><script src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/Mover.js" charset="utf-8" type="text/javascript"></script><script src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/Moveable.js" charset="utf-8" type="text/javascript"></script><script src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/_ContentPaneResizeMixin.js" charset="utf-8" type="text/javascript"></script><script src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/html.js" charset="utf-8" type="text/javascript"></script><script src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/loading.js" charset="utf-8" type="text/javascript"></script><script src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/common.js" charset="utf-8" type="text/javascript"></script><script src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/autoscroll.js" charset="utf-8" type="text/javascript"></script><script src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/_LayoutWidget.js" charset="utf-8" type="text/javascript"></script></head>
+
+<body aria-busy="false" class="v17" id="ibm-com">
+
+	<div id="ibm-top" class="ibm-landing-page ibm-no-scroll"><img src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/ibm_logo_print.png" id="ibm-print-masthead" alt="IBM Print" height="15" width="43">
+
+<!-- MASTHEAD_BEGIN -->
+<div role="banner" id="ibm-masthead">
+
+    <!-- TOP ROW -->    
+	<div id="dw-masthead-top-row">
+		<ul id="ibm-mast-options-dw" class="ru" role="toolbar">
+				<li id="dw-mast-top-4" role="presentation">
+				<a href="http://www.ibm.com/developerworks/ru/" tabindex="0"><img aria-label="dW" alt="dW" src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/dwn-dw-badge.png" height="22" width="43"></a>
+			</li>
+			<li role="presentation" id="dw-mast-top-0">
+				<div><a class="" href="http://www.ibm.com/developerworks/dwwi/DWAuthRouter?m=loginpage&amp;lang=ru&amp;d=http%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Fru%2Flibrary%2Fl-lpic3-312-1%2F" title="" role="button" tabindex="0">Войти (или Регистрация)</a></div>
+			</li>
+			<li role="presentation" id="dw-mast-top-1" class="dw-mast-top-1-ru">
+				<div><a href="#SELECTLANG" role="button">Русский</a></div>
+			</li>
+			<li role="presentation" id="dw-mast-top-3">
+				<a role="button" href="http://www.ibm.com/">IBM</a>
+			</li>
+			<li role="presentation" id="dw-mast-top-2" class="dw-mf-hide">
+				<a href="#">[userid]</a>
+			</li>
+		</ul>
+	</div>
+
+    <!-- TOP ROW SLIDER -->
+	<div id="ibm-my-menu-dw" style="display:none">
+        <!-- Sign-in -->
+		
+        <!-- Language selector --> 
+		
+		<div id="empty_div" class="dw-mast-columns" role="group"><!-- Authenticated --></div>		
+		<!-- IBM -->
+				
+	<div widgetid="ibmweb_ribbon_0" id="ibmweb_ribbon_0" class="ibm-container-body" dojoattachpoint="ribbonContainer"><a title="Назад" style="margin-top: -12px;" class="ibm-ribbon-prev ibm-disabled" dojoattachpoint="scrollLeftButton" role="button" href="#">Назад</a><div style="height: 0px;" class="ibm-ribbon-pane" dojoattachpoint="scrollContainer"><div id="ibmweb_ribbon_0_scrollable" class="ibm-ribbon-section" dojoattachpoint="scrollableNode" role="listbox"><div aria-labelledby="ibm-rib-menu-0" widgetid="ibmweb_ribbonSlide_0" id="ibmweb_ribbonSlide_0" class="ibm-columns" dojoattachpoint="containerNode" role="dialog"><h2 id="ibm-rib-menu-0" class="ibm-access">Войти (или Регистрация)</h2><div widgetid="ibmweb_ribbonItemAbstract_0" tabindex="0" id="ibmweb_ribbonItemAbstract_0" class="dw-mast-columns" role="group">
+			<div class="dw-mast-col-1-1">
+				<div id="dw-mast-sso">
+					<div id="signin_error_mf" class="no-display"></div>
+					<div id="dw-mast-sso-form">
+						<form id="sForm_mf" action="" method="post" name="sForm_name_mf" onsubmit="return false;">
+							<div id="dw-mast-sso-id">
+								<label for="ibmid_mf">IBM ID:</label>
+								<input id="ibmid_mf" name="ibmid_name_mf" maxlength="100" onkeypress="dwsi.siInst.handleEP(event,this.form,'mf');" type="text">
+							</div>
+							<div id="dw-mast-sso-pw">
+								<label for="pw_mf">Пароль:</label>
+								<input id="pw_mf" value="" name="pw_name_mf" maxlength="100" onkeypress="dwsi.siInst.handleEP(event,this.form,'mf');" type="password">
+							</div>
+							<div id="dw-mast-sso-target" class="dw-mast-sso-target-en">
+								<p class="dw-mf-perm-box">
+									<input id="perm_mf" name="perm_name_mf" type="checkbox"><label for="perm_mf"> Запомнить меня.</label>
+								</p>
+							</div>					
+							<div id="dw-mast-sso-terms">
+										<p class="dw-mast-sso-terms-ru">Нажимая <strong>Отправить</strong>, Вы
+										    принимаете <a href="http://www.ibm.com/developerworks/community/terms?lang=ru">Условия использования</a> developerWorks.</p>
+								</div>
+							<div>
+								<input class="dw-mf-submit-btn-ru" name="ibm_submit_name_mf" value="Отправить" onclick="dwsi.siInst.signin('mf');return false;" type="submit">
+							</div>
+						</form>
+					</div>
+					<div id="dw-mast-sso-update" class="dw-mast-sso-update-ru">
+						<div id="dw-mast-sso-update-id">
+							<ul>
+								<li><a href="#" onclick="(function ()
+								    {window.location='/developerworks/dwwi/DWAuthRouter?m=reg&amp;lang=ru_RU&amp;d='+encodeURIComponent(location.href);})();">Нужен IBM ID?</a></li>
+								<li><a href="http://www.ibm.com/developerworks/dwwi/jsp/WSHelp.jsp?lang=ru_RU">Забыли Ваш IBM ID?</a></li>
+							</ul>
+						</div>
+						<div id="dw-mast-sso-update-pw">
+							<ul class="dw-mf-pwupdate">
+								<li><a href="#" onclick="(function ()
+								    {window.location='https://www.ibm.com/account/profile?page=forgot&amp;lang=ru_RU&amp;appname=ibm&amp;required=null&amp;d='+encodeURIComponent(dwsi.siInst.getAuthUrl())+'%3Fm%3Dloginpage%26lang%3Den_US%26d%3D'+encodeURIComponent(location.href);})();">Забыли Ваш пароль?</a></li>
+								<li><a href="#" onclick="(function ()
+								    {window.location='https://www.ibm.com/account/profile?page=chpw&amp;lang=ru_RU&amp;appname=ibm&amp;required=null&amp;d='+encodeURIComponent(location.href);})();">Изменить пароль</a></li>
+							</ul>
+						</div>
+					</div>
+					<div id="dw-mast-sso-text-ru">
+						<p>Профиль создается, когда вы первый раз заходите в developerWorks.  <strong>Информация
+ в вашем профиле (имя, страна / регион,  название компании) отображается
+ для всех пользователей и будет сопровождать любой опубликованный вами 
+контент пока вы специально не укажите скрыть название вашей компании</strong>.  Вы можете обновить ваш IBM аккаунт в любое время.</p>								
+						<p class="dw-mf-secure-ru">Вся введенная информация защищена.</p>
+					</div>
+				</div>
+				<div id="dw-mast-dname" class="dw-mf-hide">
+							<p>При первом входе в developerWorks для Вас будет создан профиль и Вам нужно будет
+							    выбрать Отображаемое имя. Оно будет выводиться рядом с контентом,
+							    опубликованным Вами в developerWorks.</p><p class="dw-mast-dname-ru"><strong>Отображаемое имя должно иметь длину от 3 символов до 31 символа</strong>.
+  Ваше Имя в системе должно быть уникальным. В качестве имени по 
+соображениям приватности нельзя использовать контактный e-mail.</p>
+									<div id="signin_dname_error_mf" class="no-display"></div>
+					<div id="dw-mast-dname-form" class="dw-mast-dname-form-ru">
+						<form id="dForm_mf" action="" method="post" name="dForm_name_mf" onsubmit="return false;">
+							<div id="dw-mast-dname-mf">
+								<label for="dname_mf">Отображаемое имя:</label>
+								<input id="dname_mf" name="dname_name_mf" maxlength="31" size="25" onkeypress="dwsi.siInst.handleEP(event,this.form,'mf');" type="text">
+							</div>
+							<div id="dw-mast-dname-terms">
+										<p class="dw-mast-dname-terms-ru">Нажимая <strong>Отправить</strong>, Вы
+										    принимаете <a href="http://www.ibm.com/developerworks/community/terms?lang=ru">Условия использования</a> developerWorks.</p>
+							</div>
+
+							<div>
+								<input class="dw-mf-submit-btn-ru" name="dname_submit_name_mf" value="Отправить" onclick="dwsi.siInst.signin('mf');return false;" type="submit">
+							</div>
+						</form>								
+					</div>
+					<div id="dw-mast-dname-secure">
+						<p class="dw-mf-secure-ru">Вся введенная информация защищена.</p>
+					</div>
+				</div>
+				<div id="dw-mast-auth" class="dw-mf-hide">
+			    
+					<div>
+						<h2>Сообщество developerWorks:</h2>
+						<ul>
+							<li><a id="dw-mast-top-0-0" href="http://www.ibm.com/developerworks/community/homepage?lang=ru">Моя главная страница</a></li>
+						    
+							<li><a href="http://www.ibm.com/developerworks/community/profiles/html/myProfileView.do?lang=ru">Мой
+							    профайл</a></li>
+							<li><a href="http://www.ibm.com/developerworks/community/groups/service/html/mycommunities?lang=ru">Мои сообщества</a></li>
+							<li><a href="http://www.ibm.com/developerworks/community/news/?lang=ru">Настройки</a></li>
+						    
+						</ul>     
+					</div>
+					<div class="dw-mast-more">
+						<ul class="ibm-link-list">
+							<li><a class="dw-more-link" href="#" onclick="dwsi.siInst.signOut(); return false;"><strong>Выйти</strong></a></li>
+						</ul>
+					</div>
+				</div>								
+			</div>		
+		</div></div><div aria-labelledby="ibm-rib-menu-1" widgetid="ibmweb_ribbonSlide_1" id="ibmweb_ribbonSlide_1" class="ibm-columns" dojoattachpoint="containerNode" role="dialog"><h2 id="ibm-rib-menu-1" class="ibm-access">Русский</h2><div widgetid="ibmweb_ribbonItemAbstract_1" tabindex="0" id="ibmweb_ribbonItemAbstract_1" class="dw-mast-columns" role="group">
+			<div class="dw-mast-col-2-1">
+				<h2>Выбрать язык:</h2>
+				<ul>
+					<li><a id="dw-mast-top-1-0" href="http://www.ibm.com/developerworks/" lang="en">English</a></li>
+					<li><a href="http://www.ibm.com/developerworks/cn/" lang="zh">中文</a></li>
+					<li><a href="http://www.ibm.com/developerworks/jp/" lang="ja">日本語</a></li>
+					<li><a href="http://www.ibm.com/developerworks/ru/">Русский</a></li>
+				</ul>
+			</div>
+			<div class="dw-mast-col-2-2">
+				<ul>
+					<li><a href="http://www.ibm.com/developerworks/br/" lang="pt">Português (Brasil)</a></li>
+					<li><a href="http://www.ibm.com/developerworks/ssa/" lang="es">Español</a></li>
+					<li><a href="http://www.ibm.com/developerworks/vn/" lang="vi">Việt</a></li>
+				</ul>
+			</div>
+		</div></div><div aria-labelledby="ibm-rib-menu-2" widgetid="ibmweb_ribbonSlide_2" id="ibmweb_ribbonSlide_2" class="ibm-columns" dojoattachpoint="containerNode" role="dialog"><h2 id="ibm-rib-menu-2" class="ibm-access">IBM</h2><div widgetid="ibmweb_ribbonItemAbstract_2" tabindex="0" id="ibmweb_ribbonItemAbstract_2" class="dw-mast-columns" role="group">
+			<div class="dw-mast-col-2-1">
+				<ul>
+            				<li><a id="dw-mast-top-3-0" href="http://www.ibm.com/ru/ru/">Домашняя страница IBM</a></li>
+            				<li><a href="http://www.ibm.com/solutions/ru/ru/">Pешения</a></li>
+            				<li><a href="http://www.ibm.com/software/ru/">Программное обеспечение</a></li>
+            				<li><a href="http://www.ibm.com/technologyservices/ru/ru/">Сервис ПО</a></li>
+ 			</ul>
+			</div>
+			<div class="dw-mast-col-2-2 dw-mast-ibm">
+				<ul>
+           				<li><a href="http://www.ibm.com/support/ru/ru/">Поддержка</a></li>
+            				<li><a href="http://www.ibm.com/support/documentation/ru/ru/">Документация</a></li>
+            				<li><a href="http://www.ibm.com/developerworks/ru/doc/">Библиотека документов</a></li>
+  				</ul>
+			</div>	
+		</div></div></div></div><a title="Далее" style="margin-top: -12px;" class="ibm-ribbon-next" dojoattachpoint="scrollRightButton" role="button" href="#">Далее</a><div class="ibm-mm-close"><span tabindex="0" aria-label="Закрыть" role="button" title="Закрыть"></span></div></div></div>
+		
+    <!-- BOTTOM ROW -->
+	<div id="ibm-universal-nav-dw" aria-label="Site map">
+		<ul id="ibm-unav-links-dw">
+		<li id="ibm-unav-home-dwlogo">
+				<a href="http://www.ibm.com/developerworks/ru/"><img src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/dwn-dw-wordmark.png" alt="developerWorks®" height="28" width="225"></a>
+			</li>
+		</ul>
+		<ul id="ibm-menu-links-dw" class="ibm-menu-links-dw-ru" role="toolbar" aria-label="Site map">
+			<li id="dw-mast-nav-0" role="presentation"><a href="http://www.ibm.com/developerworks/ru/topics/" tabindex="0">Технические материалы</a></li>
+			<li id="dw-mast-nav-1" role="presentation"><a href="http://www.ibm.com/developerworks/downloads/">Пробное ПО</a></li>
+			<li id="dw-mast-nav-2" role="presentation"><a href="http://www.ibm.com/developerworks/community/?lang=ru">Сообщество</a></li>
+		</ul>
+		<form id="ibm-search-form" action="//www.ibm.com/search/csass/search/" method="get" name="form1" aria-label="Поиск developerWorks" role="search">
+			<p>
+				<label for="q"><span class="ibm-access">Поиск developerWorks</span></label>
+				<input id="q" name="q" value="Поиск developerWorks" maxlength="100" type="text">
+				<input name="sn" value="dw" type="hidden">
+				<input name="lang" value="ru" type="hidden">
+				<input name="cc" value="RU" type="hidden">
+				<input name="en" value="utf" type="hidden">
+				<input name="hpp" value="20" type="hidden">
+				<input name="dws" value="rudw" type="hidden">
+				<input name="lo" value="ru" type="hidden">
+				<input id="ibm-search" class="ibm-btn-search" value="Отправить" type="submit">
+			</p>
+		</form>		
+	</div>
+	
+<div aria-label="Инструменты социального взаимодействия" role="navigation" style="display: block;" id="ibm-social-tools"><ul aria-label="Social tool list" role="toolbar"><li><a tabindex="0" role="button" dojoattrid="0" rel="print" href="#" title="Распечатать эту страницу" class="ibm-share-print">Распечатать эту страницу</a></li><li><a tabindex="-1" role="button" dojoattrid="1" rel="email" href="#" title="Отправить эту страницу по электронной почте" class="ibm-share-email">Отправить эту страницу по электронной почте</a></li><li><a tabindex="-1" role="button" dojoattrid="2" rel="digg" href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Fru%2Flibrary%2Fl-lpic3-312-1%2Findex.html&amp;title=%D0%98%D0%B7%D1%83%D1%87%D0%B0%D0%B5%D0%BC%20Linux%2C%20302%20%28%D1%81%D0%BC%D0%B5%D1%88%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5%20%D1%81%D1%80%D0%B5%D0%B4%D1%8B%29%3A%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba" title="Digg" class="ibm-share-digg">Digg</a></li><li><a tabindex="-1" role="button" dojoattrid="3" rel="facebook" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Fru%2Flibrary%2Fl-lpic3-312-1%2Findex.html&amp;t=%D0%98%D0%B7%D1%83%D1%87%D0%B0%D0%B5%D0%BC%20Linux%2C%20302%20%28%D1%81%D0%BC%D0%B5%D1%88%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5%20%D1%81%D1%80%D0%B5%D0%B4%D1%8B%29%3A%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba" title="Facebook" class="ibm-share-facebook">Facebook</a></li><li><a tabindex="-1" role="button" dojoattrid="4" rel="twitter" href="http://twitter.com/home?status=http%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Fru%2Flibrary%2Fl-lpic3-312-1%2Findex.html%20-%20%D0%98%D0%B7%D1%83%D1%87%D0%B0%D0%B5%D0%BC%20Linux%2C%20302%20%28%D1%81%D0%BC%D0%B5%D1%88%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5%20%D1%81%D1%80%D0%B5%D0%B4%D1%8B%29%3A%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba" title="Twitter" class="ibm-share-twitter">Twitter</a></li><li><a tabindex="-1" role="button" dojoattrid="5" rel="delicious" href="http://delicious.com/post?url=http%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Fru%2Flibrary%2Fl-lpic3-312-1%2Findex.html&amp;title=%D0%98%D0%B7%D1%83%D1%87%D0%B0%D0%B5%D0%BC%20Linux%2C%20302%20%28%D1%81%D0%BC%D0%B5%D1%88%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5%20%D1%81%D1%80%D0%B5%D0%B4%D1%8B%29%3A%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba" title="Delicious" class="ibm-share-delicious">Delicious</a></li><li><a tabindex="-1" role="button" dojoattrid="6" rel="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Fru%2Flibrary%2Fl-lpic3-312-1%2Findex.html&amp;title=%D0%98%D0%B7%D1%83%D1%87%D0%B0%D0%B5%D0%BC%20Linux%2C%20302%20%28%D1%81%D0%BC%D0%B5%D1%88%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5%20%D1%81%D1%80%D0%B5%D0%B4%D1%8B%29%3A%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba" title="Linked In" class="ibm-share-linkedin">Linked In</a></li><li><a tabindex="-1" role="button" dojoattrid="7" rel="googleplus" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Fru%2Flibrary%2Fl-lpic3-312-1%2Findex.html&amp;t=%D0%98%D0%B7%D1%83%D1%87%D0%B0%D0%B5%D0%BC%20Linux%2C%20302%20%28%D1%81%D0%BC%D0%B5%D1%88%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5%20%D1%81%D1%80%D0%B5%D0%B4%D1%8B%29%3A%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba" title="Google+" class="ibm-share-googleplus">Google+</a></li></ul></div></div>
+<div id="fdiv" class="ibm-access"></div><!-- MASTHEAD_END -->
+	    
+<!-- LAYOUT -->
+<!-- LEADSPACE_BEGIN --> 
+<div role="main" id="ibm-access-cntr"><div id="ibm-leadspace-head">
+	<!-- LEADSPACE_BODY_BEGIN --> 
+	<div id="ibm-leadspace-body">
+		<!-- Navigation_Trail_BEGIN -->
+        <ul aria-label="Bread Crumbs" role="navigation" id="ibm-navigation-trail"><li><a href="http://www.ibm.com/developerworks/ru/">developerWorks Россия</a></li><li><a href="http://www.ibm.com/developerworks/ru/topics/">Технические материалы</a></li><li><a href="http://www.ibm.com/developerworks/ru/linux/">Linux</a></li><li><a href="http://www.ibm.com/developerworks/ru/views/linux/libraryview.jsp">Статьи</a></li></ul>
+		<!-- END_Navigation_Trail -->
+			<!-- Title_Subtitle -->
+			<h1>Изучаем Linux, 302 (смешанные среды): Kонфигурация Samba</h1><p><em><span>Настройка Samba для выполнения различных задач</span></em></p>
+	</div>
+	<!-- LEADSPACE_BODY_END --> 
+	<!-- SUMMARY_BEGIN -->
+	<div id="dw-summary-area" class="dw-summary-columns">
+		<div class="ibm-col-6-4">
+		<p>Конфигурационные параметры Samba хранятся в обычном текстовом 
+файле, поэтому самым сложным инструментом настройки Samba является 
+текстовый редактор. Из этой статьи вы узнаете о структуре 
+конфигурационного файла Samba и взаимодействии Samba с сетевым 
+окружением, о настройке журналирования, а также о том, как использовать 
+систему отладки для устранения неисправностей в работе Samba.</p>
+		<p class="ibm-no-print ibm-ind-link">
+<a class="ibm-forward-link" href="http://www.ibm.com/developerworks/ru/views/linux/libraryview.jsp?site_id=1&amp;contentarea_by=Linux&amp;sort_by=Date&amp;sort_order=2&amp;start=1&amp;end=19&amp;topic_by=-1&amp;product_by=&amp;type_by=All%20Types&amp;show_abstract=true&amp;search_by=%D1%81%D0%BC%D0%B5%D1%88%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5%20%D1%81%D1%80%D0%B5%D0%B4%D1%8B&amp;industry_by=-1&amp;series_title_by=">Больше статей из этой серии</a> <span class="dw-summary-bar">|</span>
+			
+			<span id="nCmts"><span>0</span><img class="dw-cmts-arrow" alt="" src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/dw-cmts-arrow.png" height="7" width="7"> <a href="#icomments" class="dw-cmt-link">Комментарии:</a></span>
+		<span id="relatedDownloads"></span></p>
+		</div>
+		<div class="ibm-col-6-2 dw-toc-margin">
+			<p class="dw-summary-author"><a href="#authorN10029" class="ibm-popup-link" onclick="ibmweb.overlay.show('authorN10029',this);return false;">Шон Уолберг</a>, старший сетевой инженер, P.Eng</p>
+<div id="authorN10029" class="ibm-common-overlay"><div class="ibm-head"><p><a href="#close" class="ibm-common-overlay-close">Закрыть [x]</a></p></div><div class="ibm-body"><div class="ibm-main"><div class="ibm-title"><!--this is where the h2 usually goes--></div><div class="ibm-container ibm-alternate"><div class="ibm-container-body">
+<p><!--.-->
+Шон Уолберг работал с Linux- и UNIX-системами с 1994 года в 
+академических, корпоративных и "провайдерских" кругах. Он широко 
+освещает вопросы системного администрирования в течение нескольких 
+последних лет. С ним можно связаться по адресу <a href="http://www.ibm.com/developerworks/ru/library/l-lpic3-312-1/sean@ertw.com">sean@ertw.com</a>.	</p><br><br></div></div></div></div><div class="ibm-footer"><!----></div></div>
+			<p class="dw-summary-date">24.05.2012</p>
+			
+
+
+			<div aria-hidden="true" class="ibm-container" id="dw-toc"><div class="ibm-container-body"><ul class="ibm-twisty"><li><a href="#toggle" class="ibm-twisty-trigger ibm-twisty-trigger-closed"><img src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/c.gif" alt="+"></a><span class="ibm-twisty-head">Содержание</span><div style="display: none;" class="ibm-twisty-body"><ul style="font-size:0.8em" class="ibm-link-list">
+<li><a class="ibm-anchor-down-em-link" href="#prereq">Предварительные требования</a></li>
+<li><a class="ibm-anchor-down-em-link" href="#config_file">Конфигурационный файл Samba</a></li>
+<li><a class="ibm-anchor-down-em-link" href="#network_interaction">Работа Samba в сетевом окружении</a></li>
+<li><a class="ibm-anchor-down-em-link" href="#tbx">Устранение неисправностей в работе Samba</a></li>
+<li><a class="ibm-anchor-down-em-link" href="#logging">Журналирование и отладка</a></li>
+<li><a class="ibm-anchor-down-em-link" href="#sys_call">Трассировка системных вызовов</a></li>
+<li><a class="ibm-anchor-down-em-link" href="#N10475">Что дальше</a></li>
+<li><a class="ibm-anchor-down-em-link" href="#resources">Ресурсы</a></li>
+<li><a class="ibm-anchor-down-em-link" href="#icomments">Комментарии</a></li></ul></div></li></ul></div></div>
+		</div>
+	</div>
+	<!-- SUMMARY_END -->
+</div><div id="ibm-pcon">
+
+<!-- BEGIN_IBM-CONTENT -->
+<div id="ibm-content">
+
+<!-- BEGIN_IBM-CONTENT-BODY -->
+<div id="ibm-content-body">
+
+<!-- BEGIN_IBM-CONTENT-MAIN -->
+<div id="ibm-content-main">
+
+<!-- 1_1_COLUMN_BEGIN -->
+<div class="ibm-columns">
+<div class="ibm-col-1-1">
+
+<div class="dw-sidebar ibm-inset"><h2 id="about_series"> Об этой серии</h2><p>
+ Эта серия статьей поможет вам освоить задачи администрирования 
+операционной системы Linux. Вы можете использовать материалы этих статей
+ для подготовки к <a href="http://www.lpi.org/"> экзаменам программы LPIC третьего уровня (LPIC-3)</a>.</p><p> Чтобы посмотреть описания статей этой серии и получить ссылки на них, обратитесь к нашему <a href="http://www.ibm.com/developerworks/linux/library/l-lpic3-map/index.html"> перечню материалов для подготовки к экзаменам LPIC-3</a>. Этот перечень постоянно дополняется новыми статьями по мере их готовности и содержит <em>текущие (по состоянию на ноябрь 2010 года) цели</em> экзаменов сертификации LPIC-3.</p></div><p>В этой статье рассматриваются следующие темы:</p><ul class="ibm-bullet-list"><li>Структура конфигурационного файла сервера Samba.</li><li>Использование конфигурационных параметров и переменных Samba.</li><li>Идентификация ключевых портов TCP/UDP, используемых в Server Message Block (SMB)/Common Internet File System (CIFS). </li><li>Настройка журналирования Samba.</li><li>Отладка и устранение неисправностей в работе Samba.</li></ul><p>Эта
+ статья поможет вам подготовиться к сдаче экзамена LPI 302 
+(специализация "Смешанные среды") и содержит материалы цели 312.1 темы 
+312. Цель имеет вес 6.</p><h2 id="prereq">Предварительные требования</h2><p>Чтобы
+ извлечь наибольшую пользу из наших статей, необходимо обладать 
+продвинутыми знаниями о Linux и иметь работоспособный компьютер с Linux,
+ на котором можно будет выполнять все встречающиеся команды. Кроме 
+этого, у вас должен быть доступ к среде Windows, которую можно 
+использовать для проверки доступа к файлам и принтерам.</p><div class="ibm-alternate-rule"><hr></div><p class="ibm-ind-link ibm-back-to-top"><a href="#ibm-pcon" class="ibm-anchor-up-link">В начало</a></p><h2 id="config_file">Конфигурационный файл Samba</h2><div class="dw-sidebar ibm-inset"><h2 id="about_lpi302"> О факультативном экзамене LPI-302</h2><p>
+ Как и многие другие программы, программа сертификации Linux 
+Professional Institute (LPIC) предусматривает различные уровни 
+сертификации, где для получения каждого последующего уровня необходимо 
+обладать более глубокими знаниями и практическим опытом. Экзамен LPI-302
+ – это факультативный экзамен третьего уровня программы LPIC, требующий 
+продвинутых знаний в области системного администрирования Linux.</p><p> 
+Для получения сертификата LPIC третьего уровня (LPIC-3) необходимо 
+успешно сдать два экзамена первого уровня (101 и 102), два экзамена 
+второго уровня (201 и 202), а также базовый экзамен 301 третьего уровня 
+(LPIC-3). Если вы получили сертификат третьего уровня, вы можете сдавать
+ факультативные экзамены по определенным специализациям, например, 
+экзамен LPI-302.</p></div><p>Как и большинство других демонов UNIX, 
+Samba настраивается с помощью простых текстовых файлов, которые можно 
+просматривать в обычном текстовом редакторе (в отличие от двоичных 
+файлов, работа с которыми требует использования графических средств). 
+Самый важный конфигурационный файл называется <em>smb.conf</em> и содержит все параметры, необходимые Samba для работы в конкретном рабочем окружении.</p><p><strong>Примечание.</strong>
+ Не смотря на то, что с файлом smb.conf можно работать в текстовом 
+редакторе, команда разработчиков Samba создала Web-инструмент под 
+названием <em>Samba Web Administration Tool</em>. Также существуют и 
+другие альтернативные инструменты, например, webmin. Важно помнить о 
+том, что файл smb.conf можно редактировать как до, так и после 
+использования этих инструментов, поскольку вся работа происходит с 
+обычным текстовым файлом.</p><p>Конфигурационный файл Samba имеет достаточно простой формат и может содержать три различные конструкции: </p><ul class="ibm-bullet-list"><li><strong>Разделы</strong>
+ – группируют параметры по различным независимым областям. Например, все
+ параметры общих файловых ресурсов содержатся в отдельном разделе.</li><li><strong>Параметры</strong>
+ – представляют собой пары вида "ключ-значение". Ключи – это хорошо 
+знакомые всем атрибуты, например, "read only" ("только для чтения"). </li><li><strong>Комментарии</strong> – позволяют оставлять заметки в конфигурационном файле, не влияющие на конфигурацию, например, описания файловых ресурсов. </li></ul><h3 id="sections">Разделы</h3><div class="dw-sidebar ibm-inset"><h2 id="N10099"> Создайте ваш собственный канал</h2><p>
+ Вы можете создать ваш собственный RSS, Atom или HTML канал обновлений и
+ получать уведомления о новых или обновленных статьях нашего сайта. Для 
+этого перейдите на страницу <a href="http://www.ibm.com/developerworks/ru/views/rss/customfeed.jsp"> developerWorks RSS feeds</a>, выберите зону <strong> Linux</strong>, установите флажок <strong> Статьи</strong> и введите в качестве ключевой фразы <code>Linux Professional Institute</code>, после чего выберите требуемый тип канала.</p></div><p>Разделы
+ группируют параметры по различным независимым областям. Каждый раздел 
+начинается с названия, заключенного в квадратные скобки (<code>[]</code>). Далее раздел продолжается до тех пор, пока не начнется новый раздел, или до конца файла.</p><p>Существуют три специальных раздела со следующими названиями:</p><ul class="ibm-bullet-list"><li><strong><code>global</code>.</strong> Все параметры, содержащиеся в этом разделе, влияют на работу всего сервера. При необходимости параметры раздела <code>global</code> можно переопределить на уровне общего ресурса.</li><li><strong><code>homes</code>.</strong>
+ Этот раздел является шаблоном для домашних директорий пользователей; 
+Samba самостоятельно сопоставляет имена пользователей в соответствии с 
+настройками этого раздела, избавляя от необходимости настраивать 
+отдельный общий ресурс каждый раз, когда необходимо предоставить 
+пользователю доступ к его домашней директории. </li><li><strong><code>printers</code>.</strong> Этот раздел аналогичен разделу <code>homes</code>, но используется для принтеров. </li></ul><p>Если раздел называется по-другому, то считается, что он относится к общему файловому ресурсу или принтеру.</p><p>Когда
+ Samba получает запрос на подключение к общему ресурсу, то она ищет 
+раздел с именем этого ресурса, определяющего его свойства. Если такой 
+раздел не найден, Samba просматривает список локальных пользователей 
+компьютера, чтобы выяснить, не указывает ли запрос на пользователя. Если
+ пользователь с таким именем не найден, то Samba ищет принтер с таким 
+именем в списке локальных принтеров. Если Samba находит имя 
+пользователя, то используется раздел конфигурации <code>homes</code>. Если же Samba находит принтер с таким именем, то используется раздел <code>printers</code>. В любом случае параметры раздела переопределяют глобальные параметры раздела <code>global</code>. </p><p>Если
+ все перечисленные проверки не увенчались успехом, то выполняется 
+последняя проверка. Если настроена служба по умолчанию, то используется 
+она. В противном случае клиенту возвращается сообщение об ошибке. По 
+умолчанию служба по умолчанию не настроена, поэтому неверное указание 
+имени общего ресурса приведет к ошибке.</p><h3 id="parameters">Параметры</h3><p>Параметры имеют форму <code>ключ = значение</code>, т. е. каждому <em>ключу</em> присваивается <em>значение</em>.
+ Все ключи описаны на man-странице smb.conf. Искусство конфигурирования 
+Samba заключается, по большей части, в том, чтобы понять, какие ключи 
+необходимо использовать для получения требуемого результата и какие 
+значения им присваивать. </p><p>В основном значениями параметров 
+являются строки. Samba поддерживает использование макросов, позволяющих 
+динамически изменять значение параметра в соответствии с именем общего 
+ресурса или введенными пользователем данными. Например, по умолчанию все
+ параметры раздела <code>homes</code> указывают на домашние директории 
+пользователей UNIX, однако с помощью макросов можно задать любое 
+местоположение, и в момент подключения вместо имени пользователя 
+указывать другой путь к домашней директории. Макросы начинаются с 
+символа <code>%</code> и будут рассмотрены позже в этой статье.</p><p>Если
+ значение параметра не помещается в одной строке, то все содержащие его 
+строки за исключением последней должны заканчиваться обратным слешем 
+(\), так же, как и в командной оболочке UNIX.</p><h3 id="comments">Комментарии</h3><p>Комментарии начинаются с символа точки с запятой (<code>;</code>) или символа решетки (<code>#</code>).
+ Комментарии можно использовать для пояснения того, почему был 
+использован тот или иной параметр, отслеживания изменений в конфигурации
+ или обозначения границ разделов.</p><h3 id="example_config">Пример конфигурации</h3><p>В листинге 1 показаны различные фрагменты конфигурационного файла smb.conf. </p><h5 id="list1">Листинг 1. Пример конфигурационного файла Samba</h5><div class="codesection"><pre class="displaycode"># Это комментарий
+; И это тоже
+# Не забудьте внести все общие ресурсы в Wiki! -Opsteam
+[global]
+  workgroup = BIGCO
+  # %v замещается версией Samba
+  server string = Samba Server Version %v
+  # По умолчанию все файлы, начинающиеся 
+с точки будут иметь атрибут "скрытый"
+  hide dot files = yes
+
+# Домашние директории берутся из файла паролей UNIX
+# этот раздел будет использоваться для всех пользователей
+[homes]
+  comment = Home directories
+  # файлы, начинающиеся с точки, будут скрыты,
+ т. к. это определено в разделе глобальных ключей
+
+[printers]
+  comment = System printers
+  printable = yes
+
+# Общедоступный ресурс
+[projecta]
+  path = /var/spool/projects/projecta
+  # Переопределим глобальное значение
+ для файлов, начинающихся с точки
+  hide dot files = no</pre></div><p>Эта конфигурация имеет следующие особенности:</p><ul class="ibm-bullet-list"><li>В
+ этой конфигурации используются два различных способа вставки 
+комментариев. В первом случае комментарии начинаются с символа решетки, 
+во втором случае – с символа точки с запятой.</li><li>В этой конфигурации определен один общий ресурс с именем <em>projecta</em>. Все остальные общие ресурсы будут созданы автоматически на основе пользователей и принтеров, определенных в системе</li><li>Частью параметра <code>server string</code> является макрос <code>%v</code>. При запуске вместо конструкции <code>%v</code> будет отображаться номер версии Samba.</li><li>В разделе глобальных переменных параметр <code>hide dot files</code>
+ установлен в yes, но в разделе общего ресурса projecta он установлен в 
+no. Для конфигурации домашних директорий используется раздел <code>homes</code>,
+ при этом все файлы в этих директориях, начинающиеся с точки (например, 
+.profile) будут скрыты. Файлы проекта projecta, начинающиеся с точки, 
+будут отображаться.</li></ul><div class="ibm-alternate-rule"><hr></div><p class="ibm-ind-link ibm-back-to-top"><a href="#ibm-pcon" class="ibm-anchor-up-link">В начало</a></p><h2 id="network_interaction">Работа Samba в сетевом окружении</h2><p>Samba
+ – это сетевая служба, работающая по протоколу IP, который позволяет ей 
+взаимодействовать с другими узлами сети, также использующими этот 
+протокол. Чтобы администратор Samba мог решать проблемы, связанные с 
+сетевым взаимодействием, он должен понимать, как различные службы Samba 
+работают в сетевом окружении.</p><p>Не вдаваясь в подробности, можно сказать, что Samba предоставляет сетевые службы трех различных типов:</p><ul class="ibm-bullet-list"><li><strong>Службы общего доступа к файлам и принтерам</strong> – обеспечивают сетевой доступ к файлам и принтерам для устройств, на которых запущены эти службы.</li><li><strong>Службы имен</strong> – службы разрешения имен, необходимые для работы в сетях Microsoft.</li><li><strong>Доменные службы</strong>
+ – позволяют Samba взять на себя различные роли сервера Microsoft, 
+например, legacy domain controller, и обеспечивают интеграцию с новыми 
+серверами Active Directory Domain Services (AD DS).</li></ul><h3 id="sharing">Общий доступ к файлам и принтерам</h3><p>Общий доступ к файлам и принтерам реализован посредством <code>smbd</code>
+ – одного из демонов Samba. Когда Microsoft впервые реализовала 
+поддержку IP-сетей, для предоставления общего доступа к файлам она 
+использовала механизм NetBIOS over TCP. Этот метод заключался в 
+инкапсуляции трафика NetBIOS в сеанс TCP-протокола с использованием 
+TCP-порта 139.</p><p>Протокол NetBIOS выполняет несколько функций. 
+TCP-порт 139 используется только для служб сеансов, которые выполняют 
+передачу файлов и сообщений. Службы имен не работают на этом порту.</p><p>Хотя
+ механизм NetBIOS over TCP работает, существует частичное наложение 
+между службами сеансов и надежностью, предоставляемыми с одной стороны 
+NetBIOS, а с другой стороны – протоколом TCP. Путем некоторых изменений 
+стало возможно обеспечить работу SMB/CIFS непосредственно поверх TCP. 
+Этот метод известен как <em>прямая передача</em> и используется для упрощения протокола. Прямая передача использует для работы TCP-порт 445.</p><p>Когда
+ протокол NetBIOS был удален из стека протоколов, перед Microsoft встала
+ задача найти другой способ разрешения имен. Естественным выбором стала 
+система доменных имен DNS (Domain Name System), и именно поэтому DNS 
+лежит в основе доменных служб AD DS. </p><p>По умолчанию Samba прослушивает порты 139 и 445. Можно использовать другие порты, изменив глобальный параметр <code>smb ports</code>. Например, <code>smb ports = 445</code>
+ указывает Samba прослушивать только порт 445. Вы можете настроить Samba
+ на прослушивание любого порта, но в этом случае клиентам, которые хотят
+ подключиться к серверу, необходимо сообщить о том, что они должны 
+использовать нестандартный порт. </p><p>Если вы не знаете точно, какой порт прослушивает Samba, то это можно выяснить с помощью команды <code>netstat</code>. В листинге 2 приведен практический пример ее использования.</p><h5 id="list2">Листинг 2. Использование команды netstat для поиска портов, прослушиваемого SBM</h5><div class="codesection"><pre class="displaycode"># netstat -antp | grep smbd
+# netstat -antp | grep smb
+tcp   0  0 :::445                    :::*                       LISTEN      2830/smbd
+tcp   0  0 ::ffff:192.168.1.143:445  ::ffff:192.168.1.147:4724  ESTABLISHED 2877/smbd</pre></div><p>В листинге 2 продемонстрирован запуск команды <code>netstat</code>, вывод которой был отфильтрован командой <code>grep</code> для поиска строки <code>smb</code>. Использовались следующие параметры <code>netstat</code> : показать все (<code>-a</code>) соединения TCP (<code>-t</code>) в числовом (<code>-n</code>) формате вместе с именами процессов (<code>-p</code>). В результате мы получили две строки. Первая строка содержит слово <code>LISTEN</code>,
+ которое означает, что демон прослушивает порт в ожидании входящих 
+подключений. В нашем случае прослушивается порт 445. Вторая строка 
+содержит слово <code>ESTABLISHED</code>, которое означает, что с адреса 
+192.168.1.147 было установлено соединение с портом 445 локального хоста 
+(192.168.1.143). Таким образом, листинг 2 позволяет сделать вывод о том,
+ что <code>smbd</code> прослушивает только порт 445 и что в данный момент подключен один клиент. </p><h3 id="name_svcs">Службы имен</h3><p>В
+ NetBIOS включены службы имен, отвечающие за просмотр сетевого окружения
+ и разрешение имен. Например, путем отправки запроса службе имен, 
+работающей на UDP-порту 137, узлу SERVER1 будет сопоставлен его 
+IP-адрес. Для просмотра и выбора вспомогательных ролей, таких как 
+главный обозреватель, используется UDP-порт 138, известный также как <em>порт службы датаграмм.</em> Службы имен реализованы посредством демона <code>nmbd</code>.  </p><p>Важно
+ отметить, что вместо TCP-порта службы имен используют UDP-порт, 
+поскольку UDP-пакеты не устанавливают соединений и могут передаваться в 
+широковещательных запросах сразу всем узлам сети, а не каждому 
+отдельному узлу в одноадресной передаче. Поддержке широковещательных 
+запросов протоколом UDP позволяет упростить работу служб имен NetBIOS.</p><p>Третья версия Samba не содержит каких-либо параметров для управления номерами портов, прослушиваемых демоном <code>nmbd</code>, однако в четвертой версии Samba появились глобальные параметры <code>nbt port</code> и <code>dgram port</code>, которые управляют портами службы имен и службы датаграмм, соответственно. </p><p>Чтобы просмотреть список портов, открытых демоном <code>nmbd</code>, можно использовать команду, подобную команде из листинга 2:</p><h5 id="list3">Листинг 3. Просмотр списка портов, прослушиваемых nmbd</h5><div class="codesection"><pre class="displaycode"># netstat -anup | grep nmbd
+udp        0      0 192.168.1.255:137       0.0.0.0:*        2975/nmbd
+udp        0      0 192.168.1.143:137       0.0.0.0:*        2975/nmbd
+udp        0      0 0.0.0.0:137             0.0.0.0:*        2975/nmbd
+udp        0      0 192.168.1.255:138       0.0.0.0:*        2975/nmbd
+udp        0      0 192.168.1.143:138       0.0.0.0:*        2975/nmbd
+udp        0      0 0.0.0.0:138             0.0.0.0:*        2975/nmbd</pre></div><p>Помимо того, что вместо демона <code>smbd</code> был указан демон <code>nmbd</code>, команда из листинга 3 ищет не TCP-порты, а UDP-порты, для чего используется опция <code>-u</code> команды <code>netstat</code>. Результатом выполнения команды является список, показывающий, что <code>nmbd</code>
+ прослушивает порты 137 и 138 на различных сетевых интерфейсах, а также 
+на широковещательном адресе 192.168.1.255. Оба порта службы имен 
+используют для работы как прямые взаимодействия между узлами сети, так и
+ широковещательные взаимодействия.</p><h3 id="domain_svcs">Доменные службы</h3><p>Команда
+ разработчиков Samba постоянно усовершенствует свой программный продукт,
+ все более тесно интегрируя его с сетями Microsoft и реализуя функции, 
+которые позволили бы Samba полностью заменить инфраструктуру Microsoft. 
+Для этого Samba должна уметь имитировать соответствующие службы сетевой 
+инфраструктуры.</p><p>В большинстве этих служб так или иначе 
+задействованы протокол безопасности Kerberos и протокол LDAP 
+(Lightweight Directory Access Protocol). Эти протоколы будут более 
+подробно рассмотрены в следующих статьях, а сейчас достаточно просто 
+знать о том, что Samba может не просто предоставлять общий доступ к 
+файлам, а делать нечто большее.</p><h3 id="summary_ports">Итоговый список портов, используемых Samba</h3><p>В таблице 1 перечислены все порты, которые использует Samba для предоставления общего доступа к файлам. </p><h5 id="table1">Таблица 1. Итоговый список портов, используемых Samba</h5><table class="ibm-data-table" summary="Итоговый список портов, используемых Samba" width="100%" border="0" cellpadding="0" cellspacing="0"><thead xmlns:dw="http://www.ibm.com/developerWorks/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><tr><th>Порт</th><th>Протокол</th><th>Служба</th><th>Демон</th><th>Описание</th></tr></thead><tbody xmlns:dw="http://www.ibm.com/developerWorks/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><tr><td class="tb-row">137</td><td>UDP</td><td><code>netbios-ns</code></td><td><code>nmbd</code></td><td>Службы имен NetBIOS</td></tr><tr><td class="tb-row">138</td><td>UDP</td><td><code>netbios-dgm</code></td><td><code>nmbd</code></td><td>Службы датаграмм NetBIOS</td></tr><tr><td class="tb-row">139</td><td>TCP</td><td><code>netbios-ssn</code></td><td><code>smbd</code></td><td>NetBIOS over TCP (службы сеансов)</td></tr><tr><td class="tb-row">445</td><td>TCP</td><td><code>microsoft-ds</code></td><td><code>smbd</code></td><td>NetBIOS over TCP (службы сеансов)</td></tr></tbody></table><p>Названия в столбце <strong>Служба</strong> – это общеизвестные имена служб, перечисленные в файле <em>/etc/services.</em>
+ Файл services помогает людям и приложениям сопоставлять имена служб и 
+номера используемых ими портов. Несмотря на то, что многие службы 
+резервируют как TCP-, так и UDP-порты, приложениям не обязательно 
+использовать оба этих типа портов. Такое резервирование устраняет 
+возможные конфликты в тех ситуациях, когда две различные службы пытаются
+ использовать один и тот же номер порта для различных протоколов.</p><p>Нелишне
+ также отметить, что вовсе не обязательно использовать именно те номера 
+портов и имена служб, которые присутствуют в файле /etc/services. Если 
+вы можете сообщить об этом клиентам, то можно запускать демонов на 
+различных портах, отличных от портов по умолчанию. Например, можно 
+запускать Samba на портах 5137-5139 и 5445, если использующие ее клиенты
+ знают об этом и не будут использовать стандартные порты.</p><div class="ibm-alternate-rule"><hr></div><p class="ibm-ind-link ibm-back-to-top"><a href="#ibm-pcon" class="ibm-anchor-up-link">В начало</a></p><h2 id="tbx">Устранение неисправностей в работе Samba</h2><p>У
+ Samba есть свои проблемы. Иногда эти проблемы возникают в результате 
+вмешательства системного администратора, а иногда – в результате 
+действий пользователей. Задача системного администратора – выявить 
+первопричину  проблемы и найти ее решение.  </p><h3 id="test_config">Проверка конфигурационного файла</h3><p>Если Samba не запускается или вы просто хотите проверить правильность конфигурационного файла, то вам поможет утилита <code>testparm</code>.
+ Эта утилита проверяет корректность файла smb.conf. В листинге 4 показан
+ результат проверки файла, содержащего ошибку, с помощью <code>testparm</code>.</p><h5 id="list4">Листинг 4. Проверка файла smb.conf, содержащего ошибку, с помощью testparm</h5><div class="codesection"><pre class="displaycode"># testparm
+Load smb config files from /etc/samba/smb.conf
+Unknown parameter encountered: "hide dto files"
+Ignoring unknown parameter "hide dto files"
+Processing section "[homes]"
+Processing section "[printers]"
+Processing section "[public]"
+Loaded services file OK.
+Server role: ROLE_STANDALONE
+Press enter to see a dump of your service definitions
+
+[global]
+        workgroup = MYGROUP
+        server string = Samba Server Version %v
+        passdb backend = tdbsam
+        log file = /var/log/samba/log.%m
+        max log size = 50
+        cups options = raw
+
+&lt;&lt; rest of the output omitted &gt;&gt;</pre></div><p>Вывод <code>testparm</code>
+ начинается с указания местоположения файлов. Если вы хотите указать 
+другой файл, то передайте его имя в качестве параметра командной строки,
+ как показано в следующем примере: </p><div class="codesection"><pre class="displaycode">testparm /home/me/smb.conf</pre></div><p>Далее <code>testparm</code> сообщает о неверном параметре с именем <code>hide dto files</code>. На самом деле этот параметр должен называться <em>hide <strong>dot</strong> files.</em></p><p>После
+ обработки конфигурационного файла выводится информация о роли сервера и
+ краткая версия конфигурационного файла. В этой версии отсутствуют 
+комментарии, и она приведена к единому формату; иногда это позволяет 
+обнаружить ошибку, которую вы пропустили, просматривая файл smb.conf в 
+текстовом редакторе.</p><p>Следует запускать <code>testparm</code> после
+ каждого изменения конфигурационного файла. Samba игнорирует большинство
+ опечаток в конфигурационных файлах и при запуске не всегда выводит 
+сообщения об ошибках на консоль, поэтому есть риск не заметить ошибку до
+ тех пор, пока что-то не станет работать неправильно. Утилита <code>testparm</code> предупреждает о любых опечатках в файле smb.conf. </p><p>По умолчанию <code>testparm</code>
+ выводит только те параметры конфигурации, которые определены в файле 
+smb.conf. Если вы подозреваете, что в каком-то месте используются 
+значения по умолчанию, то опция <code>-v</code> указывает <code>testparm</code> выводить также значения по умолчанию. </p><p>С помощью <code>testparm</code> можно также выводить только определенный раздел или значение определенного параметра. В листинге 5 показано, как с помощью <code>testparm</code> посмотреть значение параметра <code>security mask</code>. </p><h5 id="list5">Листинг 5. Вывод значения отдельного параметра с помощью testparm</h5><div class="codesection"><pre class="displaycode"># testparm -s --parameter-name "security mask"
+Load smb config files from /etc/samba/smb.conf
+Processing section "[homes]"
+Processing section "[printers]"
+Processing section "[public]"
+Loaded services file OK.
+0777</pre></div><p>В листинге 5 параметр <code>-s</code> указывает <code>testparm</code> не ожидать пользовательского ввода в промежутке между анализом файла smb.conf и выводом его содержимого на экран. Конструкция <code>--parameter name "security mask"</code> запрашивает значение параметра <code>security mask</code>. Результатом является значение <code>0777</code>, которое является значением по умолчанию. В этом режиме необязательно указывать опцию <code>-v</code> для вывода значений по умолчанию. </p><h3 id="connect_client">Подключение в качестве клиента</h3><p>Вместо
+ того, чтобы запускать графическую оболочку пользователя и 
+самостоятельно пробовать выполнять все действия, можно проверить работу 
+Samba с помощью командной строки вашего компьютера. Первая и самая 
+простая проверка заключается в том, чтобы суметь подключиться к порту 
+Samba. Проще всего сделать это с помощью утилиты <code>telnet</code>, как показано в листинге 6.</p><h5 id="list6">Листинг 6. Проверка подключения с помощью утилиты telnet</h5><div class="codesection"><pre class="displaycode"># telnet bob 139
+Trying 192.168.1.134...
+telnet: connect to address 192.168.1.134: Connection refused</pre></div><p>В листинге 6 пользователь root подключается к порту 139 сервера <em>bob</em>. Для проверки прямого подключения SMB можно использовать порт 445. Результатом является сообщение <code>Connection refused</code>,
+ которое говорит о том, что либо демон не прослушивает указанный порт по
+ этому адресу, либо подключение блокируется брандмауэром. То же самое 
+могут означать и другие сообщения, например, <code>No route to host</code> или <code>Connection timed out</code>.  </p><p>Обычно клиенты подключаются к серверу по его имени, а не по IP-адресу. Если с помощью <code>telnet</code>
+ вы подключаетесь к серверу по имени, а не по IP-адресу, то обратите 
+особое внимание на возвращаемый IP-адрес. В вышеприведенном примере 
+серверу bob был сопоставлен IP-адрес 192.168.1.134. Иногда в DNS могут 
+содержаться ошибочные записи, в результате чего клиенты подключаются по 
+неверному адресу.</p><p>Если вы не используете DNS для разрешения Windows-имен, то можно использовать команду <code>nmblookup</code> для поиска имен NetBIOS. В листинге 7 показан запрос для сервера bob. </p><h5 id="list7">Листинг 7. Выполнение запроса NetBIOS-имени для сервера bob</h5><div class="codesection"><pre class="displaycode"># nmblookup bob
+querying bob on 192.168.1.255
+192.168.1.138 bob&lt;00&gt;</pre></div><p>Согласно листингу 7, сервер 
+bob имеет IP-адрес 192.168.1.138, а не 192.168.1.134, как было 
+определено в листинге 6. Этот результат указывает на проблему с DNS, 
+особенно если порты 139 и 445 отзываются по адресу 192.168.1.138. </p><p>Другая
+ проверка заключается в том, чтобы выяснить, не запрещен ли доступ к 
+определенному хосту в конфигурационном файле. Для этого мы снова 
+используем утилиту <code>testparm</code>, как показано в листинге 8.</p><h5 id="list8">Листинг 8. Проверка доступа с помощью testparm</h5><div class="codesection"><pre class="displaycode"># testparm /etc/samba/smb.conf  seanspc 192.168.1.147
+Load smb config files from /etc/samba/smb.conf
+Processing section "[homes]"
+Processing section "[printers]"
+Processing section "[public]"
+Loaded services file OK.
+Server role: ROLE_STANDALONE
+Deny connection from seanspc (192.168.1.147) to homes
+Deny connection from seanspc (192.168.1.147) to printers
+Deny connection from seanspc (192.168.1.147) to public</pre></div><div class="dw-sidebar ibm-inset"><h2 id="firewall">Брандмауэр или приложение?</h2><p>Существует
+ множество способов заблокировать подключение к компьютеру, однако все 
+их можно разделить на две категории: сеть и приложение. Заблокировав 
+доступ на сетевом уровне с помощью корпоративного или персонального 
+(например, iptables) брандмауэра, вы увидите, что подключение <code>telnet</code> из  <a href="#list6">листинга 6</a> отклоняется или разрывается по таймауту. Это происходит потому, что пакеты никогда не доходят до приложения Samba.</p><p>Если Samba настроена таким образом, чтобы не разрешать подключаться определенным компьютерам, вы увидите, что подключение <code>telnet</code>
+ успешно устанавливается, но любые попытки получить доступ с клиентского
+ компьютера завершаются ошибкой. В этом случае пакеты доходят до 
+приложения, но содержат подозрительный IP-адрес или имя хоста, поэтому 
+Samba посылает в ответ сообщение об ошибке на уровне приложения. Не 
+получив пакет на уровне приложения, Samba не сможет определить, пришел 
+ли этот пакет с IP-адреса, который включен в число разрешенных адресов.</p></div><p>В листинге 8 программе <code>testparm</code> передаются три аргумента:</p><ul class="ibm-bullet-list"><li>Путь к конфигурационному файлу Samba.</li><li>NetBIOS-имя проверяемого компьютера.</li><li>IP-адрес проверяемого компьютера.</li></ul><p>Из листинга 8 видно, что для указанного компьютера доступ ко всем общим ресурсам запрещен. В этом режиме <code>testparm</code>
+ не выполняет фактического подключения к компьютеру, а вместо этого 
+обращается к конфигурационному файлу и проверяет, разрешен ли этому 
+компьютеру доступ или нет.</p><p>Если к этому моменту все проверки были выполнены успешно, можно попытаться установить клиентское подключение с помощью утилиты <code>smbclient</code>. Прежде всего, нужно попытаться просмотреть список общих ресурсов, как показано в листинге 9. </p><h5 id="list9">Листинг 9. Просмотр общих ресурсов компьютера</h5><div class="codesection"><pre class="displaycode">[sean@bob source3]$ smbclient -L '\\bob'
+Enter sean's password:
+Anonymous login successful
+Domain=[MYGROUP] OS=[Unix] Server=[Samba 3.5.6-69.fc13]
+
+        Sharename       Type      Comment
+        ---------       ----      -------
+        extdrive        Disk
+        Sean Walberg's iMac Disk
+        timemachine     Disk
+        IPC$            IPC       IPC Service (Samba Server Version 3.5.6-69.fc13)
+        test            Printer   test
+        Downstairs_Laser Printer   HP 6L
+        Cups-PDF        Printer   Cups-PDF
+Anonymous login successful
+Domain=[MYGROUP] OS=[Unix] Server=[Samba 3.5.6-69.fc13]
+
+        Server               Comment
+        ---------            -------
+        BOB                  Samba Server Version 3.5.6-69.fc13
+
+        Workgroup            Master
+        ---------            -------
+        MYGROUP              BOB
+        WORK                 SWALBERG-XPLT
+        WORKGROUP            IMAC-1FC525</pre></div><p>В листинге 9 с помощью параметра <code>-L</code> пользователь запрашивает список общих ресурсов сервера с именем <em>bob</em>. Поскольку имя сервера – это UNC-путь, то перед ним ставятся две обратных косых черты (<code>\\</code>).
+ Будьте внимательны и не перепутайте одиночные кавычки с двойными. Две 
+обратные косые черты, заключенные в одиночные кавычки, интерпретируются 
+как символы escape-последовательности.</p><p>Если на сервере настроен 
+более высокий уровень безопасности, то может потребоваться передать имя 
+пользователя или домена с помощью параметров <code>-W</code> и <code>-U</code> соответственно. </p><p>Наконец, можно попытаться подключиться к общему ресурсу, не используя параметр <code>-L</code>,
+ а указав полный UNC-путь к общему ресурсу. В листинге 10 показано 
+клиентское подключение к серверу с использованием другой рабочей группы и
+ имени пользователя.</p><h5 id="list10">Листинг 10. Подключение к общему ресурсу с использованием другого имени пользователя и домена
+	</h5><div class="codesection"><pre class="displaycode">[sean@bob source3]$ smbclient '\\swalberg-xplt\photos' -U swalberg -W WORK
+Enter swalberg's password:
+Domain=[WORK] OS=[Windows 5.1] Server=[Windows 2000 LAN Manager]
+smb: \&gt; dir
+  .                                   D        0  Thu Jan  6 11:39:50 2011
+  ..                                  D        0  Thu Jan  6 11:39:50 2011
+&lt;&lt; files omitted &gt;&gt;
+                38156 blocks of size 4194304. 2938 blocks available
+smb: \&gt;&gt;</pre></div><p>Если все эти проверки успешно выполнены, то
+ можно быть точно уверенными в том, что проблема заключается не в 
+конфигурации Samba, а возникает где-то между клиентом и сервером или же 
+на самом клиенте. В следующем разделе мы проанализируем файлы журналов, 
+которые могут подсказать, где именно следует искать проблему. </p><div class="ibm-alternate-rule"><hr></div><p class="ibm-ind-link ibm-back-to-top"><a href="#ibm-pcon" class="ibm-anchor-up-link">В начало</a></p><h2 id="logging">Журналирование и отладка</h2><p>Журналирование
+ и устранение неисправностей идут рука об руку. Журналы позволяют 
+видеть, не возникали ли какие-либо ошибки в работе Samba, и получать 
+дополнительную информацию о них. Если вы пытаетесь выяснить, почему 
+что-то не работает, то можно настроить более подробный уровень 
+журналирования, позволяющий определить источник проблемы. В файле 
+smb.conf имеется ряд полезных параметров для управления журналированием,
+ которые можно использовать для создания журналов определенных типов. </p><p>Работа
+ Samba не отличается от работы обычного демона UNIX в том плане, что она
+ может записывать события для определенной категории <code>syslog</code>,
+ а также создавать собственные файлы журналов. Более того, можно 
+извлекать журналы с сервера Samba с помощью инструмента Microsoft Event 
+Viewer (MMC-оснастка "Просмотр событий"). В последнем случае существует 
+небольшая проблема, которая заключается в том, что Samba не может 
+записывать события в формате журнала регистрации событий Windows, 
+поэтому журналы Samba нуждаются в предварительной обработке. </p><h3 id="log_levels">Уровни журналирования</h3><p>Каждое генерируемое Samba сообщение имеет <em>уровень</em>
+ от 0 до 10. Наиболее важные сообщения (например, сообщения о новых 
+подключениях и важные сообщения об ошибках) имеют более низкие уровни. 
+Отладочные сообщения имеют более высокие уровни. Т. е. чем выше уровень 
+журналирования, тем подробнее будет журнал. Можно управлять количеством 
+журналируемых сообщений, задавая их максимальный уровень. На уровне 
+журналирования 1 в журнал попадают только сообщения с приоритетами 0 и 
+1. Если вам требуется более подробное журналирование, указывайте более 
+высокие уровни.</p><p>Все сообщения уровня 4 и выше предназначены для 
+разработчиков и не особо полезны для системных администраторов. Уровень 
+журналирования 0 отключает запись всех сообщений за исключением 
+некоторых сообщений запуска и сообщений о критических ошибках.</p><p>Для настройки уровня журналирования используйте параметр <code>log level</code> в разделе <code>global</code>; например, параметр <code>log level = 2</code> устанавливает уровень журналирования 2, на котором будут записываться все события с приоритетом равным или меньшим 2.</p><div class="dw-sidebar ibm-inset"><h2 id="exam_note">Примечание к экзамену</h2><p>В рамках экзамена LPIC упоминается, что очень важно знать о параметре <code>debuglevel</code>. <code>debuglevel</code> – это синоним <em>уровня журналирования,</em> и оба этих параметра взаимозаменяемы. </p></div><p>Можно изменить уровень журналирования во время выполнения, послав процессу Samba сигнал <code>SIGUSR1</code> для повышения уровня или сигнал <code>SIGUSR2</code> для его понижения.</p><p>Можно
+ еще больше конкретизировать уровни журналирования, увеличивая 
+подробность сообщений, касающихся только определенных функций. Для этого
+ нужно указать, события какого класса необходимо записывать в журнал. 
+Имеются следующие классы:</p><ul class="ibm-bullet-list"><li><strong><code>all</code>.</strong> Необязательный параметр, используется, если не указано никакое другое ключевое слово. </li><li><strong><code>tdb</code>.</strong> Запись событий, 	относящихся к базам данных TDB – хранилищам типа "ключ-значение", которые использует Samba. </li><li><strong><code>printdrivers</code>.</strong> Функции управления драйверами принтеров. </li><li><strong><code>lanman</code>.</strong> Отладка протокола NTLM (NT LAN Manager).  </li><li><strong><code>smb</code>.</strong> Отладка протокола SMB. </li><li><strong><code>rpc_parse</code>.</strong> Анализ вызовов удаленных процедур (RPCs).  </li><li><strong><code>rpc_srv</code>.</strong> Вызовы удаленных процедур на стороне сервера.  </li><li><strong><code>rpc_cli</code>.</strong> Вызовы удаленных процедур на стороне клиента. </li><li><strong><code>passdb</code>.</strong> Старый способ хранения паролей на сервере Samba.  </li><li><strong><code>sam</code>.</strong> Локальная база данных паролей Samba. </li><li><strong><code>auth</code>.</strong> Различные внутренние модули авторизации пользователей Samba. </li><li><strong><code>winbind</code>.</strong> Компонент, предназначенный для прозрачного подключения пользователей Microsoft к UNIX-системам. </li><li><strong><code>vfs</code>.</strong>
+ Сообщения отладки модулей виртуальной файловой системы Virtual File 
+System, позволяющих расширять функциональность Samba с помощью 
+подключаемых модулей. </li><li><strong><code>idmap</code>.</strong> Сопоставление сущностей, имеющих идентификаторы пользователей UNIX и идентификаторы безопасности Microsoft.  </li><li><strong><code>quota</code>.</strong> Сообщения, относящиеся к обработке квот как политиками Microsoft Windows NT, так и политиками файловой системы UNIX.  </li><li><strong><code>acls</code>.</strong>  Обработка списков контроля доступа.  </li><li><strong><code>locking</code>.</strong> Статус и ошибки блокировки файлов.  </li><li><strong><code>msdfs</code>.</strong> Сообщения, относящиеся к поддержке Samba распределенной файловой системы.  </li><li><strong><code>dmapi</code>.</strong>
+ Функциональность API-интерфейса управления данными. Для использование 
+этой функциональности Samba должна быть скомпилирована с поддержкой 
+сторонней реализации DMAPI. </li><li><strong><code>registry</code>.</strong> Эмуляция системного реестра Windows. </li></ul><p>Для
+ использования этого дополнительного журналирования добавьте ключевое 
+слово и значение к параметру уровня журналирования, разделенные 
+двоеточием (<code>:</code>). Например, <code>log level = 1 winbind:3</code>
+ устанавливает системный уровень журналирования по умолчанию 1 и 
+увеличивает уровень журналирования событий winbind до 3. Это позволяет 
+отслеживать проблемы, не путаясь в большом количестве ненужных 
+log-файлов.  </p><h3 id="file_location">Расположение log-файлов</h3><p>Чтобы изменить имя log-файла, используйте параметр <code>log file</code>.
+ Значение этого параметра может содержать макросы. Часто используется 
+подход, в котором для каждого клиента создается отдельный log-файл. Это 
+можно сделать следующим способом: </p><div class="codesection"><pre class="displaycode">log file = /var/log/samba/log.%m</pre></div><p>Эта команда создает отдельный log-файл для каждого клиента, а остальные сообщения продолжают сохраняться в файле log.smbd. </p><p>Если необходимо отправлять события в <code>syslog</code>, то можно задать параметр <code>syslog = 1</code> для отправки всех сообщений уровня 1 или 0 на локальный syslog-сервер. Samba использует категорию (facility) <code>LOG_DAEMON</code> и сопоставляет уровни журналирования Samba с приоритетами <code>syslog</code> следующим образом: </p><ul class="ibm-bullet-list"><li><strong><code>LOG_ERR</code>.</strong> Уровень журналирования 0.</li><li><strong><code>LOG_WARNING</code>.</strong> Уровень журналирования 1.</li><li><strong><code>LOG_NOTICE</code>.</strong> Уровень журналирования 2.</li><li><strong><code>LOG_INFO</code>.</strong> Уровень журналирования 3.</li><li><strong><code>LOG_DEBUG</code>.</strong> Уровни журналирования от 4 и выше.</li></ul><p>Если вы используете более продвинутый демон <code>syslog</code>,
+ который может отфильтровывать входящие сообщения и посылать уведомления
+ системному администратору, то это прекрасный способ отслеживать 
+работоспособность сервера Samba. </p><h3 id="metadata">Метаданные журналов</h3><p>Можно
+ добавлять или удалять определенную информацию, отображаемую во всех 
+log-файлах, с помощью дополнительных глобальных параметров:</p><ul class="ibm-bullet-list"><li><strong><code>debug timestamp</code>.</strong> Добавляет отметку времени к сообщению в журнале; этот параметр включен по умолчанию.</li><li><strong><code>debug uid</code>.</strong> Записывает идентификаторы пользователя и группы, с которыми был запущен процесс Samba, сгенерировавший событие.</li><li><strong><code>debug prefix timestamp</code>.</strong> Оставляет отметки времени, но удаляет информацию о месте в исходном коде Samba, которое сгенерировало событие. </li><li><strong><code>debug pid</code>.</strong> Записывает идентификатор процесса Samba, сгенерировавшего событие.</li><li><strong><code>debug hires timestamp</code>.</strong> Записывает метки времени с точностью до миллисекунд, а не секунд.  </li><li><strong><code>debug class</code>.</strong>
+ Записывает класс сообщения, который помогает в тех случаях, когда 
+необходимо повысить подробность событий определенного класса (эта опция 
+позволяет вам определить, какой класс вам нужен). </li></ul><p>Журналирование
+ может помочь обнаружить проблему, а может высыпать на вас тонны 
+ненужного мусора. У Samba имеется множество различных параметров 
+журналирования – используйте их с умом.</p><div class="ibm-alternate-rule"><hr></div><p class="ibm-ind-link ibm-back-to-top"><a href="#ibm-pcon" class="ibm-anchor-up-link">В начало</a></p><h2 id="sys_call">Трассировка системных вызовов</h2><p>Если
+ ничего так и не помогло решить проблему, то можно использовать 
+системные инструменты UNIX, чтобы взглянуть, что происходит внутри 
+процесса. Linux-приложение <code>strace</code> позволяет выполнять 
+трассировку всех системных вызовов, которые генерирует приложение. 
+Программы используют системные вызовы для открытия и чтения файлов, 
+создания и уничтожения процессов, а также для взаимодействия с 
+остальными компонентами операционной системы.</p><p>В листинге 11 показано, как пользователь root выполняет трассировку процесса Samba, посылающего ошибку клиенту.</p><h5 id="list11">Листинг 11. Трассировка процесса с помощью strace</h5><div class="codesection"><pre class="displaycode"># ps -ef | grep smb
+sean     13375 28812  0 21:54 ?        00:00:00 smbd -D
+root     14294 13593  0 21:55 pts/2    00:00:00 grep smb
+root     16132 28812  0 Feb27 ?        00:00:36 smbd -D
+root     28812     1  0 Feb14 ?        00:00:28 smbd -D
+root     28814 28812  0 Feb14 ?        00:00:00 smbd -D
+[root@bob /]# strace -e trace=file -p 13375
+Process 13375 attached - interrupt to quit
+&lt;&lt; Output omitted &gt;&gt;
+chdir("/home/sean")                     = 0
+stat64("somedir", {st_mode=S_IFDIR|0700, st_size=4096, ...}) = 0
+stat64("somedir/*", 0xbfcb5f60)         = -1 EACCES (Permission denied)
+getcwd("/home/sean", 4096)              = 11
+lstat64("/home/sean/somedir", {st_mode=S_IFDIR|0700, st_size=4096, ...}) = 0
+lstat64("/home/sean/somedir/*", 0xbfcb5ffc) = -1 EACCES (Permission denied)</pre></div><p>Первая
+ команда выводит список всех процессов Samba. Поскольку Samba 
+присваивает идентификатор подключенного пользователя, легко понять, что 
+процесс 13375 принадлежит пользователю. Далее запускается команда <code>strace</code> с двумя параметрами. Первый параметр, <code>-e trace=file</code>,
+ ограничивает вывод только системными вызовами, выполняющими действия с 
+файлами. Для решения определенных типов проблем, с которыми вы можете 
+столкнуться, неплохо начать именно с этого. Второй параметр, <code>-p 13375</code>, указывает команде <code>strace</code> подключиться к запущенному процессу с указанным идентификатором.</p><p>Если посмотреть на вывод этой команды, то видно, что <code>smb</code>
+ постоянно проверяет директории предмет изменения. Если пользователь 
+пытается выполнить действие, приводящее к ошибке, то можно увидеть нечто
+ похожее на содержимое <a href="#list11">листинга 11</a>. Последние несколько команд пытаются получить информацию о файле, находящемся в директории, с помощью вызова <code>stat64</code>. В результате выдается сообщение <code>permission denied</code>,
+ которое означает, что доступ пользователю был запрещен на системном 
+уровне, а не сервером Samba. Эта команда может предоставить 
+дополнительную информацию для решения проблемы, например, информацию об 
+изменении атрибутов директории или о том, что пользователю запрещен 
+доступ в директорию.</p><div class="ibm-alternate-rule"><hr></div><p class="ibm-ind-link ibm-back-to-top"><a href="#ibm-pcon" class="ibm-anchor-up-link">В начало</a></p><h2 id="N10475">Что дальше</h2><p>Эта
+ статья завершает тему конфигурирования Samba. Следующая статья этой 
+серии содержит материалы цели 312.2 темы 312. В ней будет рассказано, 
+как создавать и настраивать общие ресурсы, и получать доступ к ним с 
+других компьютеров.</p><!--CMA ID: 811567--><!--Site ID: 40--><!--XSLT stylesheet used to transform this file:
+        dw-document-html-7.0.xsl-->
+
+
+</div>
+</div>
+<!-- 1_1_COLUMN_END -->
+
+<!-- SPLIT_COLUMNS_BEGIN -->
+<div class="ibm-columns">
+
+<!-- 6_4_COLUMN_BEGIN -->
+<div class="ibm-col-6-4">
+
+<h2 id="resources" class="ibm-rule">Ресурсы</h2><h3 class="dw-resources-category-heading">Научиться</h3><ul class="ibm-bullet-list"><li> 
+Оригинал статьи: <a href="http://www.ibm.com/developerworks/linux/library/l-lpic3-312-1/?S_TACT=105AGX99&amp;S_CMP=CP"> Learn Linux, 302 (Mixed environments): Configure Samba</a> (EN).
+</li><li> 
+На Web-сайте <a href="http://www.lpi.org/eng/certification/the_lpic_program"> программы сертификации LPIC</a>
+ (EN) вы найдете подробные цели, списки задач и примерные вопросы всех 
+трех уровней сертификации на администратора Linux-систем 
+профессионального института Linux. В частности, на этом сайте 
+представлены <a href="http://www.lpi.org/eng/certification/the_lpic_program/lpic_3/exam_302_detailed_objectives"> подробные цели экзамена LPI 302</a> (EN), а также <a href="http://www.lpi.org/eng/certification/the_lpic_program/lpic_3/exam_302_tasks_and_sample_questions"> примеры заданий и вопросов</a> (EN).
+</li><li> 
+Просмотрите всю <a href="http://www.ibm.com/developerworks/ru/linux/lpi/index.html"> серию статей для подготовки к экзаменам института LPI</a>
+ (EN) на сайте developerWorks, основанных на предыдущих целях, 
+определенных до апреля 2009 года, чтобы изучить основы администрирования
+ Linux и подготовиться к экзаменам для получения сертификата 
+администратора Linux.
+</li><li> 
+Чтобы получить ссылки на все статьи этой серии, которые помогут вам 
+подготовиться к успешной сдаче экзамена LPI-302, обратитесь к нашему <a href="http://www.ibm.com/developerworks/linux/library/l-lpic3-map/index.html?S_TACT=105AGX99&amp;S_CMP=CP"> перечню материалов для подготовки к экзаменам LPIC-3</a>. 
+</li><li>
+               В статье <a href="http://www.ibm.com/developerworks/aix/library/au-perftun.html?S_TACT=105AGX99&amp;S_CMP=CP">Quantify performance changes using application tracing</a> (EN) (developerWorks, июль 2006 г.) объясняется, как использовать утилиты <code>truss</code> и <code>strace</code> для отслеживания системных вызовов.</li><li><a href="http://moiristo.wordpress.com/2009/08/10/samba-logging-user-activity/">Журналирование действий пользователей</a>  (EN) можно выполнять на уровне виртуальной файловой системы Samba.  </li><li> Онлайновая  <a href="http://www.samba.org/samba/docs/man/manpages-3/smb.conf.5.html">man-страница smb.conf</a> (EN) более удобна в использовании, чем текстовая версия.</li><li> 
+В <a href="http://www.ibm.com/developerworks/ru/linux/"> разделе Linux сайта developerWorks</a> можно найти сотни <a href="http://www.ibm.com/developerworks/ru/views/linux/libraryview.jsp"> пошаговых инструкций и руководств</a>,
+ загрузить программные продукты, а также получить ссылки на форумы и 
+многие другие ресурсы, ориентированные на разработчиков и 
+администраторов Linux. 
+</li></ul><h3 class="dw-resources-category-heading">Получить продукты и технологии</h3><ul class="ibm-bullet-list"><li><a href="http://wiki.samba.org/index.php/Using_Git_for_Samba_Development">Репозиторий Samba Git repository</a> (EN) поможет вам выяснить текущее состояние Samba.</li><li> Загрузите <a href="http://samba.org/samba/download/">последнюю версию Samba</a> (EN), чтобы использовать все ее новые возможности.</li></ul><h3 class="dw-resources-category-heading">Обсудить</h3><ul class="ibm-bullet-list"><li> 
+Следите за блогом <a href="http://twitter.com/developerworks"> developerWorks в Твиттере</a> или подпишитесь на <a href="http://search.twitter.com/search?q=%23linux+from%3Adeveloperworks+-RT+"> твиты Linux на сайте developerWorks</a> (EN).
+</li></ul>
+
+<!-- INLINE_COMMENTS_BEGIN -->
+<h2 id="icomments" class="ibm-alternate-rule ibm-no-print">Комментарии</h2>
+    
+<div class="ibm-no-print" id="dw-icomments-container">	
+	<div id="threadShow"><img style="display: none;" id="imgPlHdr" src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/animated-progress-38x38c.gif" alt=""><div id="cmtTog" style=""><div class="ibm-container ibm-alternate-two dw-commentbox dw-noborder"><div class="ibm-container-body dw-commentbox dw-noborder"><p id="signInSect"> <a onclick="var e=arguments[0] || window.event; dwsi.siInst &amp;&amp; dwsi.siInst.showSignIn(); if (e.stopPropagation){ e.stopPropagation();} else { e.cancelBubble = true; } e.preventDefault &amp;&amp; e.preventDefault(); return false;" href="#">Войти</a> or <a href="http://www.ibm.com/developerworks/dwwi/DWAuthRouter?m=register&amp;lang=ru_RU&amp;d=http%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Fru%2Flibrary%2Fl-lpic3-312-1%2F%23icomments">зарегистрироваться</a>  чтобы оставить комментарий.</p><p id="cmtHead"><label for="newCmt"><strong>Добавить комментарий:</strong></label></p><p>Внимание: HTML элементы не поддерживаются в комментариях.</p><div id="infoCmt"></div><form focus="name" enctype="multipart/form-data" method="post" action="" name="form" class="ibm-column-form ibm-styled-form"><p class="6-4-textarea"><textarea rows="5" name="newCmt" id="newCmt" class="dw-inoperable" disabled="disabled"></textarea><br></p><span class="ibm-input-group"><input value="1" name="comment_notification" id="comment_notification" disabled="disabled" type="checkbox"><label id="notifyText" class="ibm-form-note dw-btn-cancel-sec" for="comment_notification">Дайте мне знать, когдапоявятся новые комментарии</label></span><span class="ibm-form-note dw-btn-cancel-sec notifySection" id="maxCharsCount">осталось <span id="charCount">1000</span> символов</span><p class="ibm-buttons-row"><input value="Отправить " name="postCmt" id="postCmt" class="ibm-btn-sec ibm-btn-small ibm-disabled" disabled="disabled" type="button"></p></form></div></div><div class="ibm-alternate-rule"><hr></div><div id="topControl" class="ibm-container ibm-alternate-two dw-comment-totals" style="display: none;"><div class="ibm-container-body"><form id="selectComments" method="get" action=""><p>&nbsp;<span class="dw-comment-totals-label"><strong>Всего комментариев (<span id="numCmts">0</span>)</strong></span><span class="dw-how-many-comments-label" style="display:none" id="dropdownCmts"><label for="howManyComments"><strong>Отобразить:</strong></label>&nbsp;<select name="comments" id="howManyComments" class="dw-how-many-comments"><option selected="selected" value="recent">Последние комментарии   </option></select><input class="ibm-btn-go" name="ibm-go" value="Go" src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/short-btn.gif" alt="Go" type="image"><br></span></p></form></div></div><div id="cmtSect"><div class="comment"><div class="dw-icomment-container"><table class="dw-icomment-body" width="100%" cellpadding="0" cellspacing="0"><tbody><tr><td><p>Нет комментариев</p></td></tr></tbody></table></div></div></div></div><div id="bottomControl" class="ibm-container ibm-alternate-two dw-comment-totals" style="display:none"><div class="ibm-container-body"><form id="selectComments2" method="get" action=""><p>&nbsp;<span class="dw-comment-totals-label"><strong>Всего комментариев (<span id="numCmts2">0</span>)</strong></span><span class="dw-how-many-comments-label" style="display:none" id="dropdownCmts2"><label for="howManyComments2"><strong>Отобразить:</strong></label>&nbsp;<select name="comments" id="howManyComments2" class="dw-how-many-comments"><option selected="selected" value="recent">Последние комментарии   </option></select><input class="ibm-btn-go" name="ibm-go" value="Go" src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/short-btn.gif" alt="Go" type="image"><br></span></p></form></div></div></div>
+</div>
+<!-- Sign in OVERLAY STARTS HERE -->
+    
+<!-- Sign in OVERLAY STARTS HERE -->
+<div class="ibm-common-overlay" id="signin_overlay">
+<div class="ibm-head">
+<p><a class="ibm-common-overlay-close" href="#" onclick="dwsi.siInst.clearForm();">Закрыть [x]</a></p>
+</div>
+<div class="ibm-body">
+<div class="ibm-main">
+
+ <div class="ibm-title">
+<h2>developerWorks: Войти</h2>
+<div id="ibm-overlay-error-signin" class="no-display"></div>
+</div>
+<div class="ibm-container ibm-alternate ibm-buttons-last">
+<div class="ibm-container-body">
+<p class="ibm-overlay-intro">Обязательные поля отмечены звездочкой (<span class="ibm-required">*</span>).</p> 
+<form class="ibm-column-form" id="sFormId" action="" method="post" name="sForm" onsubmit="return false;">
+<p><label for="ibmid">IBM ID:<span class="ibm-required">*</span></label><span><input name="ibm-id" id="ibmid" size="25" class="required" onkeypress="dwsi.siInst.handleEP(event,this.form);" type="text">
+    <br><a onclick="window.location='/developerworks/dwwi/DWAuthRouter?m=reg&amp;lang=ru_RU&amp;d='+encodeURIComponent(location.protocol + '//' + location.hostname + location.pathname + '#icomments'); return false;" href="#" class="ibm-forward-link">Нужен IBM ID?</a> <br><a class="ibm-forward-link" href="http://www.ibm.com/developerworks/dwwi/jsp/WSHelp.jsp?lang=ru_RU">Забыли Ваш IBM ID?</a>   
+</span>
+</p> 
+<p><label for="password">Пароль:<span class="ibm-required">*</span></label><span>
+    <input name="password" id="password" size="25" value="" class="required" onkeypress="dwsi.siInst.handleEP(event,this.form);" type="password">
+    <br><a class="ibm-forward-link" href="#" onclick="(function ()
+        {window.location='https://www.ibm.com/account/profile?page=forgot&amp;lang=ru_RU&amp;appname=ibm&amp;required=null&amp;d='+encodeURIComponent(dwsi.siInst.getAuthUrl())+'%3Fm%3Dloginpage%26lang%3Dru_RU%26d%3D'+encodeURIComponent(location.href);})();">Забыли
+        Ваш пароль?</a>
+    <br><a class="ibm-forward-link" href="#" onclick="(function ()
+        {window.location='https://www.ibm.com/account/profile?page=chpw&amp;lang=ru_RU&amp;appname=ibm&amp;required=null&amp;d='+encodeURIComponent(location.href);})();">Изменить пароль</a></span></p> 
+<p class="dw-perm-box">
+	<span><input id="perm" name="perm_name" type="checkbox"><label for="perm"> Запомнить меня.</label></span>
+</p>
+<p>Нажимая <strong>Отправить</strong>, Вы принимаете <a href="http://www.ibm.com/developerworks/community/terms?lang=ru">Условия использования</a> developerWorks.</p>
+<div class="ibm-buttons-row">
+   <p><input class="ibm-btn-arrow-pri" name="ibm-submit" value="Отправить" onclick="dwsi.siInst.signin();return false;" type="submit"><span class="ibm-sep">&nbsp;</span>
+<input value="Отмена" name="ibm-cancel" class="ibm-btn-cancel-sec" onclick="dwsi.siInst.clearForm();ibmweb.overlay.hide('signin_overlay');return false;" type="button"></p>
+</div>
+</form>
+ <div class="ibm-overlay-rule"><hr></div> 
+
+<p>Профиль создается, когда вы первый раз заходите в developerWorks.  <strong>Информация
+ в вашем профиле (имя, страна / регион,  название компании) отображается
+ для всех пользователей и будет сопровождать любой опубликованный вами 
+контент пока вы специально не укажите скрыть название вашей компании</strong>.  Вы можете обновить ваш IBM аккаунт в любое время.</p>    
+<div><p class="dw-c-overlay-secure">Вся введенная информация защищена.</p></div>
+</div>
+</div>
+</div>
+</div>
+<div class="ibm-footer"></div>
+</div>
+<!-- Display name OVERLAY STARTS HERE -->
+<div class="ibm-common-overlay" id="displayname_overlay">
+<div class="ibm-head">
+<p><a class="ibm-common-overlay-close" href="#" onclick="dwsi.siInst.clearForm();">Закрыть [x]</a></p>
+</div>
+<div class="ibm-body">
+<div class="ibm-main">
+<div class="ibm-title">
+<h2>Выберите имя, которое будет отображаться на экране</h2><br><br>
+<div id="ibm-overlay-error-dname" class="no-display"></div>
+</div>
+<div class="ibm-container ibm-alternate ibm-buttons-last">
+<div class="ibm-container-body">
+<p class="ibm-overlay-intro">При первом входе в developerWorks для Вас 
+будет создан профиль и Вам нужно будет выбрать Отображаемое имя. Оно 
+будет выводиться рядом с контентом, опубликованным Вами в 
+developerWorks.</p><p><strong>Отображаемое имя должно иметь длину от 3 символов до 31 символа</strong>.
+  Ваше Имя в системе должно быть уникальным. В качестве имени по 
+соображениям приватности нельзя использовать контактный e-mail.
+    </p>
+<p class="ibm-overlay-intro">Обязательные поля отмечены звездочкой (<span class="ibm-required">*</span>).</p> 
+<form id="dFormId" method="post" action="" name="dForm" onsubmit="return false;" class="ibm-column-form">
+<p><label for="displayname">Отображаемое имя:<span class="ibm-required">*</span></label><span>
+    <input name="displayname" id="displayname" size="25" onkeypress="dwsi.siInst.handleEP(event,this.form);" type="text"></span>
+    <span class="ibm-form-note">(Отображаемое имя должно иметь длину от 3 символов до 31 символа.)</span>
+</p>
+<p>Нажимая <strong>Отправить</strong>, Вы принимаете <a href="http://www.ibm.com/developerworks/community/terms?lang=ru">Условия использования</a> developerWorks.</p>
+<div class="ibm-buttons-row">
+   <p><input class="ibm-btn-arrow-pri" name="ibm-submit" value="Отправить" onclick="dwsi.siInst.signin();return false;" type="submit"><span class="ibm-sep">&nbsp;</span>
+<input value="Отмена" name="ibm-cancel" class="ibm-btn-cancel-sec" onclick="dwsi.siInst.clearForm();ibmweb.overlay.hide('displayname_overlay');return false;" type="button"></p>
+</div>
+</form>
+<div class="ibm-overlay-rule"><hr></div>
+<div><p class="dw-c-overlay-secure">Вся введенная информация защищена.</p></div>
+</div>
+</div>
+</div>
+</div>
+<div class="ibm-footer"></div>
+</div>
+
+
+<!-- INLINE_COMMENTS_END -->
+
+</div>
+<!-- 6_4_COLUMN_END -->
+
+<!-- 6_2_COLUMN_BEGIN -->
+<div class="ibm-col-6-2">
+
+<!-- Next_Steps -->
+<!-- Dig_Deeper -->
+
+
+<!-- Promotion_Module -->
+    
+<!-- PROMOTION_MODULE_START -->
+<div class="ibm-alternate-rule"><hr></div>
+<ul class="ibm-portrait-module-list">
+<li><a role="presentation" tabindex="-1" class="" href="http://www.ibm.com/developerworks/ru/library/articles/"><img src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/index_auth_60.jpg" alt="" height="60" width="60"></a>
+<h3><a class="ibm-feature-link" href="http://www.ibm.com/developerworks/ru/library/articles/">Авторы и их статьи</a></h3>
+<p>Статьи на русском языке специалистов в сфере ИТ технологий, сотрудничающих с IBM developerWorks.</p></li>
+<li><a role="presentation" tabindex="-1" class="" href="http://www.ibm.com/developerworks/ru/cloud/"><img src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/index_cloud_60.jpg" alt="" height="60" width="60"></a>
+<h3><a class="ibm-feature-link" href="http://www.ibm.com/developerworks/ru/cloud/">Облачные вычисления</a></h3>
+<p>Статьи, руководства, обзоры для ИТ специалистов.</p></li>
+<li><a role="presentation" tabindex="-1" class="" href="http://www.ibm.com/developerworks/ru/doc/"><img src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/index_ads_lib_60.jpg" alt="" height="60" width="60"></a>
+<h3><a class="ibm-feature-link" href="http://www.ibm.com/developerworks/ru/doc/">Библиотека документов</a></h3>
+<p>Более трех тысяч статей, обзоров, руководств и других полезных материалов.</p></li>
+</ul>
+<!-- PROMOTION_MODULE_END -->
+
+</div>
+<!-- 6_2_COLUMN_END -->
+
+</div>
+<!-- SPLIT_COLUMNS_END -->
+
+<!-- BOTTOM_BACK_TO_TOP -->
+<div class="ibm-columns">
+<div class="ibm-col-1-1">
+	<div class="ibm-alternate-rule"><hr></div><p class="ibm-ind-link ibm-back-to-top"><a href="#ibm-pcon" class="ibm-anchor-up-link">В начало</a></p>
+</div>
+</div>
+
+<!-- Rating_Meta_BEGIN -->
+<!--Rating_Meta_BEGIN--><div class="metavalue">static.content.url=http://www.ibm.com/developerworks/js/artrating/</div><div class="metavalue">SITE_ID=40</div><div class="metavalue">Zone=Linux</div><div class="metavalue">ArticleID=811567</div><div class="metavalue">ArticleTitle=Изучаем Linux, 302 (смешанные среды): Kонфигурация Samba</div><div class="metavalue">publish-date=05242012</div><script language="javascript" type="text/javascript">document.write('<div class="metavalue">url='+location.href.replace(/</g,  '%3C')+'</div>');</script><div class="metavalue">url=http://www.ibm.com/developerworks/ru/library/l-lpic3-312-1/</div><!--Rating_Meta_END-->
+<!-- Rating_Meta_END -->
+
+</div>
+<!-- END_IBM_CONTENT_MAIN -->
+
+</div>
+<!-- END_IBM_CONTENT_BODY -->
+
+</div>
+<!-- END_IBM_CONTENT -->
+
+</div></div>
+<!-- LEADSPACE_END -->
+
+
+<!-- END_IBM_PCON -->
+<!-- FOOTER_BEGIN -->
+<!-- FOOTER_BEGIN -->
+<div aria-label="Нижний колонтитул" id="ibm-footer"><!-- IBM footer container; disabled --></div>
+
+<div id="ibm-footer-module-dwwrapper" role="contentinfo" aria-label="developerWorks Footer">
+
+<div id="ibm-footer-module-dw">
+	<div class="dw-footer-columns">
+		<div class="dw-footer-col-5-1">
+			<ul>
+			<li><a href="https://www.ibm.com/developerworks/secure/feedback.jsp?domain=dwrussia">Помощь</a></li>
+			<li><a href="http://www.ibm.com/developerworks/ru/rss/">Ленты</a></li>
+			<li><a href="https://www.ibm.com/developerworks/community/report?lang=ru">Сообщить о нарушениях</a></li>
+			</ul>
+		</div>
+		<div class="dw-footer-col-5-2">
+			<ul>			
+			<li><a href="https://www.ibm.com/developerworks/community/terms?lang=ru">Условия использования</a></li>
+			<li class="dw-footer-newline"><a href="https://www.ibm.com/developerworks/ru/community/terms/thirdparty/">Уведомить сторонние ресурсы</a></li>
+			<li><a href="http://www.ibm.com/privacy/ru/ru/">Конфиденциальность</a></li>
+			</ul>
+		</div>
+		<div class="dw-footer-col-5-3">
+			<ul>
+			<li><a href="http://www.ibm.com/accessibility/us/en/">Доступность (Английский)</a></li>
+			<li><a href="http://www.ibm.com/ru/software/info/students/">Портал для студентов</a></li>			
+			</ul>
+		</div>
+		<div class="dw-footer-col-5-4">
+			<ul>
+				<li><a href="http://www.ibm.com/ru/partners/">Бизнес-партнеры IBM</a></li>
+				<li><a href="http://www.ibm.com/developerworks/ru/newsletter/">Новости developerWorks</a></li>	
+			</ul>
+		</div>
+		<div class="dw-footer-col-5-5">
+			<img alt="IBM®" src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/dwn-ibm-logo-v17.png" height="46" width="223">
+			<img class="dw-preload" src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/ibm_sprite_social_blue_ON.png" alt="" height="1" width="1">
+		</div>
+	</div>
+	<!-- Language selector no-script -->
+	<noscript>
+	<div id="dw-footer-selectlang">
+		<h2><a name="SELECTLANG">Выбрать язык:</a></h2>
+		<ul>
+			<li><a href="http://www.ibm.com/developerworks/" lang="en">English</a></li>
+			<li><a href="http://www.ibm.com/developerworks/cn/" lang="zh">中文</a></li>
+			<li><a href="http://www.ibm.com/developerworks/jp/" lang="ja">日本語</a></li>
+			<li><a href="http://www.ibm.com/developerworks/ru/" >Русский</a></li>
+			<li><a href="http://www.ibm.com/developerworks/br/" lang="pt">Português (Brasil)</a></li>
+			<li><a href="http://www.ibm.com/developerworks/ssa/" lang="es">Español</a></li>
+			<li><a href="http://www.ibm.com/developerworks/vn/" lang="vi">Việt</a></li>
+		</ul>
+	</div>
+	</noscript>
+</div>
+
+</div><!-- FOOTER_END --><!-- FOOTER_END -->
+
+<!-- END_IBM-TOP -->
+</div>
+
+<!-- SCRIPTS_INCLUDE_BEGIN -->
+<script type="text/javascript" src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/dw-comments.js">//</script>
+<script type="text/javascript" language="JavaScript">
+		dojo.ready(function(){
+		rBHash = null;
+		rBHash = new Object();
+		rBHash['viperLang'] = 'ru';
+		rBHash['urlLang'] = 'ru';
+		
+		dwsi.siInst = new dwweb.dynnav.dwsi();
+		dwsi.siInst.initSI();		
+
+		// construct the comment widget
+dwc.cmts = 'комментарии';
+dwc.signInPreText = '';
+dwc.signIn = 'Войти';
+dwc.or = 'or';
+dwc.register = 'зарегистрироваться';
+dwc.signInPostText = '';
+dwc.leaveCmt = 'чтобы оставить комментарий.';
+dwc.view = 'Посмотреть';
+dwc.totalCmts = 'Всего комментариев';
+dwc.postYourCmt = 'Отправить ваш комментарий';
+dwc.show = 'Отобразить:';
+dwc.recentCmts = 'Последние комментарии';
+dwc.allCmts = 'Все комментарии';
+dwc.tooLongCmt = 'Количество знаков в вашем комментарии превысило 1000.';
+dwc.numCharsLeft = 'осталось <span id="charCount">{1}</span> символов';
+dwc.reportAbuse = 'Сообщение о нарушениях';
+dwc.notifyMsg = 'Дайте мне знать, когдапоявятся новые комментарии';
+dwc.htmlWarning = 'Внимание: HTML элементы не поддерживаются в комментариях.'; 
+dwc.addCmts = 'Добавить комментарии';
+dwc.addCmt = 'Добавить комментарий';
+dwc.doNotErase = '-- Добавьте любой комментарий ниже --'; 
+dwc.viewOrAddCmts = 'Посмотреть или добавить комментарии';
+dwc.reportInapprCont = 'Сообщить о некорректном содержании';
+dwc.reportInapprContLink = 'http://www.ibm.com/developerworks/forums/forum.jspa?forumID=1835';
+dwc.postingCmt = 'Комментарий отправляется';
+dwc.noCmt = 'Нет комментариев';
+dwc.netwkErr = 'Возникла проблема при загрузке комментариев. Пожалуйста, обновите страничку позже.';
+dwc.addACmt = 'Добавить комментарий';
+dwc.instructCmt = 'Для завершения данной транзакции вы обязательно должны заполнить поля, отмеченные звездочкой (<span class="ibm-required">*</span>).';
+dwc.cmt = 'Комментарий:';
+dwc.btnPost = 'Отправить ';
+dwc.btnPostAnon = 'Отправить анонимно';
+dwc.btnClrCmt = 'Стереть';
+dwc.btnCancel = 'Отменить';
+dwc.showRecent = 'Показать следующие {1} '; // {1} is the count to be substituted
+dwc.showNext = 'Показать следующие {1} '; // {1} is the count to be substituted
+dwc.showAllCmts = 'Показать все комментарии';
+dwc.enterCmt = 'Пожалуйста, введите комментарий';
+dwc.loginErr = 'Статус вашей авторизации не может быть установлен в данный момент. Пожалуйста, повторите попытку позже.';
+dwc.postErr = 'В настоящее время ваше сообщение не может быть опубликовано. Пожалуйста, попробуйте позже.';
+dwc.postBy = 'Выложено (Размещено) <strong>{1}</strong> {2}'; // {1} is the author to be substituted; {2} is the date
+dwc.siteId = 40;
+dwc.lang = 'ru_RU';
+dwc.viperLang = 'ru';
+//dwc.abuseHref =  null;
+dwc.maxChars =  1000;
+dwc.cmtTxt =  'Комментарий:';
+dwc.cmtsTxt =  'Комментарии:';  
+		dwc && new dwc.comments('threadShow','95%',5,'nCmts','icomments');
+		});
+</script>
+
+
+
+<!-- BEGIN: Use this section to set page specific variables for the Unica Page Tag -->
+<script language="JavaScript">var NTPT_PGEXTRA="ibmSkillLevel=5&ibmCmaId=811567&ibmContentAreas=linux";</script>
+<!--END --><!-- SCRIPTS_INCLUDE_END -->
+
+<div id="ibm-metrics">
+<script src="Linux%20K%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20Samba_files/stats.js" type="text/javascript">//</script>
+</div>
+
+
+
+</body></html>
