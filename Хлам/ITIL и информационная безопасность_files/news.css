@@ -1,0 +1,35 @@
+p.article-date {font-style: italic;}
+p.article-author {font-style: italic; font-weight: bold;}
+p.article-source {font-style: italic; text-align: right;}
+
+li.index-maindocs a.index-title {font-size: 9pt; font-weight: bold;}
+div.index-maindocs-author {font-size: 8pt; font-style: italic;}
+
+div.section-header {border: 1px solid #008080; background: #F4F9F3; padding: 3px; font-family: Arial, sans-serif; font-size: 14pt}
+.section-header-title {font-weight: bold}
+.section-header-sponsors {text-align: right; font-size: 10pt; font-weight: bold}
+
+div.page-section-header {font-family: Arial, sans-serif; font-size: 12pt; font-weight: bold; background: cornflowerblue; border: 1px solid navy; padding: 3px; margin-top: 8px;}
+table.tabs-top {border-spacing: 0}
+table.tabs-top td {border: 1px solid #008080; padding-left: 20px; padding-right: 20px; padding-top: 3px; padding-bottom: 3px; white-space: nowrap}
+table.tabs-top td.tab-space {border: none; border-bottom: 1px solid #008080;}
+table.tabs-top td#active-tab {border-bottom: none}
+table.tabs-top td a {text-decoration: none}
+table.tabs-bottom {border-spacing: 0}
+table.tabs-bottom td {border: 1px solid #008080; padding-left: 5px; padding-right: 5px; padding-top: 0; padding-bottom: 0; white-space: nowrap}
+table.tabs-bottom td.tab-space {border: none; border-top: 1px solid #008080;}
+table.tabs-bottom td#active-tab {border: 1px solid #008080; border-top: none}
+table.tabs-bottom td a {text-decoration: none}
+div.index-page-refs {margin-top: 10px;}
+
+ul.column {list-style:inside; padding:0; margin: 0;}
+ul.index {margin: 0; padding: 0; list-style: none; font-family: Arial, sans-serif; }
+li.index-date {font-weight: bold; padding-top: 10px}
+ul.index li {padding-top: 5px; padding-bottom: 5px}
+a.index-title {font-size: 10pt;}
+div.index-author {font-size: 8pt; font-style: italic;}
+div.index-annotation {font-size: 8pt}
+li.index-highlight a.index-title {font-weight: bold;}
+
+table.nav-top {border: 1px solid navy}
+table.nav-top td {padding-left: 5px; padding-right: 5px; padding-top: 0; text-align: center; font-size: 8pt; font-weight: bold}

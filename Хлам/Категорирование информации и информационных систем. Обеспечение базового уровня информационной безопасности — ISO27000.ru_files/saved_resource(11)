@@ -1,0 +1,1865 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv=Content-Type content="text/html;charset=UTF-8">
+	
+		
+			<meta http-equiv="x-dns-prefetch-control" content="on">
+        <link rel="dns-prefetch" href="https://buyoncdn.ru/">
+	    <title>Байон.ру интернет-магазин | Смартфоны, планшеты, ноутбуки, видеорегистраторы</title>
+    <link rel="shortcut icon" href="/themes/buyon/assets/icons/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/themes/buyon/assets/icons/favicon.ico" type="image/x-icon" />
+	<link rel="search" type="application/opensearchdescription+xml" title="Buyon.ru" href="/assets/global/globals_v1/xml/opensearch.xml" />
+                <meta name="description" content="Мобильные телефоны, аксессуары, планшеты, фотоаппараты, mp3 плееры. Низкие цены и подарки на Buyon.ru">
+        	<!--meta http-equiv="X-UA-Compatible" content="IE=edge"-->
+	<meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <meta name='wmail-verification' content='fb64889dcfc59ab9' />
+    <meta name="msvalidate.01" content="DCC81079B74C01D5821ACBFCE4EBC77B" />
+	
+			<meta property="og:description" content="Мобильные телефоны, аксессуары, планшеты, фотоаппараты, mp3 плееры. Низкие цены и подарки на Buyon.ru" />
+		<meta property="og:image" content="https://buyoncdn.ru/themes/buyon/assets/icons/buyon-logo.png" />
+	
+            <meta name="theme-color" content="#ffae00">
+        <link rel="apple-touch-icon" href="/themes/buyon/assets/icons/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/themes/buyon/assets/icons/touch-icon-ipad.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/themes/buyon/assets/icons/touch-icon-iphone-retina.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/themes/buyon/assets/icons/touch-icon-ipad-retina.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/themes/buyon/assets/icons/touch-icon-180x180.png">
+        <link rel="manifest" href="/themes/buyon/assets/icons/manifest.json">
+    	
+	     
+	<!-- Static -->
+		<link type="text/css" href="https://buyoncdn.ru/themes/buyon/assets/frontend_v1/css/style.css?version=w22ogvsm" rel="stylesheet" data-type="2" />
+<!--[if lte IE 9]>
+<link type="text/css" href="https://buyoncdn.ru/themes/buyon/assets/frontend_v1/css/ie.css?version=w22ogvsm" rel="stylesheet" data-type="2" />
+<![endif]-->
+<!--[if lt IE 9]>
+<link type="text/css" href="https://buyoncdn.ru/assets/frontend_v1/css/ie8.css?version=w22ogvsm" rel="stylesheet" data-type="2" />
+<![endif]-->
+<!--[if lt IE 8]>
+<link type="text/css" href="https://buyoncdn.ru/assets/frontend_v1/css/ie7.css?version=w22ogvsm" rel="stylesheet" data-type="2" />
+<![endif]-->
+
+	<!-- Application runtime JSON -->
+	<script type="text/javascript">var json_vars = [];</script>
+	</head>
+<body class=" bn-mainpage">
+	<!-- Google Tag Manager (Analytics,Adwords etc.) -->
+	
+		<script>
+			var dataLayer = [];
+		</script>		
+		
+		<!-- Google Tag Manager -->
+		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MQG7WZ"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-MQG7WZ');</script>
+		<!-- End Google Tag Manager -->
+					<div id="vk_api_transport"></div>
+	<div id="fb-root"></div><!-- stretching_top баннеры -->
+<header id="header" class="mainheader bn-clearfix"  >
+    <div class="bn-searchlogin">
+        <div class="bn-search clearfix row" id="searchtabsContainer">
+            <div class="mainheader__inner">
+                <div class="mainheader-left">
+                    <div class="mainheader__logo span2">
+                        <a href="/" class="mainheader__logo-link ajaxise"></a>
+						
+						<div class="city-popup city-popup--active" style="display:none;">
+                            <div class="city-popup__question">
+                                Вы в <span class="city-popup__city">г. Орёл</span>?
+                            </div>
+                            <div class="city-popup__buttons">
+                                <a class="btn-round yes" href="#">Да</a> <a class="btn-round" href="#">Нет</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bn-search-container"><form class="search__form" action="/search/">
+    <input type="text" placeholder="Искать" value="" name="search" class="search__inputbox ui-autocomplete-input ui-autocomplete-searchtabs z9999" id="search" spellcheck="false">
+    <i title="Очистить" class="search__icon bn-tabs-btn bn-tabs-clear" style="display: none;">d</i>
+    <i title="Искать" class="search__icon bn-tabs-btn bn-tabs-go" style="display: none;">a</i>
+    <button class="search__btn" type="submit">
+        <i class="search__icon">a</i>
+    </button>
+</form></div>
+                </div>
+
+                <div class="mainheader-right bn-valign">
+                    <ul class="mainheader-right__blocks bn-valign-middle">
+                        <li class="mainheader-right__item mainheader__phone">
+                            <a href="tel:88002507700" rel="nofollow" class="bn-phnumber noAjax">
+                                8 800 250 77 00                                <span class="bn-phnumber__info">бесплатно по РФ</span>
+                            </a>
+                        </li>
+                                                <li class="mainheader-right__item bn-miniwishlist">
+                            <a class="bn-miniwishlist__link" title="Открыть список желаний" href="#"></a>
+                        </li>
+
+                        <li class="header-widget__item bn-minicompare">
+                            <a class="bn-minicompare__link bn-miniwidget" title="Сравнить товары" href="#"></a>
+                        </li>
+
+                        <li class="mainheader-right__item bn-minicart hide1280 bn-minicart--empty">
+                            <a class="bn-minicart__link " href="/cart" title="Перейти в корзину"></a>
+                        </li>
+
+                        <li class="mainheader-right__item bn-myorders hide1280 hidden">
+                            <a class="bn-myorders__link " href="/account_orders_buy" title="Перейти к моим покупкам"></a>
+                        </li>
+
+                        <li class="mainheader-right__item  mainheader__search-btn">
+                            <a href="#" class="bn-search-btn"><i class="search-icon"></i></a>
+                        </li>
+                        <li class="mainheader-right__item  mainheader__search-close">
+                            <a href="#" class="search-close-btn"><i class="close-icon"></i></a>
+                        </li>
+
+                        <li class="mainheader-right__item mainheader__login">
+                                                            <div class="minilogin_wrap minilogin_notauth">
+                                    <div id="minilogin_block" class="bn-minilogin">
+	<a class="bn-minilogin__login-btn  btn-miniloginOpenLoginPopup  bn-miniwidget" href="/login" tabindex="6" title="Войти или зарегистрироваться"><strong>Войти</strong><span> или зарегистрироваться</span></a>
+</div>                                </div>
+                            
+                                                    </li>
+                    </ul>
+                </div>
+                <a class="menu-toggle" href="#"><i class="menu-toggle__icon"></i></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<div class="container"  >
+    <div class="maincontent">
+        <div id="searchwindow"><div style="display: block;" class="contentRendered">
+    <div class="bn-serp" style="display: block; z-index: 10;">
+        <ul id="breadcrumb" class="breadcrumb bn-breadcrumb bn-shot-bc bn-clearfix view-toggle">
+            <li class="breadcrumb__item breadcrumb__item--main bn-main" itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display: none;">
+                <a class="breadcrumb__link breadcrumb__link--main noAjax mainL" href="https://buyon.ru/" itemprop="url">
+                    <span class="breadcrumb__text bn-Link" itemprop="title">Весь сайт</span>
+                </a>
+                <div class="bn-sub-block firstBlockNav">
+                    <div class="bn-sub-block-in">
+                        <ul>
+                            <li class="bn-home"><a href="/" class="ajaxise"><span>Главная страница</span></a></li>
+    
+                                    <li><a href="/catalog-smartfony/" class="ajaxise" data-id="3252"><span>Смартфоны</span></a></li>
+    
+                                    <li><a href="/catalog-planshety/" class="ajaxise" data-id="3071"><span>Планшеты</span></a></li>
+    
+                                    <li><a href="/catalog-bytovaya-tehnika/" class="ajaxise" data-id="192"><span>Бытовая техника</span></a></li>
+    
+                                    <li><a href="/catalog-televizory-i-video/" class="ajaxise" data-id="3200"><span>Телевизоры и видео</span></a></li>
+    
+                                    <li><a href="/catalog-aksessuary-elektroniki/" class="ajaxise" data-id="1279"><span>Аксессуары</span></a></li>
+    
+                                    <li><a href="/catalog-kompyuternye-komplektuyuschie/" class="ajaxise" data-id="3171"><span>Компьютерные комплектующие</span></a></li>
+    
+                                    <li><a href="/catalog-kompyuternye-komponenty/" class="ajaxise" data-id="1328"><span>Для компьютера</span></a></li>
+    
+                                    <li><a href="/catalog-noutbuki/" class="ajaxise" data-id="3068"><span>Ноутбуки</span></a></li>
+    
+                                    <li><a href="/catalog-mobilnye-telefony/" class="ajaxise" data-id="2606"><span>Мобильные телефоны</span></a></li>
+    
+                                    <li><a href="/catalog-orgtehnika/" class="ajaxise" data-id="3211"><span>Оргтехника</span></a></li>
+    
+                                    <li><a href="/catalog-monobloki/" class="ajaxise" data-id="1326"><span>Моноблоки</span></a></li>
+    
+                                    <li><a href="/catalog-avto/" class="ajaxise" data-id="260"><span>Для авто</span></a></li>
+    
+                                    <li><a href="/catalog-razvlecheniya/" class="ajaxise" data-id="231"><span>Игры и приставки</span></a></li>
+    
+                                    <li><a href="/catalog-foto-i-video-kamery/" class="ajaxise" data-id="343"><span>Фото и видео</span></a></li>
+    
+                                    <li><a href="/catalog-elektronnye-knigi/" class="ajaxise" data-id="3074"><span>Электронные книги</span></a></li>
+    
+                                    <li><a href="/catalog-neobychnye-gadzhety/" class="ajaxise" data-id="3146"><span>Необычные гаджеты</span></a></li>
+    
+                                    <li><a href="/catalog-telefoniya/" class="ajaxise" data-id="3194"><span>Телефония</span></a></li>
+    
+                                    <li><a href="/catalog-tovary-dlya-stroitelstva-i-remonta/" class="ajaxise" data-id="3230"><span>Для строительства и ремонта</span></a></li>
+    
+                                    <li><a href="/catalog-podarochnye-sertifikaty/" class="ajaxise" data-id="3248"><span>Подарочные сертификаты</span></a></li>
+    
+                            <li class="bn-home"><a href="/offers/" class="ajaxise"><span>Акции</span></a></li>
+                            <li class="bn-home"><a href="/pages/" class="ajaxise"><span>Статьи</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+    
+                <li class="view-toggle__item"><a class="view-toggle__link" data-type="showcase" href="#">Витрина</a></li>
+                <li class="view-toggle__item active"><a class="view-toggle__link" data-type="catalogue" href="#">Каталог</a></li>
+    
+    
+        </ul>
+    </div>
+
+    <div class="bn-active">
+            <div data-type="showcase" class="main-showcase bn-view row" style="display:none;">
+                    <section class="showcase-box span4 span--vert span--h2">
+                        <a class="showcase-box__link showcase-box--light" href="https://buyon.ru/catalog-/microsoft-lumia-950-xl/#63437" style="background:#0179d8;"><div class="showcase-box__overlay"><div class="showcase-box__title">Lumia 950 XL</div><div class="showcase-box__subtitle">Работает как компьютер</div></div><div class="showcase-box__bottom"><div class="showcase-box__price" style="background:#15a0e4;">39990<span class="bn-ruble">&thinsp;р.</span> </div><div class="showcase-box-arrow"></div></div><img alt="" src="/upload/images/staticpages/Lumia-950-XL.png" /></a>
+                    </section>
+                    <section class="showcase-box span4 span--alone">
+                        <a class="showcase-box__link showcase-box--light showcase-box--green" href="/catalog-razvlecheniya/xbox/xbox-one-500gb/#11474"><div class="showcase-box__overlay"><div class="showcase-box__title">Оторвемся?:)</div><div class="showcase-box__subtitle">Xbox One</div></div><div class="showcase-box__bottom"><div class="showcase-box-arrow"></div></div><img alt="" src="/upload/images/staticpages/xbox-one-lrg2.png" /></a> 
+                    </section>
+                    <section class="showcase-box span4 span--vert span--h2">
+                        <a class="showcase-box__link showcase-box--light showcase-box--pink1" href="/catalog-/micromax-sliver-5-q450/"><div class="showcase-box__overlay"><div class="showcase-box__title">Самый тонкий</div><div class="showcase-box__subtitle">Micromax Sliver 5</div></div><div class="showcase-box__bottom"><div class="showcase-box__price" style="background:#fb9179;">16190<span class="bn-ruble">&thinsp;р.</span> </div><div class="showcase-box-arrow"></div></div><img alt="" src="/upload/images/staticpages/q450new.png" /></a>
+                    </section>
+                    <section class="showcase-box span4 span--alone">
+                        <a class="showcase-box__link showcase-box--dark showcase-box--gradient" href="https://buyon.ru/catalog-bytovaya-tehnika/tehnika-dlya-kuhni/elektrochayniki/" style="background:#dde8ef;"><div class="showcase-box__overlay"><div class="showcase-box__title">Чайники</div></div><div class="showcase-box__bottom"><div class="showcase-box-arrow"></div></div><img alt="" src="/upload/images/staticpages/kettle3.png" /></a>
+                    </section>
+                    <section class="showcase-box span4 span--alone">
+                        <a class="showcase-box__link showcase-box--dark" href="https://buyon.ru/catalog-foto-i-video-kamery/tsifrovye-fotoapparaty/" style="background:#dde5ed;"><div class="showcase-box__overlay"><div class="showcase-box__title">Фотоаппараты</div></div><div class="showcase-box__bottom"><div class="showcase-box-arrow"></div></div><img alt="" src="/upload/images/staticpages/photo.png" /></a>
+                    </section>
+                    <section class="showcase-box span4 span--alone">
+                        <a class="showcase-box__link showcase-box--light showcase-box--purple" href="/catalog-noutbuki/"><div class="showcase-box__overlay"><div class="showcase-box__title">Ноутбуки</div></div><div class="showcase-box__bottom"><div class="showcase-box-arrow"></div></div><img alt="" src="/upload/images/staticpages/notebook.png" /></a> 
+                    </section>
+                    <section class="showcase-box span4 span--alone">
+                        <a class="showcase-box__link showcase-box--light showcase-box--yellow" href="https://buyon.ru/catalog-/smartband-swr110/#2449"><div class="showcase-box__overlay"><div class="showcase-box__title">Рекомендуем</div><div class="showcase-box__subtitle">Спортивные браслеты<br />Sony SmartBand 2 </div></div><div class="showcase-box__bottom"><div class="showcase-box__price" style="background:#e5a623;">от 3250<span class="bn-ruble">&thinsp;р.</span></div><div class="showcase-box-arrow"></div></div><img alt="Спортивные браслеты Sony SmartBand 2" src="/upload/images/staticpages/recomendation.png" /></a>
+                    </section>
+                    <section class="showcase-box span4 span--alone">
+                        <a class="showcase-box__link showcase-box--light showcase-box--pink2" href="/catalog-planshety/"><div class="showcase-box__overlay"><div class="showcase-box__title">Планшеты</div></div><div class="showcase-box__bottom"><div class="showcase-box__price" style="background:#ea5ac8;">от 2 700<span class="bn-ruble">&thinsp;р.</span></div><div class="showcase-box-arrow"></div></div><img alt="" src="/upload/images/staticpages/ipad.png" /></a>
+                    </section>
+                    <section class="showcase-box span4 span--alone">
+                        <a class="showcase-box__link showcase-box--light " href="/pages/b2b-022"><div class="showcase-box__overlay"><div class="showcase-box__title">Компаниям</div><div class="showcase-box__subtitle">Специальные предложения</div></div><div class="showcase-box__bottom"><div class="showcase-box-arrow"></div></div><img alt="" src="/upload/images/staticpages/b2b.jpg" /></a> 
+                    </section>
+                    <section class="showcase-box span4 span--alone">
+                        <a class="showcase-box__link showcase-box--light " href="/offers/"><div class="showcase-box__overlay"><div class="showcase-box__title">Акции</div></div><div class="showcase-box__bottom"><div class="showcase-box-arrow"></div></div><img alt="" src="/upload/images/staticpages/%D0%B0%D0%BA%D1%86%D0%B8%D0%B8.jpg" /></a> 
+                    </section>
+            </div>
+
+        <div data-type="catalogue" class="bn-view bn-mini category-wrap clearfix">
+                        <section class="category">
+                            <div class="category__in">
+                                <h2 class="category__title">
+                                    <a class="category__link" href="/catalog-smartfony/?r=0">Смартфоны</a>
+                                </h2>
+                        
+                                <div class="category-products">
+                                    <ul class="product-list category-products-row">
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="21418"
+                                                 data-category-id="3252"
+                                                 data-product-name="Microsoft Lumia 640 Dual Sim"
+                                                 data-product-price="9840"
+                                                 data-hascompetitors="true"
+                                            data-product-img="https://buyoncdn.ru/product/2698007425/product_little/1068999/microsoft-lumia-640-dual-sim-chernyy-8gb-2-sim-3g.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/2134911923/product_medium/1068999/microsoft-lumia-640-dual-sim-chernyy-8gb-2-sim-3g.jpg">
+                        
+                                            <a class="product-cell__link" href="/763774/microsoft-lumia-640-dual-sim-chernyy-8gb-2-sim-3g/">
+                                                <img class="product-cell__img"
+                                                     width="260"
+                                                     height="260"
+                                                     title="Microsoft Lumia 640 Dual Sim"
+                                                     alt="Microsoft Lumia 640 Dual Sim"
+                                                     src="https://buyoncdn.ru/product/2354309126/product_260/1068999/microsoft-lumia-640-dual-sim-chernyy-8gb-2-sim-3g.jpg"
+                                                     srcset="https://buyoncdn.ru/product/3328010308/product_510/1068999/microsoft-lumia-640-dual-sim-chernyy-8gb-2-sim-3g.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price">
+                                                        9840<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Microsoft Lumia 640 Dual Sim</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="84408"
+                                                 data-category-id="3252"
+                                                 data-product-name="Micromax E451"
+                                                 data-product-price="13590"
+                                                 
+                                            data-product-img="https://buyoncdn.ru/product/289713466/product_little/1330019/micromax-e451-seryy.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/3470054664/product_medium/1330019/micromax-e451-seryy.jpg">
+                        
+                                            <a class="product-cell__link" href="/1117462/micromax-e451-seryy/">
+                                                <img class="product-cell__img"
+                                                     width="260"
+                                                     height="260"
+                                                     title="Micromax E451"
+                                                     alt="Micromax E451"
+                                                     src="https://buyoncdn.ru/product/2417163179/product_260/1330019/micromax-e451-seryy.jpg"
+                                                     srcset="https://buyoncdn.ru/product/3659299817/product_510/1330019/micromax-e451-seryy.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price">
+                                                        13&thinsp;590<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Micromax E451</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>                        <section class="category">
+                            <div class="category__in">
+                                <h2 class="category__title">
+                                    <a class="category__link" href="/catalog-planshety/?r=0">Планшеты</a>
+                                </h2>
+                        
+                                <div class="category-products">
+                                    <ul class="product-list category-products-row">
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="79629"
+                                                 data-category-id="3071"
+                                                 data-product-name="KREZ TM802B16 3G"
+                                                 data-product-price="6770"
+                                                 data-hascompetitors="true"
+                                            data-product-img="https://buyoncdn.ru/product/3062462908/product_little/1319742/krez-tm802b16-3g.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/1763246478/product_medium/1319742/krez-tm802b16-3g.jpg">
+                        
+                                            <a class="product-cell__link" href="/812071/krez-tm802b16-3g/">
+                                                <img class="product-cell__img"
+                                                     width="260"
+                                                     height="260"
+                                                     title="KREZ TM802B16 3G"
+                                                     alt="KREZ TM802B16 3G"
+                                                     src="https://buyoncdn.ru/product/1493695606/product_260/1319742/krez-tm802b16-3g.jpg"
+                                                     srcset="https://buyoncdn.ru/product/319388724/product_510/1319742/krez-tm802b16-3g.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price">
+                                                        6770<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">KREZ TM802B16 3G</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="75884"
+                                                 data-category-id="3071"
+                                                 data-product-name="Digma Optima 10.7 Темно-синий"
+                                                 data-product-price="4580"
+                                                 data-hascompetitors="true"
+                                            data-product-img="https://buyoncdn.ru/product/3016788356/product_little/1304386/digma-optima-107-temno-siniy-temno-siniy-wi-fi-8gb.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/1816195510/product_medium/1304386/digma-optima-107-temno-siniy-temno-siniy-wi-fi-8gb.jpg">
+                        
+                                            <a class="product-cell__link" href="/1113720/digma-optima-107-temno-siniy-temno-siniy-wi-fi-8gb/">
+                                                <img class="product-cell__img"
+                                                     width="260"
+                                                     height="260"
+                                                     title="Digma Optima 10.7 Темно-синий"
+                                                     alt="Digma Optima 10.7 Темно-синий"
+                                                     src="https://buyoncdn.ru/product/1317785450/product_260/1304386/digma-optima-107-temno-siniy-temno-siniy-wi-fi-8gb.jpg"
+                                                     srcset="https://buyoncdn.ru/product/75845416/product_510/1304386/digma-optima-107-temno-siniy-temno-siniy-wi-fi-8gb.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price bn-price--w-last">
+                                                    <span class="bn-last-price">4770<span class="bn-ruble inline">&thinsp;р.</span></span>
+                                                        4580<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Digma Optima 10.7 Темно-синий</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>                        <section class="category category--micr bn-micr">
+                            <div class="category__in">
+                                <h2 class="category__title">
+                                    <a class="category__link" href="/catalog-bytovaya-tehnika/?r=0">Бытовая техника</a>
+                                </h2>
+                                    <ul class="bn-micr__subcategory subcategory-list">
+                        
+                                            <li><a href="/catalog-bytovaya-tehnika/tehnika-dlya-kuhni/?r=0">Техника для кухни</a></li>
+                                            <li><a href="/catalog-bytovaya-tehnika/tehnika-dlya-doma/?r=0">Техника для дома</a></li>
+                                            <li><a href="/catalog-bytovaya-tehnika/tehnika-dlya-krasoty-i-zdorovya/?r=0">Техника для красоты и здоровья</a></li>
+                                            <li><a href="/catalog-bytovaya-tehnika/vstraivaemaya-tehnika/?r=0">Встраиваемая техника</a></li>
+                                            <li><a class="bn-readmore-btn" href="/catalog-bytovaya-tehnika/?r=0"><span>Все подкатегории</span></a></li>
+                                    </ul>
+                                <div class="category-products">
+                                    <ul class="product-list category-products-row">
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="43500"
+                                                 data-category-id="1373"
+                                                 data-product-name="Squesito Delicato"
+                                                 data-product-price="960"
+                                                 
+                                            data-product-img="https://buyoncdn.ru/product/1353315779/product_little/866151/squesito-delicato--.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/2402913777/product_medium/866151/squesito-delicato--.jpg">
+                        
+                                            <a class="product-cell__link" href="/762024/squesito-delicato--/">
+                                                <img class="product-cell__img product-cell__img--small"
+                                                     title="Squesito Delicato"
+                                                     alt="Squesito Delicato"
+                                                     src="https://buyoncdn.ru/product/2834734336/product_260/866151/squesito-delicato--.jpg"
+                                                     srcset="https://buyoncdn.ru/product/3807911234/product_510/866151/squesito-delicato--.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price">
+                                                        960<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Squesito Delicato</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="88478"
+                                                 data-category-id="194"
+                                                 data-product-name="Pozis RS-416"
+                                                 data-product-price="18920"
+                                                 data-hascompetitors="true"
+                                            data-product-img="https://buyoncdn.ru/product/3764655194/product_little/1331387/pozis-rs-416-grafit-240l.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/1072983144/product_medium/1331387/pozis-rs-416-grafit-240l.jpg">
+                        
+                                            <a class="product-cell__link" href="/1125081/pozis-rs-416-grafit-240l/">
+                                                <img class="product-cell__img product-cell__img--small"
+                                                     title="Pozis RS-416"
+                                                     alt="Pozis RS-416"
+                                                     src="https://buyoncdn.ru/product/1644958327/product_260/1331387/pozis-rs-416-grafit-240l.jpg"
+                                                     srcset="https://buyoncdn.ru/product/671257141/product_510/1331387/pozis-rs-416-grafit-240l.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price bn-price--w-last">
+                                                    <span class="bn-last-price">20&thinsp;730<span class="bn-ruble inline">&thinsp;р.</span></span>
+                                                        18&thinsp;920<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Pozis RS-416</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>                        <section class="category category--micr bn-micr">
+                            <div class="category__in">
+                                <h2 class="category__title">
+                                    <a class="category__link" href="/catalog-televizory-i-video/?r=0">Телевизоры и видео</a>
+                                </h2>
+                                    <ul class="bn-micr__subcategory subcategory-list">
+                        
+                                            <li><a href="/catalog-televizory-i-video/televizory/?r=0">Телевизоры</a></li>
+                                            <li><a href="/catalog-televizory-i-video/kronshteyny/?r=0">Кронштейны для ТВ</a></li>
+                                            <li><a href="/catalog-televizory-i-video/dvd-pleery/?r=0">DVD и Blu-ray плееры</a></li>
+                                            <li><a href="/catalog-televizory-i-video/proektory/?r=0">Проекторы</a></li>
+                                            <li><a class="bn-readmore-btn" href="/catalog-televizory-i-video/?r=0"><span>Все подкатегории</span></a></li>
+                                    </ul>
+                                <div class="category-products">
+                                    <ul class="product-list category-products-row">
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="73909"
+                                                 data-category-id="3064"
+                                                 data-product-name="Mystery MTV-26LT2"
+                                                 data-product-price="15380"
+                                                 data-hascompetitors="true"
+                                            data-product-img="https://buyoncdn.ru/product/3609478404/product_little/1081054/mystery-mtv-3226lt2.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/146029878/product_medium/1081054/mystery-mtv-3226lt2.jpg">
+                        
+                                            <a class="product-cell__link" href="/848078/mystery-mtv-3226lt2/">
+                                                <img class="product-cell__img product-cell__img--small"
+                                                     title="Mystery MTV-26LT2"
+                                                     alt="Mystery MTV-26LT2"
+                                                     src="https://buyoncdn.ru/product/1375625024/product_260/1081054/mystery-mtv-3226lt2.jpg"
+                                                     srcset="https://buyoncdn.ru/product/468770562/product_510/1081054/mystery-mtv-3226lt2.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price bn-price--w-last">
+                                                    <span class="bn-last-price">15&thinsp;950<span class="bn-ruble inline">&thinsp;р.</span></span>
+                                                        15&thinsp;380<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Mystery MTV-26LT2</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="77289"
+                                                 data-category-id="3240"
+                                                 data-product-name="Benq TH681+"
+                                                 data-product-price="69390"
+                                                 
+                                            data-product-img="https://buyoncdn.ru/product/501642878/product_little/1275228/benq-th681-portativnyy.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/3262516812/product_medium/1275228/benq-th681-portativnyy.jpg">
+                        
+                                            <a class="product-cell__link" href="/1101468/benq-th681-portativnyy/">
+                                                <img class="product-cell__img product-cell__img--small"
+                                                     title="Benq TH681+"
+                                                     alt="Benq TH681+"
+                                                     src="https://buyoncdn.ru/product/3515567253/product_260/1275228/benq-th681-portativnyy.jpg"
+                                                     srcset="https://buyoncdn.ru/product/2609237207/product_510/1275228/benq-th681-portativnyy.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price">
+                                                        69&thinsp;390<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Benq TH681+</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>                        <section class="category category--micr bn-micr">
+                            <div class="category__in">
+                                <h2 class="category__title">
+                                    <a class="category__link" href="/catalog-aksessuary-elektroniki/?r=0">Аксессуары</a>
+                                </h2>
+                                    <ul class="bn-micr__subcategory subcategory-list">
+                        
+                                            <li><a href="/catalog-aksessuary-elektroniki/chehly-i-korpusa/?r=0">Чехлы и корпуса</a></li>
+                                            <li><a href="/catalog-aksessuary-elektroniki/garnitury/?r=0">Наушники и гарнитуры</a></li>
+                                            <li><a href="/catalog-aksessuary-elektroniki/diktofony/?r=0">Диктофоны</a></li>
+                                            <li><a href="/catalog-aksessuary-elektroniki/karty-pamyati/?r=0">Карты памяти</a></li>
+                                            <li><a class="bn-readmore-btn" href="/catalog-aksessuary-elektroniki/?r=0"><span>Все подкатегории</span></a></li>
+                                    </ul>
+                                <div class="category-products">
+                                    <ul class="product-list category-products-row">
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="14020"
+                                                 data-category-id="2762"
+                                                 data-product-name="SCR26 Style Cover для Xperia Z3 Compact"
+                                                 data-product-price="700"
+                                                 
+                                            data-product-img="https://buyoncdn.ru/product/169111782/product_little/795867/scr26-style-cover-dlya-xperia-z3-compact-chehol-knizhka-kozhzam-chernyy.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/3582200020/product_medium/795867/scr26-style-cover-dlya-xperia-z3-compact-chehol-knizhka-kozhzam-chernyy.jpg">
+                        
+                                            <a class="product-cell__link" href="/734616/scr26-style-cover-dlya-xperia-z3-compact-chehol-knizhka-kozhzam-chernyy/">
+                                                <img class="product-cell__img product-cell__img--small"
+                                                     title="SCR26 Style Cover для Xperia Z3 Compact"
+                                                     alt="SCR26 Style Cover для Xperia Z3 Compact"
+                                                     src="https://buyoncdn.ru/product/2334829838/product_260/795867/scr26-style-cover-dlya-xperia-z3-compact-chehol-knizhka-kozhzam-chernyy.jpg"
+                                                     srcset="https://buyoncdn.ru/product/3240373580/product_510/795867/scr26-style-cover-dlya-xperia-z3-compact-chehol-knizhka-kozhzam-chernyy.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price bn-price--w-last">
+                                                    <span class="bn-last-price">1400<span class="bn-ruble inline">&thinsp;р.</span></span>
+                                                        700<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">SCR26 Style Cover для Xperia Z3 Compact</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="3240"
+                                                 data-category-id="2762"
+                                                 data-product-name="Sony SCR16 для Sony Xperia T3"
+                                                 data-product-price="630"
+                                                 
+                                            data-product-img="https://buyoncdn.ru/product/3392987077/product_little/1413706/sony-scr16-dlya-sony-xperia-t3-chehol-knizhka-poliuretan-chernyy.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/363636727/product_medium/1413706/sony-scr16-dlya-sony-xperia-t3-chehol-knizhka-poliuretan-chernyy.jpg">
+                        
+                                            <a class="product-cell__link" href="/325331/sony-scr16-dlya-sony-xperia-t3-chehol-knizhka-poliuretan-chernyy/">
+                                                <img class="product-cell__img product-cell__img--small"
+                                                     title="Sony SCR16 для Sony Xperia T3"
+                                                     alt="Sony SCR16 для Sony Xperia T3"
+                                                     src="https://buyoncdn.ru/product/2328182229/product_260/1413706/sony-scr16-dlya-sony-xperia-t3-chehol-knizhka-poliuretan-chernyy.jpg"
+                                                     srcset="https://buyoncdn.ru/product/3234577815/product_510/1413706/sony-scr16-dlya-sony-xperia-t3-chehol-knizhka-poliuretan-chernyy.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price bn-price--w-last">
+                                                    <span class="bn-last-price">1260<span class="bn-ruble inline">&thinsp;р.</span></span>
+                                                        630<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Sony SCR16 для Sony Xperia T3</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>                        <section class="category category--micr bn-micr">
+                            <div class="category__in">
+                                <h2 class="category__title">
+                                    <a class="category__link" href="/catalog-kompyuternye-komplektuyuschie/?r=0">Компьютерные комплектующие</a>
+                                </h2>
+                                    <ul class="bn-micr__subcategory subcategory-list">
+                        
+                                            <li><a href="/catalog-kompyuternye-komplektuyuschie/systemnye-bloki/?r=0">Системные блоки</a></li>
+                                            <li><a href="/catalog-kompyuternye-komplektuyuschie/hdd-diski/?r=0">Жесткие диски</a></li>
+                                            <li><a href="/catalog-kompyuternye-komplektuyuschie/ssd-diski/?r=0">SSD диски</a></li>
+                                            <li><a href="/catalog-kompyuternye-komplektuyuschie/ram-pamyat/?r=0">Оперативная память</a></li>
+                                            <li><a class="bn-readmore-btn" href="/catalog-kompyuternye-komplektuyuschie/?r=0"><span>Все подкатегории</span></a></li>
+                                    </ul>
+                                <div class="category-products">
+                                    <ul class="product-list category-products-row">
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="30089"
+                                                 data-category-id="3159"
+                                                 data-product-name="InWin EC022"
+                                                 data-product-price="3860"
+                                                 data-hascompetitors="true"
+                                            data-product-img="https://buyoncdn.ru/product/1541344905/product_little/808506/inwin-ec022-chernyy.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/2219800251/product_medium/808506/inwin-ec022-chernyy.jpg">
+                        
+                                            <a class="product-cell__link" href="/744074/inwin-ec022-chernyy/">
+                                                <img class="product-cell__img product-cell__img--small"
+                                                     title="InWin EC022"
+                                                     alt="InWin EC022"
+                                                     src="https://buyoncdn.ru/product/580296040/product_260/808506/inwin-ec022-chernyy.jpg"
+                                                     srcset="https://buyoncdn.ru/product/1754799402/product_510/808506/inwin-ec022-chernyy.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price">
+                                                        3860<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">InWin EC022</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="85345"
+                                                 data-category-id="1330"
+                                                 data-product-name="Dell Vostro 3900"
+                                                 data-product-price="38290"
+                                                 
+                                            data-product-img="https://buyoncdn.ru/product/1263471730/product_little/1335099/dell-vostro-3900-3200mgts-4gb-intel-core-i5-1000gb.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/2497672256/product_medium/1335099/dell-vostro-3900-3200mgts-4gb-intel-core-i5-1000gb.jpg">
+                        
+                                            <a class="product-cell__link" href="/1125775/dell-vostro-3900-3200mgts-4gb-intel-core-i5-1000gb/">
+                                                <img class="product-cell__img product-cell__img--small"
+                                                     title="Dell Vostro 3900"
+                                                     alt="Dell Vostro 3900"
+                                                     src="https://buyoncdn.ru/product/1097570444/product_260/1335099/dell-vostro-3900-3200mgts-4gb-intel-core-i5-1000gb.jpg"
+                                                     srcset="https://buyoncdn.ru/product/191174862/product_510/1335099/dell-vostro-3900-3200mgts-4gb-intel-core-i5-1000gb.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price">
+                                                        38&thinsp;290<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Dell Vostro 3900</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>                        <section class="category category--micr bn-micr">
+                            <div class="category__in">
+                                <h2 class="category__title">
+                                    <a class="category__link" href="/catalog-kompyuternye-komponenty/?r=0">Для компьютера</a>
+                                </h2>
+                                    <ul class="bn-micr__subcategory subcategory-list">
+                        
+                                            <li><a href="/catalog-kompyuternye-komponenty/kompyuternye-monitory/?r=0">Компьютерные мониторы</a></li>
+                                            <li><a href="/catalog-kompyuternye-komponenty/kompyuternye-klaviatury/?r=0">Компьютерные клавиатуры</a></li>
+                                            <li><a href="/catalog-kompyuternye-komponenty/kompyuternye-myshi/?r=0">Компьютерные мыши</a></li>
+                                            <li><a href="/catalog-kompyuternye-komponenty/usb-fleshki/?r=0">USB флешки</a></li>
+                                            <li><a class="bn-readmore-btn" href="/catalog-kompyuternye-komponenty/?r=0"><span>Все подкатегории</span></a></li>
+                                    </ul>
+                                <div class="category-products">
+                                    <ul class="product-list category-products-row">
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="71085"
+                                                 data-category-id="2638"
+                                                 data-product-name="Microsoft Mobile Mouse 3600"
+                                                 data-product-price="2190"
+                                                 
+                                            data-product-img="https://buyoncdn.ru/product/394325880/product_little/1285147/microsoft-mobile-mouse-3600-siniy-bluetooth.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/3356530506/product_medium/1285147/microsoft-mobile-mouse-3600-siniy-bluetooth.jpg">
+                        
+                                            <a class="product-cell__link" href="/1109981/microsoft-mobile-mouse-3600-siniy-bluetooth/">
+                                                <img class="product-cell__img product-cell__img--small"
+                                                     title="Microsoft Mobile Mouse 3600"
+                                                     alt="Microsoft Mobile Mouse 3600"
+                                                     src="https://buyoncdn.ru/product/2772531515/product_260/1285147/microsoft-mobile-mouse-3600-siniy-bluetooth.jpg"
+                                                     srcset="https://buyoncdn.ru/product/4014995833/product_510/1285147/microsoft-mobile-mouse-3600-siniy-bluetooth.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price">
+                                                        2190<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Microsoft Mobile Mouse 3600</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="71089"
+                                                 data-category-id="2638"
+                                                 data-product-name="Microsoft Mobile Mouse 3600"
+                                                 data-product-price="2190"
+                                                 
+                                            data-product-img="https://buyoncdn.ru/product/1118863021/product_little/1285149/microsoft-mobile-mouse-3600-krasnyy-bluetooth.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/2636121759/product_medium/1285149/microsoft-mobile-mouse-3600-krasnyy-bluetooth.jpg">
+                        
+                                            <a class="product-cell__link" href="/1109988/microsoft-mobile-mouse-3600-krasnyy-bluetooth/">
+                                                <img class="product-cell__img product-cell__img--small"
+                                                     title="Microsoft Mobile Mouse 3600"
+                                                     alt="Microsoft Mobile Mouse 3600"
+                                                     src="https://buyoncdn.ru/product/2594135032/product_260/1285149/microsoft-mobile-mouse-3600-krasnyy-bluetooth.jpg"
+                                                     srcset="https://buyoncdn.ru/product/3499219898/product_510/1285149/microsoft-mobile-mouse-3600-krasnyy-bluetooth.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price">
+                                                        2190<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Microsoft Mobile Mouse 3600</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>                        <section class="category">
+                            <div class="category__in">
+                                <h2 class="category__title">
+                                    <a class="category__link" href="/catalog-noutbuki/?r=0">Ноутбуки</a>
+                                </h2>
+                        
+                                <div class="category-products">
+                                    <ul class="product-list category-products-row">
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="15764"
+                                                 data-category-id="3068"
+                                                 data-product-name="Lenovo Ideapad Flex 10"
+                                                 data-product-price="25390"
+                                                 
+                                            data-product-img="https://buyoncdn.ru/product/3516495551/product_little/880504/lenovo-ideapad-flex-10-101-pentium-2160ggts-4gb-500gb-serebristyy-windows-81.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/235474573/product_medium/880504/lenovo-ideapad-flex-10-101-pentium-2160ggts-4gb-500gb-serebristyy-windows-81.jpg">
+                        
+                                            <a class="product-cell__link" href="/742828/lenovo-ideapad-flex-10-101-pentium-2160ggts-4gb-500gb-serebristyy-windows-81/">
+                                                <img class="product-cell__img"
+                                                     width="260"
+                                                     height="260"
+                                                     title="Lenovo Ideapad Flex 10"
+                                                     alt="Lenovo Ideapad Flex 10"
+                                                     src="https://buyoncdn.ru/product/1115787962/product_260/880504/lenovo-ideapad-flex-10-101-pentium-2160ggts-4gb-500gb-serebristyy-windows-81.jpg"
+                                                     srcset="https://buyoncdn.ru/product/143594232/product_510/880504/lenovo-ideapad-flex-10-101-pentium-2160ggts-4gb-500gb-serebristyy-windows-81.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price bn-price--w-last">
+                                                    <span class="bn-last-price">31&thinsp;740<span class="bn-ruble inline">&thinsp;р.</span></span>
+                                                        25&thinsp;390<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Lenovo Ideapad Flex 10</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="15756"
+                                                 data-category-id="3068"
+                                                 data-product-name="Lenovo IdeaPad S2030"
+                                                 data-product-price="19990"
+                                                 data-hascompetitors="true"
+                                            data-product-img="https://buyoncdn.ru/product/2405928595/product_little/807268/lenovo-ideapad-s2030-116-intel-celeron-2160ggts-2gb-320gb-chernyy-windows-81.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/1358427809/product_medium/807268/lenovo-ideapad-s2030-116-intel-celeron-2160ggts-2gb-320gb-chernyy-windows-81.jpg">
+                        
+                                            <a class="product-cell__link" href="/742817/lenovo-ideapad-s2030-116-intel-celeron-2160ggts-2gb-320gb-chernyy-windows-81/">
+                                                <img class="product-cell__img"
+                                                     width="260"
+                                                     height="260"
+                                                     title="Lenovo IdeaPad S2030"
+                                                     alt="Lenovo IdeaPad S2030"
+                                                     src="https://buyoncdn.ru/product/2387345453/product_260/807268/lenovo-ideapad-s2030-116-intel-celeron-2160ggts-2gb-320gb-chernyy-windows-81.jpg"
+                                                     srcset="https://buyoncdn.ru/product/3292692591/product_510/807268/lenovo-ideapad-s2030-116-intel-celeron-2160ggts-2gb-320gb-chernyy-windows-81.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price bn-price--w-last">
+                                                    <span class="bn-last-price">24&thinsp;990<span class="bn-ruble inline">&thinsp;р.</span></span>
+                                                        19&thinsp;990<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Lenovo IdeaPad S2030</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>                        <section class="category">
+                            <div class="category__in">
+                                <h2 class="category__title">
+                                    <a class="category__link" href="/catalog-mobilnye-telefony/?r=0">Мобильные телефоны</a>
+                                </h2>
+                        
+                                <div class="category-products">
+                                    <ul class="product-list category-products-row">
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="41805"
+                                                 data-category-id="2606"
+                                                 data-product-name="Nokia 105"
+                                                 data-product-price="1910"
+                                                 
+                                            data-product-img="https://buyoncdn.ru/product/1819504500/product_little/1069848/nokia-105-ds.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/3018004294/product_medium/1069848/nokia-105-ds.jpg">
+                        
+                                            <a class="product-cell__link" href="/842044/nokia-105-ds/">
+                                                <img class="product-cell__img"
+                                                     width="260"
+                                                     height="260"
+                                                     title="Nokia 105"
+                                                     alt="Nokia 105"
+                                                     src="https://buyoncdn.ru/product/4090569133/product_260/1069848/nokia-105-ds.jpg"
+                                                     srcset="https://buyoncdn.ru/product/3118440943/product_510/1069848/nokia-105-ds.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price bn-price--w-last">
+                                                    <span class="bn-last-price">2010<span class="bn-ruble inline">&thinsp;р.</span></span>
+                                                        1910<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Nokia 105</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="86672"
+                                                 data-category-id="2606"
+                                                 data-product-name="Explay TV280"
+                                                 data-product-price="2100"
+                                                 
+                                            data-product-img="https://buyoncdn.ru/product/498284020/product_little/43669/explay-tv280-chernyy-2-sim.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/3257093574/product_medium/43669/explay-tv280-chernyy-2-sim.jpg">
+                        
+                                            <a class="product-cell__link" href="/356285/explay-tv280-chernyy-2-sim/">
+                                                <img class="product-cell__img"
+                                                     width="260"
+                                                     height="260"
+                                                     title="Explay TV280"
+                                                     alt="Explay TV280"
+                                                     src="https://buyoncdn.ru/product/337281594/product_260/43669/explay-tv280-chernyy-2-sim.jpg"
+                                                     srcset="https://buyoncdn.ru/product/1578369656/product_510/43669/explay-tv280-chernyy-2-sim.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price">
+                                                        2100<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Explay TV280</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>                        <section class="category category--micr bn-micr">
+                            <div class="category__in">
+                                <h2 class="category__title">
+                                    <a class="category__link" href="/catalog-orgtehnika/?r=0">Оргтехника</a>
+                                </h2>
+                                    <ul class="bn-micr__subcategory subcategory-list">
+                        
+                                            <li><a href="/catalog-orgtehnika/kalkulyatory/?r=0">Калькуляторы</a></li>
+                                            <li><a href="/catalog-orgtehnika/perepletchiki/?r=0">Переплетчики</a></li>
+                                            <li><a href="/catalog-orgtehnika/laminatory/?r=0">Ламинаторы</a></li>
+                                            <li><a href="/catalog-orgtehnika/rezaki/?r=0">Резаки</a></li>
+                                            <li><a class="bn-readmore-btn" href="/catalog-orgtehnika/?r=0"><span>Все подкатегории</span></a></li>
+                                    </ul>
+                                <div class="category-products">
+                                    <ul class="product-list category-products-row">
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="31124"
+                                                 data-category-id="1337"
+                                                 data-product-name="Fujitsu ScanSnap S1100i"
+                                                 data-product-price="12490"
+                                                 data-hascompetitors="true"
+                                            data-product-img="https://buyoncdn.ru/product/1025878073/product_little/884768/fujitsu-scansnap-s1100i-protyazhnyy-a4.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/3803566091/product_medium/884768/fujitsu-scansnap-s1100i-protyazhnyy-a4.jpg">
+                        
+                                            <a class="product-cell__link" href="/802238/fujitsu-scansnap-s1100i-protyazhnyy-a4/">
+                                                <img class="product-cell__img product-cell__img--small"
+                                                     title="Fujitsu ScanSnap S1100i"
+                                                     alt="Fujitsu ScanSnap S1100i"
+                                                     src="https://buyoncdn.ru/product/1687380123/product_260/884768/fujitsu-scansnap-s1100i-protyazhnyy-a4.jpg"
+                                                     srcset="https://buyoncdn.ru/product/782098649/product_510/884768/fujitsu-scansnap-s1100i-protyazhnyy-a4.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price">
+                                                        12&thinsp;490<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Fujitsu ScanSnap S1100i</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="69006"
+                                                 data-category-id="3217"
+                                                 data-product-name="Hama Premium H-50187"
+                                                 data-product-price="3060"
+                                                 
+                                            data-product-img="https://buyoncdn.ru/product/489626887/product_little/1062992/hama-premium-h-50187-8-fragmenty-perekrestnaya-rezka.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/3267323189/product_medium/1062992/hama-premium-h-50187-8-fragmenty-perekrestnaya-rezka.jpg">
+                        
+                                            <a class="product-cell__link" href="/908755/hama-premium-h-50187-8-fragmenty-perekrestnaya-rezka/">
+                                                <img class="product-cell__img product-cell__img--small"
+                                                     title="Hama Premium H-50187"
+                                                     alt="Hama Premium H-50187"
+                                                     src="https://buyoncdn.ru/product/1430778638/product_260/1062992/hama-premium-h-50187-8-fragmenty-perekrestnaya-rezka.jpg"
+                                                     srcset="https://buyoncdn.ru/product/524907340/product_510/1062992/hama-premium-h-50187-8-fragmenty-perekrestnaya-rezka.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price">
+                                                        3060<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Hama Premium H-50187</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>                        <section class="category">
+                            <div class="category__in">
+                                <h2 class="category__title">
+                                    <a class="category__link" href="/catalog-monobloki/?r=0">Моноблоки</a>
+                                </h2>
+                        
+                                <div class="category-products">
+                                    <ul class="product-list category-products-row">
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="38261"
+                                                 data-category-id="1326"
+                                                 data-product-name="Lenovo A540"
+                                                 data-product-price="112790"
+                                                 
+                                            data-product-img="https://buyoncdn.ru/product/2504949656/product_little/927776/lenovo-a540-238-serebristyy-4gb-1008gb-windows-intel-core-i5-sensornyy-ekran-1tb-sshd.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/1256064938/product_medium/927776/lenovo-a540-238-serebristyy-4gb-1008gb-windows-intel-core-i5-sensornyy-ekran-1tb-sshd.jpg">
+                        
+                                            <a class="product-cell__link" href="/784940/lenovo-a540-238-serebristyy-4gb-1008gb-windows-intel-core-i5-sensornyy-ekran-1tb-sshd/">
+                                                <img class="product-cell__img"
+                                                     width="260"
+                                                     height="260"
+                                                     title="Lenovo A540"
+                                                     alt="Lenovo A540"
+                                                     src="https://buyoncdn.ru/product/2148973545/product_260/927776/lenovo-a540-238-serebristyy-4gb-1008gb-windows-intel-core-i5-sensornyy-ekran-1tb-sshd.jpg"
+                                                     srcset="https://buyoncdn.ru/product/3390585771/product_510/927776/lenovo-a540-238-serebristyy-4gb-1008gb-windows-intel-core-i5-sensornyy-ekran-1tb-sshd.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price bn-price--w-last">
+                                                    <span class="bn-last-price">113&thinsp;690<span class="bn-ruble inline">&thinsp;р.</span></span>
+                                                        112&thinsp;790<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Lenovo A540</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="88844"
+                                                 data-category-id="1326"
+                                                 data-product-name="Lenovo Horizon 2"
+                                                 data-product-price="101490"
+                                                 
+                                            data-product-img="https://buyoncdn.ru/product/836926487/product_little/1430474/lenovo-horizon-2-27-hd1600x900touchintel-core-i5-4210u-dual8gb500gbnodvdwifibt40kbmousewlsw81ysilver.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/4000449573/product_medium/1430474/lenovo-horizon-2-27-hd1600x900touchintel-core-i5-4210u-dual8gb500gbnodvdwifibt40kbmousewlsw81ysilver.jpg">
+                        
+                                            <a class="product-cell__link" href="/1129893/lenovo-horizon-2-27-hd1600x900touchintel-core-i5-4210u-dual8gb500gbnodvdwifibt40kbmousewlsw81ysilver/">
+                                                <img class="product-cell__img"
+                                                     width="260"
+                                                     height="260"
+                                                     title="Lenovo Horizon 2"
+                                                     alt="Lenovo Horizon 2"
+                                                     src="https://buyoncdn.ru/product/1185782166/product_260/1430474/lenovo-horizon-2-27-hd1600x900touchintel-core-i5-4210u-dual8gb500gbnodvdwifibt40kbmousewlsw81ysilver.jpg"
+                                                     srcset="https://buyoncdn.ru/product/212015572/product_510/1430474/lenovo-horizon-2-27-hd1600x900touchintel-core-i5-4210u-dual8gb500gbnodvdwifibt40kbmousewlsw81ysilver.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price bn-price--w-last">
+                                                    <span class="bn-last-price">102&thinsp;090<span class="bn-ruble inline">&thinsp;р.</span></span>
+                                                        101&thinsp;490<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Lenovo Horizon 2</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>                        <section class="category category--micr bn-micr">
+                            <div class="category__in">
+                                <h2 class="category__title">
+                                    <a class="category__link" href="/catalog-avto/?r=0">Для авто</a>
+                                </h2>
+                                    <ul class="bn-micr__subcategory subcategory-list">
+                        
+                                            <li><a href="/catalog-avto/videoregistratory/?r=0">Видеорегистраторы</a></li>
+                                            <li><a href="/catalog-avto/avtomobilnye-navigatory/?r=0">Автомобильные навигаторы</a></li>
+                                            <li><a href="/catalog-avto/radar-detektory/?r=0">Радар-детекторы</a></li>
+                                            <li><a href="/catalog-avto/alkotestery/?r=0">Алкотестеры</a></li>
+                                            <li><a class="bn-readmore-btn" href="/catalog-avto/?r=0"><span>Все подкатегории</span></a></li>
+                                    </ul>
+                                <div class="category-products">
+                                    <ul class="product-list category-products-row">
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="74415"
+                                                 data-category-id="3107"
+                                                 data-product-name="ParkCity DVR HD 720 GPS"
+                                                 data-product-price="7340"
+                                                 
+                                            data-product-img="https://buyoncdn.ru/product/2267008351/product_little/1246449/parkcity-dvr-hd-720-gps-1920x1080-nochnoy-rezhim.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/1485813101/product_medium/1246449/parkcity-dvr-hd-720-gps-1920x1080-nochnoy-rezhim.jpg">
+                        
+                                            <a class="product-cell__link" href="/1082535/parkcity-dvr-hd-720-gps-1920x1080-nochnoy-rezhim/">
+                                                <img class="product-cell__img product-cell__img--small"
+                                                     title="ParkCity DVR HD 720 GPS"
+                                                     alt="ParkCity DVR HD 720 GPS"
+                                                     src="https://buyoncdn.ru/product/2475438155/product_260/1246449/parkcity-dvr-hd-720-gps-1920x1080-nochnoy-rezhim.jpg"
+                                                     srcset="https://buyoncdn.ru/product/3649220617/product_510/1246449/parkcity-dvr-hd-720-gps-1920x1080-nochnoy-rezhim.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price">
+                                                        7340<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">ParkCity DVR HD 720 GPS</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="16429"
+                                                 data-category-id="3107"
+                                                 data-product-name="Prestigio RoadRunner 565 черный"
+                                                 data-product-price="6870"
+                                                 data-hascompetitors="true"
+                                            data-product-img="https://buyoncdn.ru/product/4097501030/product_little/853194/prestigio-roadrunner-565-chernyy-bez-gps.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/732602196/product_medium/853194/prestigio-roadrunner-565-chernyy-bez-gps.jpg">
+                        
+                                            <a class="product-cell__link" href="/744717/prestigio-roadrunner-565-chernyy-bez-gps/">
+                                                <img class="product-cell__img product-cell__img--small"
+                                                     title="Prestigio RoadRunner 565 черный"
+                                                     alt="Prestigio RoadRunner 565 черный"
+                                                     src="https://buyoncdn.ru/product/2471785497/product_260/853194/prestigio-roadrunner-565-chernyy-bez-gps.jpg"
+                                                     srcset="https://buyoncdn.ru/product/3646616667/product_510/853194/prestigio-roadrunner-565-chernyy-bez-gps.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price">
+                                                        6870<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Prestigio RoadRunner 565 черный</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>                        <section class="category category--micr bn-micr">
+                            <div class="category__in">
+                                <h2 class="category__title">
+                                    <a class="category__link" href="/catalog-razvlecheniya/?r=0">Игры и приставки</a>
+                                </h2>
+                                    <ul class="bn-micr__subcategory subcategory-list">
+                        
+                                            <li><a href="/catalog-razvlecheniya/xbox/?r=0">Xbox</a></li>
+                                            <li><a href="/catalog-razvlecheniya/xbox-aksesuary/?r=0">Xbox аксессуары</a></li>
+                                            <li><a href="/catalog-razvlecheniya/igry-dlya-xbox/?r=0">Игры для XBox</a></li>
+                                            <li><a href="/catalog-razvlecheniya/playstation/?r=0">Playstation</a></li>
+                                            <li><a class="bn-readmore-btn" href="/catalog-razvlecheniya/?r=0"><span>Все подкатегории</span></a></li>
+                                    </ul>
+                                <div class="category-products">
+                                    <ul class="product-list category-products-row">
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="69043"
+                                                 data-category-id="241"
+                                                 data-product-name="Xbox One 1 ТБ + Rise of the Tomb Raider"
+                                                 data-product-price="32990"
+                                                 
+                                            data-product-img="https://buyoncdn.ru/product/3688614193/product_little/1293214/xbox-one-1-tb--rise-of-the-tomb-raider.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/72069379/product_medium/1293214/xbox-one-1-tb--rise-of-the-tomb-raider.jpg">
+                        
+                                            <a class="product-cell__link" href="/1105426/xbox-one-1-tb--rise-of-the-tomb-raider/">
+                                                <img class="product-cell__img product-cell__img--small"
+                                                     title="Xbox One 1 ТБ + Rise of the Tomb Raider"
+                                                     alt="Xbox One 1 ТБ + Rise of the Tomb Raider"
+                                                     src="https://buyoncdn.ru/product/3479424984/product_260/1293214/xbox-one-1-tb--rise-of-the-tomb-raider.jpg"
+                                                     srcset="https://buyoncdn.ru/product/2238533530/product_510/1293214/xbox-one-1-tb--rise-of-the-tomb-raider.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price">
+                                                        32&thinsp;990<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Xbox One 1 ТБ + Rise of the Tomb Raider</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="64934"
+                                                 data-category-id="241"
+                                                 data-product-name="Xbox One 1 ТБ + Halo 5"
+                                                 data-product-price="42990"
+                                                 
+                                            data-product-img="https://buyoncdn.ru/product/2863264632/product_little/1270700/xbox-one-1-tb--halo-5.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/1966705482/product_medium/1270700/xbox-one-1-tb--halo-5.jpg">
+                        
+                                            <a class="product-cell__link" href="/1097007/xbox-one-1-tb--halo-5/">
+                                                <img class="product-cell__img product-cell__img--small"
+                                                     title="Xbox One 1 ТБ + Halo 5"
+                                                     alt="Xbox One 1 ТБ + Halo 5"
+                                                     src="https://buyoncdn.ru/product/3892059168/product_260/1270700/xbox-one-1-tb--halo-5.jpg"
+                                                     srcset="https://buyoncdn.ru/product/2918358114/product_510/1270700/xbox-one-1-tb--halo-5.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price">
+                                                        42&thinsp;990<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Xbox One 1 ТБ + Halo 5</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>                        <section class="category category--micr bn-micr">
+                            <div class="category__in">
+                                <h2 class="category__title">
+                                    <a class="category__link" href="/catalog-foto-i-video-kamery/?r=0">Фото и видео</a>
+                                </h2>
+                                    <ul class="bn-micr__subcategory subcategory-list">
+                        
+                                            <li><a href="/catalog-foto-i-video-kamery/tsifrovye-fotoapparaty/?r=0">Цифровые и зеркальные фотоаппараты</a></li>
+                                            <li><a href="/catalog-foto-i-video-kamery/fotoramki/?r=0">Фоторамки</a></li>
+                                            <li><a href="/catalog-foto-i-video-kamery/videokamery-i-action-kamery/?r=0">Видеокамеры и экшн-камеры</a></li>
+                                            <li><a href="/catalog-foto-i-video-kamery/obektivy-dlya-kamer-i-optiki/?r=0">Объективы для камер и оптики</a></li>
+                                            <li><a class="bn-readmore-btn" href="/catalog-foto-i-video-kamery/?r=0"><span>Все подкатегории</span></a></li>
+                                    </ul>
+                                <div class="category-products">
+                                    <ul class="product-list category-products-row">
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="65813"
+                                                 data-category-id="3069"
+                                                 data-product-name="NIKON D5300"
+                                                 data-product-price="39390"
+                                                 data-hascompetitors="true"
+                                            data-product-img="https://buyoncdn.ru/product/2256336758/product_little/1259590/nikon-d5300-seryy-24.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/1508675396/product_medium/1259590/nikon-d5300-seryy-24.jpg">
+                        
+                                            <a class="product-cell__link" href="/1092597/nikon-d5300-seryy-24/">
+                                                <img class="product-cell__img product-cell__img--small"
+                                                     title="NIKON D5300"
+                                                     alt="NIKON D5300"
+                                                     src="https://buyoncdn.ru/product/2699320478/product_260/1259590/nikon-d5300-seryy-24.jpg"
+                                                     srcset="https://buyoncdn.ru/product/3941260508/product_510/1259590/nikon-d5300-seryy-24.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price bn-price--w-last">
+                                                    <span class="bn-last-price">42&thinsp;190<span class="bn-ruble inline">&thinsp;р.</span></span>
+                                                        39&thinsp;390<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">NIKON D5300</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="75983"
+                                                 data-category-id="3069"
+                                                 data-product-name="Sony Alpha ILCE-3500J/B"
+                                                 data-product-price="19990"
+                                                 data-hascompetitors="true"
+                                            data-product-img="https://buyoncdn.ru/product/1169368091/product_little/960422/sony-alpha-ilce-3500jb-chernyy.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/2586008617/product_medium/960422/sony-alpha-ilce-3500jb-chernyy.jpg">
+                        
+                                            <a class="product-cell__link" href="/813676/sony-alpha-ilce-3500jb-chernyy/">
+                                                <img class="product-cell__img product-cell__img--small"
+                                                     title="Sony Alpha ILCE-3500J/B"
+                                                     alt="Sony Alpha ILCE-3500J/B"
+                                                     src="https://buyoncdn.ru/product/1018731439/product_260/960422/sony-alpha-ilce-3500jb-chernyy.jpg"
+                                                     srcset="https://buyoncdn.ru/product/1991646189/product_510/960422/sony-alpha-ilce-3500jb-chernyy.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price bn-price--w-last">
+                                                    <span class="bn-last-price">22&thinsp;390<span class="bn-ruble inline">&thinsp;р.</span></span>
+                                                        19&thinsp;990<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Sony Alpha ILCE-3500J/B</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>                        <section class="category">
+                            <div class="category__in">
+                                <h2 class="category__title">
+                                    <a class="category__link" href="/catalog-elektronnye-knigi/?r=0">Электронные книги</a>
+                                </h2>
+                        
+                                <div class="category-products">
+                                    <ul class="product-list category-products-row">
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="88554"
+                                                 data-category-id="3074"
+                                                 data-product-name="Digma R658"
+                                                 data-product-price="6390"
+                                                 data-hascompetitors="true"
+                                            data-product-img="https://buyoncdn.ru/product/2980690828/product_little/1070980/digma-r658-e-ink-chernyy-6-vstroennaya-podsvetka.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/1849279422/product_medium/1070980/digma-r658-e-ink-chernyy-6-vstroennaya-podsvetka.jpg">
+                        
+                                            <a class="product-cell__link" href="/926756/digma-r658-e-ink-chernyy-6-vstroennaya-podsvetka/">
+                                                <img class="product-cell__img"
+                                                     width="260"
+                                                     height="260"
+                                                     title="Digma R658"
+                                                     alt="Digma R658"
+                                                     src="https://buyoncdn.ru/product/451259274/product_260/1070980/digma-r658-e-ink-chernyy-6-vstroennaya-podsvetka.jpg"
+                                                     srcset="https://buyoncdn.ru/product/1357589448/product_510/1070980/digma-r658-e-ink-chernyy-6-vstroennaya-podsvetka.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price">
+                                                        6390<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Digma R658</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="61240"
+                                                 data-category-id="3074"
+                                                 data-product-name="PocketBook 626 Plus"
+                                                 data-product-price="12710"
+                                                 
+                                            data-product-img="https://buyoncdn.ru/product/650303833/product_little/1423575/pocketbook-626-plus-e-ink-belyy-6-sensornyy-ekran-vstroennaya-podsvetka.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/4182942059/product_medium/1423575/pocketbook-626-plus-e-ink-belyy-6-sensornyy-ekran-vstroennaya-podsvetka.jpg">
+                        
+                                            <a class="product-cell__link" href="/1092871/pocketbook-626-plus-e-ink-belyy-6-sensornyy-ekran-vstroennaya-podsvetka/">
+                                                <img class="product-cell__img"
+                                                     width="260"
+                                                     height="260"
+                                                     title="PocketBook 626 Plus"
+                                                     alt="PocketBook 626 Plus"
+                                                     src="https://buyoncdn.ru/product/2660963557/product_260/1423575/pocketbook-626-plus-e-ink-belyy-6-sensornyy-ekran-vstroennaya-podsvetka.jpg"
+                                                     srcset="https://buyoncdn.ru/product/3566572711/product_510/1423575/pocketbook-626-plus-e-ink-belyy-6-sensornyy-ekran-vstroennaya-podsvetka.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price">
+                                                        12&thinsp;710<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">PocketBook 626 Plus</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>                        <section class="category">
+                            <div class="category__in">
+                                <h2 class="category__title">
+                                    <a class="category__link" href="/catalog-neobychnye-gadzhety/?r=0">Необычные гаджеты</a>
+                                </h2>
+                        
+                                <div class="category-products">
+                                    <ul class="product-list category-products-row">
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="3607"
+                                                 data-category-id="3146"
+                                                 data-product-name="Комплекты браслетов SmartBand SWR110"
+                                                 data-product-price="460"
+                                                 
+                                            data-product-img="https://buyoncdn.ru/product/240955072/product_little/15087/sony-swr110-dlya-smartband-active-razmer-s.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/3519862514/product_medium/15087/sony-swr110-dlya-smartband-active-razmer-s.jpg">
+                        
+                                            <a class="product-cell__link" href="/325744/sony-swr110-dlya-smartband-active-razmer-s/">
+                                                <img class="product-cell__img"
+                                                     width="260"
+                                                     height="260"
+                                                     title="Комплекты браслетов SmartBand SWR110"
+                                                     alt="Комплекты браслетов SmartBand SWR110"
+                                                     src="https://buyoncdn.ru/product/2480104159/product_260/15087/sony-swr110-dlya-smartband-active-razmer-s.jpg"
+                                                     srcset="https://buyoncdn.ru/product/3655197341/product_510/15087/sony-swr110-dlya-smartband-active-razmer-s.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price bn-price--w-last">
+                                                    <span class="bn-last-price">1540<span class="bn-ruble inline">&thinsp;р.</span></span>
+                                                        460<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Комплекты браслетов SmartBand SWR110</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="3282"
+                                                 data-category-id="3146"
+                                                 data-product-name="Фитнес трекер Misfit Shine"
+                                                 data-product-price="1790"
+                                                 data-hascompetitors="true"
+                                            data-product-img="https://buyoncdn.ru/product/2466323169/product_little/14794/fitnes-treker-misfit-shine-seryy.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/1284596435/product_medium/14794/fitnes-treker-misfit-shine-seryy.jpg">
+                        
+                                            <a class="product-cell__link" href="/325468/fitnes-treker-misfit-shine-seryy/">
+                                                <img class="product-cell__img"
+                                                     width="260"
+                                                     height="260"
+                                                     title="Фитнес трекер Misfit Shine"
+                                                     alt="Фитнес трекер Misfit Shine"
+                                                     src="https://buyoncdn.ru/product/1073666426/product_260/14794/fitnes-treker-misfit-shine-seryy.jpg"
+                                                     srcset="https://buyoncdn.ru/product/1978685752/product_510/14794/fitnes-treker-misfit-shine-seryy.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price bn-price--w-last">
+                                                    <span class="bn-last-price">3580<span class="bn-ruble inline">&thinsp;р.</span></span>
+                                                        1790<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Фитнес трекер Misfit Shine</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>                        <section class="category category--micr bn-micr">
+                            <div class="category__in">
+                                <h2 class="category__title">
+                                    <a class="category__link" href="/catalog-telefoniya/?r=0">Телефония</a>
+                                </h2>
+                                    <ul class="bn-micr__subcategory subcategory-list">
+                        
+                                            <li><a href="/catalog-telefoniya/ip-telefon/?r=0">IP телефоны</a></li>
+                                            <li><a href="/catalog-telefoniya/dect/?r=0">DECT телефоны</a></li>
+                                            <li><a href="/catalog-telefoniya/telefony/?r=0">Телефоны</a></li>
+                                            <li><a href="/catalog-telefoniya/faks/?r=0">Факс</a></li>
+                                    </ul>
+                                <div class="category-products">
+                                    <ul class="product-list category-products-row">
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="52504"
+                                                 data-category-id="3206"
+                                                 data-product-name="Panasonic KX-FC278RU"
+                                                 data-product-price="10030"
+                                                 data-hascompetitors="true"
+                                            data-product-img="https://buyoncdn.ru/product/2266697145/product_little/1073861/panasonic-kx-fc278ru-t.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/1485534603/product_medium/1073861/panasonic-kx-fc278ru-t.jpg">
+                        
+                                            <a class="product-cell__link" href="/928856/panasonic-kx-fc278ru-t/">
+                                                <img class="product-cell__img product-cell__img--small"
+                                                     title="Panasonic KX-FC278RU"
+                                                     alt="Panasonic KX-FC278RU"
+                                                     src="https://buyoncdn.ru/product/1379716382/product_260/1073861/panasonic-kx-fc278ru-t.jpg"
+                                                     srcset="https://buyoncdn.ru/product/405949788/product_510/1073861/panasonic-kx-fc278ru-t.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price bn-price--w-last">
+                                                    <span class="bn-last-price">10&thinsp;420<span class="bn-ruble inline">&thinsp;р.</span></span>
+                                                        10&thinsp;030<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Panasonic KX-FC278RU</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="51971"
+                                                 data-category-id="3195"
+                                                 data-product-name="Panasonic KX-TPA60"
+                                                 data-product-price="4580"
+                                                 
+                                            data-product-img="https://buyoncdn.ru/product/3984165053/product_little/1072139/panasonic-kx-tpa60-chernyy.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/854192271/product_medium/1072139/panasonic-kx-tpa60-chernyy.jpg">
+                        
+                                            <a class="product-cell__link" href="/928142/panasonic-kx-tpa60-chernyy/">
+                                                <img class="product-cell__img product-cell__img--small"
+                                                     title="Panasonic KX-TPA60"
+                                                     alt="Panasonic KX-TPA60"
+                                                     src="https://buyoncdn.ru/product/1175436979/product_260/1072139/panasonic-kx-tpa60-chernyy.jpg"
+                                                     srcset="https://buyoncdn.ru/product/201408241/product_510/1072139/panasonic-kx-tpa60-chernyy.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price">
+                                                        4580<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Panasonic KX-TPA60</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>                        <section class="category category--micr bn-micr">
+                            <div class="category__in">
+                                <h2 class="category__title">
+                                    <a class="category__link" href="/catalog-tovary-dlya-stroitelstva-i-remonta/?r=0">Для строительства и ремонта</a>
+                                </h2>
+                                    <ul class="bn-micr__subcategory subcategory-list">
+                        
+                                            <li><a href="/catalog-tovary-dlya-stroitelstva-i-remonta/dreli/?r=0">Дрели</a></li>
+                                            <li><a href="/catalog-tovary-dlya-stroitelstva-i-remonta/perforatory/?r=0">Перфораторы</a></li>
+                                            <li><a href="/catalog-tovary-dlya-stroitelstva-i-remonta/lobziki/?r=0">Лобзики</a></li>
+                                            <li><a href="/catalog-tovary-dlya-stroitelstva-i-remonta/shlifovalnye-mashiny/?r=0">Шлифовальные машины</a></li>
+                                            <li><a class="bn-readmore-btn" href="/catalog-tovary-dlya-stroitelstva-i-remonta/?r=0"><span>Все подкатегории</span></a></li>
+                                    </ul>
+                                <div class="category-products">
+                                    <ul class="product-list category-products-row">
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="71335"
+                                                 data-category-id="3231"
+                                                 data-product-name="Шуруповерт Bosch PSR 1080 LI"
+                                                 data-product-price="4390"
+                                                 
+                                            data-product-img="https://buyoncdn.ru/product/1797808825/product_little/1147964/shurupovert-bosch-psr-1080-li-keys-v-komplekte-akkumulyator-15-ach.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/3031964299/product_medium/1147964/shurupovert-bosch-psr-1080-li-keys-v-komplekte-akkumulyator-15-ach.jpg">
+                        
+                                            <a class="product-cell__link" href="/1004321/shurupovert-bosch-psr-1080-li-keys-v-komplekte-akkumulyator-15-ach/">
+                                                <img class="product-cell__img product-cell__img--small"
+                                                     title="Шуруповерт Bosch PSR 1080 LI"
+                                                     alt="Шуруповерт Bosch PSR 1080 LI"
+                                                     src="https://buyoncdn.ru/product/3621847388/product_260/1147964/shurupovert-bosch-psr-1080-li-keys-v-komplekte-akkumulyator-15-ach.jpg"
+                                                     srcset="https://buyoncdn.ru/product/2649719070/product_510/1147964/shurupovert-bosch-psr-1080-li-keys-v-komplekte-akkumulyator-15-ach.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price">
+                                                        4390<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Шуруповерт Bosch PSR 1080 LI</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                            <li class="product-cell product-list__item"
+                                                 data-lot-id="70269"
+                                                 data-category-id="3235"
+                                                 data-product-name="Bosch PST 800 PEL"
+                                                 data-product-price="4690"
+                                                 
+                                            data-product-img="https://buyoncdn.ru/product/3198600264/product_little/1270410/bosch-pst-800-pel-ruchnoy.jpg"
+                                            data-img_medium="https://buyoncdn.ru/product/1630977146/product_medium/1270410/bosch-pst-800-pel-ruchnoy.jpg">
+                        
+                                            <a class="product-cell__link" href="/1099461/bosch-pst-800-pel-ruchnoy/">
+                                                <img class="product-cell__img product-cell__img--small"
+                                                     title="Bosch PST 800 PEL"
+                                                     alt="Bosch PST 800 PEL"
+                                                     src="https://buyoncdn.ru/product/3226089050/product_260/1270410/bosch-pst-800-pel-ruchnoy.jpg"
+                                                     srcset="https://buyoncdn.ru/product/2319758872/product_510/1270410/bosch-pst-800-pel-ruchnoy.jpg 2x">
+                        
+                                                    <span class="product-cell__price bn-price bn-price--w-last">
+                                                    <span class="bn-last-price">4780<span class="bn-ruble inline">&thinsp;р.</span></span>
+                                                        4690<span class="bn-ruble inline">&thinsp;р.</span>
+                                                    </span>
+                                    <span class="product-cell__title bn-title">Bosch PST 800 PEL</span>
+                        
+                                                    <span class="bn-marker-list">
+                                                        <span class="bn-marker-wishlist"></span>
+                                                        <span class="bn-marker-cart"></span>
+                                                        <span class="bn-marker-compare"></span>
+                                                    </span>
+                                            </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>        </div>
+
+            <div class="bn-main-header">
+                <a class="bn-main-header__link" href="/pages">Статьи</a> <a class="rss-link noAjax" href="/upload/feeds/rss.xml"></a>
+            </div>
+            <div class="bn-article-list article-list article-list--main">
+                    <section class="bn-article-item article">
+                        <a class="article__link" href="/pages/chto-podarit-na-8-marta-1355/">
+                            <img class="article__img" alt="Что подарить на 8 марта?"
+                                 src="https://buyoncdn.ru/preset/1726382319/pages_356x222/e5/4a/2d/e54a2dd77ba99dbaa606ba1c96a3c0563b89dd2b.jpg"
+                                 srcset="https://buyoncdn.ru/preset/1191984683/pages_712x444/e5/4a/2d/e54a2dd77ba99dbaa606ba1c96a3c0563b89dd2b.jpg 2x">
+                    
+                            <div class="bn-article-title article__info">
+                                <h2 class="article__title">Что подарить на 8 марта?</h2>
+                                <p class="article__intro">ТОП-10 идей для подарка на женский день от 500 руб.  </p>
+                                <div class="bn-article-info article__meta  bn-miniarticle__intro">
+                                    <div class="bn-article-date article__date">26 февраля 2016</div>
+                                    <div class="bn-article-view article__hits">562</div>
+                                </div>
+                            </div>
+                        </a>
+                    </section>                    <section class="bn-article-item article">
+                        <a class="article__link" href="/pages/10-samyh-ozhidaemyh-smartfonov-2016-goda-1322/">
+                            <img class="article__img" alt="10 самых ожидаемых смартфонов 2016 года"
+                                 src="https://buyoncdn.ru/preset/755076332/pages_356x222/1f/28/ff/1f28ffa21181d0b4ac8ad3f1fedcc89ece8ea33b.jpg"
+                                 srcset="https://buyoncdn.ru/preset/216740392/pages_712x444/1f/28/ff/1f28ffa21181d0b4ac8ad3f1fedcc89ece8ea33b.jpg 2x">
+                    
+                            <div class="bn-article-title article__info">
+                                <h2 class="article__title">10 самых ожидаемых смартфонов 2016 года</h2>
+                                <p class="article__intro">Представлен список самых долгожданных смартфонов, которые выйдут в 2016 году. Специалисты в области мобильных гаджетов составили топ самых ожидаемых гаджетов этого года. 
+</p>
+                                <div class="bn-article-info article__meta  bn-miniarticle__intro">
+                                    <div class="bn-article-date article__date">08 февраля 2016</div>
+                                    <div class="bn-article-view article__hits">3232</div>
+                                </div>
+                            </div>
+                        </a>
+                    </section>                    <section class="bn-article-item article">
+                        <a class="article__link" href="/pages/lutchye-proizvoditel-2016-goda-1366/">
+                            <img class="article__img" alt="Лучшие производители смартфонов 2016 года "
+                                 src="https://buyoncdn.ru/preset/809118179/pages_356x222/da/04/10/da041058f7cfd6d43baec524049aeb906a78201e.jpg"
+                                 srcset="https://buyoncdn.ru/preset/298882855/pages_712x444/da/04/10/da041058f7cfd6d43baec524049aeb906a78201e.jpg 2x">
+                    
+                            <div class="bn-article-title article__info">
+                                <h2 class="article__title">Лучшие производители смартфонов 2016 года </h2>
+                                <p class="article__intro">Стоит лишь компании отложить свои планы на месяц, как тут же все эксклюзивные наработки появляются у конкурентов. Предлагаем вашему вниманию ТОП-5 самых популярных производителей в мире
+</p>
+                                <div class="bn-article-info article__meta  bn-miniarticle__intro">
+                                    <div class="bn-article-date article__date">04 марта 2016</div>
+                                    <div class="bn-article-view article__hits">365</div>
+                                </div>
+                            </div>
+                        </a>
+                    </section>                    <section class="bn-article-item article">
+                        <a class="article__link" href="/pages/andoird-n-1365/">
+                            <img class="article__img" alt="Android N получит новый дизайн оповещений  "
+                                 src="https://buyoncdn.ru/preset/2729180799/pages_356x222/dd/2a/bf/dd2abf53fb9a986b426f1f54eaf912881aa4a576.jpg"
+                                 srcset="https://buyoncdn.ru/preset/2202091707/pages_712x444/dd/2a/bf/dd2abf53fb9a986b426f1f54eaf912881aa4a576.jpg 2x">
+                    
+                            <div class="bn-article-title article__info">
+                                <h2 class="article__title">Android N получит новый дизайн оповещений  </h2>
+                                <p class="article__intro">В Android N Google наконец-то добавит функцию многозадачности с разделением экрана для планшетов</p>
+                                <div class="bn-article-info article__meta  bn-miniarticle__intro">
+                                    <div class="bn-article-date article__date">02 марта 2016</div>
+                                    <div class="bn-article-view article__hits">332</div>
+                                </div>
+                            </div>
+                        </a>
+                    </section>                    <section class="bn-article-item article">
+                        <a class="article__link" href="/pages/iphone-7-iphone-pro-1364/">
+                            <img class="article__img" alt="Старшая версия iPhone 7 Plus будет называться iPhone Pro  "
+                                 src="https://buyoncdn.ru/preset/1842055167/pages_356x222/bc/0c/8e/bc0c8e698ddb3a99d285771701ffaf6658cda29e.jpg"
+                                 srcset="https://buyoncdn.ru/preset/1277245755/pages_712x444/bc/0c/8e/bc0c8e698ddb3a99d285771701ffaf6658cda29e.jpg 2x">
+                    
+                            <div class="bn-article-title article__info">
+                                <h2 class="article__title">Старшая версия iPhone 7 Plus будет называться iPhone Pro  </h2>
+                                <p class="article__intro">Китайский ресурс MyDrivers опубликовал довольно интересную, но противоречивую информацию о следующем поколении флагманов от Apple. </p>
+                                <div class="bn-article-info article__meta  bn-miniarticle__intro">
+                                    <div class="bn-article-date article__date">02 марта 2016</div>
+                                    <div class="bn-article-view article__hits">230</div>
+                                </div>
+                            </div>
+                        </a>
+                    </section>            </div>
+    </div>
+</div>
+<div class="reset bn-filter-aside"></div>
+</div>    </div>
+    <aside id="aside">
+        <div id="myOrders" class="bn-widget">
+            <article class="bn-wish-list"></article>
+        </div>
+        <div id="compare">
+            <article class="bn-wish-list"></article>
+        </div>
+        <div id="wish_list">
+            <article class="bn-wish-list"></article>
+        </div>
+        <div id="viewedlist">
+            <article class="bn-wish-list"></article>
+        </div>
+    </aside>
+
+    <div class="clearfix"></div>
+
+    <!-- stretching_bottom баннеры -->
+</div>
+
+<footer id="footer" class="bn-footer bn-clearfix">
+    <div class="container">
+        <div class="bn-footer-section show768">
+            <ul class="unstyled copyright">
+                <li>
+                    <a href="https://buyon.ru/"> &copy; 2016 Байон</a>
+                </li>
+                <li class="bn-footer-indent" id="vk-like"><!-- vk like -->
+                    <div class="like-counter">
+                            <span class="vk-counter-wrap">
+                                <div class="arrow"></div>
+                                <span id="vk-counter-num">12917</span>
+                            </span>
+                    </div>
+                </li>
+                <li class="bn-footer-indent" id="fb-like"><!-- fb like -->
+                    <div class="like-counter">
+                        <div class="fb-counter-wrap">
+                            <span class="fb-counter-num">1025</span>
+                            <div class="arrow"><s></s><i></i></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bn-footer-section">
+            <ul class="unstyled footer-links--help">
+                <li><a href="/help2?id=1#5" class="ajaxise">Доставка и оплата</a></li>
+                <li><a href="/help2?id=1#13" class="ajaxise">Оформление заказа</a></li>
+                <li><a href="/help2?id=1#17" class="ajaxise">Возврат товара и денег</a></li>
+                <li><a href="/help2?id=3#help_category13" class="ajaxise">Пользовательское соглашение</a></li>
+            </ul>
+        </div>
+
+        <div class="bn-footer-section">
+            <ul class="unstyled footer-links--second">
+                <li><a href="/offers" class="noAjax">Акции</a></li>
+                <li><a href="/feedback" class="send-feedback-btn ajaxise">Форма обратной связи</a></li>
+                <li><a class="noAjax" rel="nofollow" target="_blank" href="http://buyon.uservoice.com">Отзывы и предложения</a></li>
+                <li><a href="/sitemap"  class="noAjax">Карта сайта</a></li>
+                <li><a href="/catalog-podarochnye-sertifikaty/">Подарочные сертификаты</a></li>
+            </ul>
+        </div>
+
+        <div class="bn-footer-section last">
+            <ul class="unstyled footer-links--company">
+                <li><a href="/pages/comforts" class="noAjax">О компании</a></li>
+                <li><a href="/help2?id=5#help_category16" class="ajaxise">Контакты</a></li>
+                <li><a href="/pages/b2b-022" class="noAjax">Корпоративным клиентам</a></li>
+                <li><a href="/pages/partners" class="noAjax">Партнерам</a></li>
+                <li><a href="/pages/press" class="noAjax">Пресс-центр</a></li>
+            </ul>
+        </div>
+
+        <div class="bn-footer-btm clearfix">
+            <div class="bn-footer-soc">
+                <span class="bn-footer-soc-title">Байон в соц. сетях:</span>
+                <a href="http://vk.com/buyon" rel="nofollow" class="vk bn-soclink-item" target="_blank">Vkontakte</a>
+                <a href="https://facebook.com/buyon.ru" rel="nofollow" class="fb bn-soclink-item" target="_blank">Facebook</a>
+                <a href="https://twitter.com/buyonru" rel="nofollow" class="tw bn-soclink-item" target="_blank">Twitter</a>
+                <a href="https://google.com/+BuyonRus" rel="publisher" class="google bn-soclink-item" target="_blank">Google+</a>
+                <a href="http://instagram.com/buyonru" rel="nofollow" class="instagram bn-soclink-item" target="_blank">Instagram</a>
+                <a href="http://odnoklassniki.ru/buyon" rel="nofollow" class="ok bn-soclink-item" target="_blank">Odnoklassniki</a>
+                <a href="http://www.youtube.com/user/buyonru" rel="nofollow" class="youtube bn-soclink-item" target="_blank">YouTube</a>
+                <div class="download-app">
+                    <a class="download-app-link" href="https://play.google.com/store/apps/details?id=ru.buyon.buyonstore" rel="nofollow"></a>
+                </div>
+            </div>
+            <div class="bn-footer-card">
+                <span class="bn-footer-card-title">Мы принимаем к оплате:</span>
+
+                <span class="visa bn-card-item">Visa</span>
+                <span class="master bn-card-item">MasterCard</span>
+                <span class="paypal bn-card-item">PayPal</span>
+                <span class="alfa bn-card-item">Альфа-банк</span>
+            </div>
+            <div class="bn-footer-section bn-phone">
+                <span class="bn-phnumber">8 800 250 77 00</span>
+                <small>(звонок по РФ бесплатный)</small>
+            </div>
+            <a id="go_to_the_fullsite" class="toggle-site-version" href="#">Полная версия сайта</a>
+        </div>
+
+    </div>
+    </footer>
+
+<div class="drop_wishlist">
+    <div class="bn-dropfew-item dropcomparelayer">
+        <span class="drop-wishlist-text"><span class="bn-drug-icon"></span> Добавить к сравнению</span>
+    </div>
+    <div class="bn-dropfew-item dropwishlistlayer">
+        <span class="drop-wishlist-text"><span class="bn-drug-icon"></span> Добавить в «Желания»</span>
+    </div></div>
+
+    <div id="cartPlace"></div>
+<div class="cartDragWrap" style=";opacity:0.9">
+    <div class="dargAreaW">
+        
+        <div class="drop_cart active" id="cartDragWrap" style="display:none"><span class="bn-drug-icon"></span>Добавить в корзину</div>
+        
+    </div>
+</div>
+<div class="bn-faq-popup" style="display: none;">
+	<div class="bn-popup">
+		<header>
+			<h2 class="bn-faq-title">FAQ</h2>
+			<a href="#" class="bn-faq-close close"></a>
+		</header>
+		
+		<div class="bn-popupContent">
+			
+			<div class="bn-faq-white-block"></div>
+
+		</div>
+		
+		<footer></footer>
+	</div>
+	
+</div>
+<div id="notification" data-message_type=""></div>
+
+<script type="text/javascript">
+	var _TM = {},
+        Info = {
+            date : {
+                day   : 08,
+                month : 03,
+                year  : 2016            }
+        },
+        app_csrf = '972b30e02ce2e5bf620229725b8377e2b07c0c11',
+        themePath = '/themes/buyon',
+        static_version = '43698f3',
+		referer = 'http://vuazon.ru/go/rr/?',
+		/* пока не удаляйте этот ключ, а то ошибки в js валиться начинают */
+        WishlistCartData = {},
+
+        chainBanners = [{"id":16,"previous_banner_id":13,"html":"<div class=\"popup-subscribe-vk\" style=\"background:#eee;\"><div class=\"subscribe-img\"><img alt=\"\" src=\"\/upload\/images\/staticpages\/15-10-19---popup.jpg\" \/><\/div><div class=\"popup-subscribe__content\"><div class=\"popup-subscribe__header\">\u0415\u0429\u0415 \u041f\u0420\u0418\u0417\u041e\u0412 \u0418 \u041f\u041e\u0414\u0410\u0420\u041a\u041e\u0412?<\/div><div class=\"popup-subscribe__text\">\u0412\u0441\u0442\u0443\u043f\u0430\u0439 \u0432 \u043d\u0430\u0448\u0443 \u0433\u0440\u0443\u043f\u043f\u0443 \u0438 \u0443\u0437\u043d\u0430\u0439 \u0432\u0441\u0435 \u043e \u0433\u0430\u0434\u0436\u0435\u0442\u0430\u0445!<br \/>\u041f\u0440\u0438\u0437\u044b, \u043f\u043e\u0434\u0430\u0440\u043a\u0438 \u0438 \u0441\u043a\u0438\u0434\u043a\u0438 \u0443 \u043d\u0430\u0441 \u043a\u0430\u0436\u0434\u044b\u0439 \u0434\u0435\u043d\u044c. <\/div><div class=\"popup-subscribe__vk\" id=\"vk_subscribe\"><\/div><\/div><\/div>","showCurrentUrl":null,"urls":[],"schedule":[]}],
+
+        curCity = 'г. Орёл',
+        curCityCode = '5700000100000',
+
+        isAuthorized = false,
+        doShowCreatePasswordForm = 'false',
+
+                pageData = {"nav_categories":[{"id":"3252","category_id":"1","name":"Смартфоны","tag":"smartfony","path":"smartfony","is_archived":"0","left_key":2,"right_key":"3","level":"1","is_leaf":1,"is_active":0,"children":[]},{"id":"3071","category_id":"1","name":"Планшеты","tag":"planshety","path":"planshety","is_archived":"0","left_key":4,"right_key":"5","level":"1","is_leaf":1,"is_active":0,"children":[]},{"id":"192","category_id":"1","name":"Бытовая техника","tag":"bytovaya-tehnika","path":"bytovaya-tehnika","is_archived":"0","left_key":6,"right_key":"175","level":"1","is_leaf":0,"is_active":0,"children":[]},{"id":"3200","category_id":"1","name":"Телевизоры и видео","tag":"televizory-i-video","path":"televizory-i-video","is_archived":"0","left_key":176,"right_key":"191","level":"1","is_leaf":0,"is_active":0,"children":[]},{"id":"1279","category_id":"1","name":"Аксессуары","tag":"aksessuary-elektroniki","path":"aksessuary-elektroniki","is_archived":"0","left_key":192,"right_key":"365","level":"1","is_leaf":0,"is_active":0,"children":[]},{"id":"3171","category_id":"1","name":"Компьютерные комплектующие","tag":"kompyuternye-komplektuyuschie","path":"kompyuternye-komplektuyuschie","is_archived":"0","left_key":366,"right_key":"397","level":"1","is_leaf":0,"is_active":0,"children":[]},{"id":"1328","category_id":"1","name":"Для компьютера","tag":"kompyuternye-komponenty","path":"kompyuternye-komponenty","is_archived":"0","left_key":398,"right_key":"491","level":"1","is_leaf":0,"is_active":0,"children":[]},{"id":"3068","category_id":"1","name":"Ноутбуки","tag":"noutbuki","path":"noutbuki","is_archived":"0","left_key":492,"right_key":"493","level":"1","is_leaf":1,"is_active":0,"children":[]},{"id":"2606","category_id":"1","name":"Мобильные телефоны","tag":"mobilnye-telefony","path":"mobilnye-telefony","is_archived":"0","left_key":494,"right_key":"495","level":"1","is_leaf":1,"is_active":0,"children":[]},{"id":"3211","category_id":"1","name":"Оргтехника","tag":"orgtehnika","path":"orgtehnika","is_archived":"0","left_key":496,"right_key":"529","level":"1","is_leaf":0,"is_active":0,"children":[]},{"id":"1326","category_id":"1","name":"Моноблоки","tag":"monobloki","path":"monobloki","is_archived":"0","left_key":530,"right_key":"531","level":"1","is_leaf":1,"is_active":0,"children":[]},{"id":"260","category_id":"1","name":"Для авто","tag":"avto","path":"avto","is_archived":"0","left_key":532,"right_key":"887","level":"1","is_leaf":0,"is_active":0,"children":[]},{"id":"231","category_id":"1","name":"Игры и приставки","tag":"razvlecheniya","path":"razvlecheniya","is_archived":"0","left_key":888,"right_key":"933","level":"1","is_leaf":0,"is_active":0,"children":[]},{"id":"343","category_id":"1","name":"Фото и видео","tag":"foto-i-video-kamery","path":"foto-i-video-kamery","is_archived":"0","left_key":934,"right_key":"977","level":"1","is_leaf":0,"is_active":0,"children":[]},{"id":"3074","category_id":"1","name":"Электронные книги","tag":"elektronnye-knigi","path":"elektronnye-knigi","is_archived":"0","left_key":978,"right_key":"979","level":"1","is_leaf":1,"is_active":0,"children":[]},{"id":"3146","category_id":"1","name":"Необычные гаджеты","tag":"neobychnye-gadzhety","path":"neobychnye-gadzhety","is_archived":"0","left_key":980,"right_key":"981","level":"1","is_leaf":1,"is_active":0,"children":[]},{"id":"3194","category_id":"1","name":"Телефония","tag":"telefoniya","path":"telefoniya","is_archived":"0","left_key":982,"right_key":"997","level":"1","is_leaf":0,"is_active":0,"children":[]},{"id":"3230","category_id":"1","name":"Для строительства и ремонта","tag":"tovary-dlya-stroitelstva-i-remonta","path":"tovary-dlya-stroitelstva-i-remonta","is_archived":"0","left_key":998,"right_key":"1009","level":"1","is_leaf":0,"is_active":0,"children":[]},{"id":"3248","category_id":"1","name":"Подарочные сертификаты","tag":"podarochnye-sertifikaty","path":"podarochnye-sertifikaty","is_archived":"0","left_key":5076,"right_key":"5077","level":"1","is_leaf":1,"is_active":0,"children":[]}],"content_type":"main","site_domain":"buyon.ru","site_name":"Байон"},
+
+        callCenterPhone = "8 800 250 77 00",
+        
+        companyContactPhone = "8 (495) 580 71 04",
+
+        authData = {"cities":{"2400000400000":"Железногорск","3200000100000":"Брянск","5700000100000":"Орёл","4600000100000":"Курск","7101000100000":"Ефремов","7102000100000":"Суворов"},"city_code":"5700000100000","social_networks":[{"id":"3717768","system_name":"vkontakte"},{"id":"528039927237517","system_name":"facebook"},{"id":"551206162267-24ius91020af6o697sn1uveoso7nc51i.apps.googleusercontent.com","system_name":"google"},{"id":"710049","key":"b14929be026d9b339de0c04167593bf4","system_name":"mailru"},{"id":"db797a3ecc49406faa0ac88b121b2439","system_name":"yandex"},{"key":"sqH4qmccPJBx9xTivksA","system_name":"twitter"},{"id":"194476288","key":"CBAKHIJMABABABABA","system_name":"odnoklassniki"}],"login_form_action_url":"https://buyon.ru/login","app_lang":"ru-ru","user":{"id":"","name":""}},
+
+        wishListEmptyText = "<p style=\"font-size:180%;padding:0 0 0 20px;\"><strong>\u0412\u0438\u0448\u043b\u0438\u0441\u0442<\/strong> (\u0430\u043d\u0433\u043b. <i>wish list<\/i> \u2014 c\u043f\u0438\u0441\u043e\u043a \u0436\u0435\u043b\u0430\u043d\u0438\u0439) \u2014 \u044d\u0442\u043e \u043c\u0435\u0441\u0442\u043e, \u043a\u0443\u0434\u0430 \u043c\u043e\u0436\u043d\u043e \u043f\u043e\u043b\u043e\u0436\u0438\u0442\u044c \u0438\u043d\u0442\u0435\u0440\u0435\u0441\u0443\u044e\u0449\u0438\u0435 \u0442\u043e\u0432\u0430\u0440\u044b. \u042d\u0442\u043e \u0432\u0430\u0448\u0438 \u0437\u0430\u043a\u043b\u0430\u0434\u043a\u0438 \u043d\u0430 \u0431\u0443\u0434\u0443\u0449\u0435\u0435, \u0447\u0442\u043e\u0431\u044b \u043d\u0435 \u0437\u0430\u0431\u044b\u0432\u0430\u0442\u044c \u0438\u043d\u0442\u0435\u0440\u0435\u0441\u043d\u044b\u0435 \u043d\u0430\u0445\u043e\u0434\u043a\u0438, \u0430 \u0442\u0430\u043a\u0436\u0435 \u0443\u0437\u043d\u0430\u0432\u0430\u0442\u044c \u043e \u0441\u043d\u0438\u0436\u0435\u043d\u0438\u0438 \u0446\u0435\u043d\u044b \u0438 \u0430\u043a\u0446\u0438\u044f\u0445 \u043d\u0430 \u0438\u043d\u0442\u0435\u0440\u0435\u0441\u0443\u044e\u0449\u0438\u0435 \u0432\u0430\u0441 \u0442\u043e\u0432\u0430\u0440\u044b.<\/p>",
+
+        suggestURL = 'https://buyon.ru/service/suggest/',
+
+        emailExists = false,
+        jivosite = 'JHAlIf0TJX',
+        
+        phoneData = {"phone_exists":false,"number":"8 800 250 77 00","text":"Звонок по РФ бесплатный.\nОператоры работают с 8:00 до 21:00 (МСК).<br>Из-за рубежа звоните \n<a href=\"tel:+74955807104\" class=\"noAjax\" rel=\"nofollow\">+7 (495) 580 71 04</a><br>\nИли введите свой номер и мы перезвоним вам."},
+		social_apps = {
+			vk_app_id: '3717768',
+			fb_app_id: '528039927237517'
+		},
+		roles = {
+			is_have_discount_by_moscow_card: false,
+			is_have_student_discount: false		},
+		yandexId = '21611203',
+		cityAds = '17325',
+		badgeRedHelper = '/upload/settings/voprosy.png',
+		admitadData = ""
+        /*!
+         * Bowser - a browser detector
+         * https://github.com/ded/bowser
+         * MIT License | (c) Dustin Diaz 2015
+         */
+        window.browser = eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('(z(){z t(t){z n(e){b n=t.1j(e);j n&&n.K>1&&n[1]||""}z r(e){b n=t.1j(e);j n&&n.K>1&&n[2]||""}b i=n(/(1i|N|Q)/i).1W(),s=/1h G/i.7(t),o=!s&&/G/i.7(t),u=/1T/.7(t),a=n(/1f\\/(\\d+(\\.\\d+)?)/i),f=n(/5\\/(\\d+(\\.\\d+)?)/i),l=/J/i.7(t),c=!l&&/[^-]1M/i.7(t),h;/m|1e/i.7(t)?h={8:"1F",m:e,5:f||n(/(?:m|1e)[\\s\\/](\\d+(\\.\\d+)?)/i)}:/1c/i.7(t)?h={8:"1A 1w",19:e,5:f||n(/(?:1c)[\\s\\/](\\d+(\\.\\d+)?)/i)}:/13 11/i.7(t)?(h={8:"1I 1z",W:e},a?(h.y=e,h.5=a):(h.k=e,h.5=n(/1U\\/(\\d+(\\.\\d+)?)/i))):/k|1O/i.7(t)?h={8:"1K 1t",k:e,5:n(/(?:k |U:)(\\d+(\\.\\d+)?)/i)}:u?h={8:"1a",1y:e,9:e,5:n(/(?:9|S|R)\\/(\\d+(\\.\\d+)?)/i)}:/9.+? 1f/i.7(t)?h={8:"21 1n",y:e,5:a}:/9|S|R/i.7(t)?h={8:"1a",9:e,5:n(/(?:9|S|R)\\/(\\d+(\\.\\d+)?)/i)}:i?(h={8:i=="N"?"1p":i=="Q"?"1q":"1s"},f&&(h.5=f)):/O/i.7(t)?h={8:"1u",O:e,5:n(/O\\s?X\\/(\\d+(\\.\\d+)?)/i)}:/M\\//i.7(t)?h={8:"1D",M:e,5:n(/M\\/(\\d+(\\.\\d+)?)/i)}:/A|Y/i.7(t)?(h={8:"1N",A:e,5:n(/(?:A|Y)[ \\/](\\d+(\\.\\d+)?)/i)},/\\((Z|J);[^\\)]*U:[\\d\\.]+\\)/i.7(t)&&(h.1Q=e)):/E/i.7(t)?h={8:"1V 1Y",E:e,5:n(/E\\/(\\d+(\\.\\d+)?)/i)}:o?h={8:"1Z",5:f}:/12/i.7(t)?h={8:"22",12:e,5:n(/1m\\/(\\d+(\\.\\d+)?)/i)}:/q|\\1o\\d+/i.7(t)||/14\\16/i.7(t)?h={8:"1r",q:e,5:f||n(/q[\\d]+\\/(\\d+(\\.\\d+)?)/i)}:/(17|18)D/i.7(t)?(h={8:"1v",I:e,5:f||n(/w(?:1x)?1l\\/(\\d+(\\.\\d+)?)/i)},/1b\\//i.7(t)&&(h.1b=e)):/C/i.7(t)?h={8:"1B",C:e,5:n(/1C\\/(\\d+(\\.\\d+)?)/i)}:/B/i.7(t)?h={8:"1E",B:e,5:n(/(?:B\\s?)?X\\/(\\d+(\\.\\d+)?)/i)||f}:/F/i.7(t)?h={8:"1G",F:e,5:f}:h={8:n(/^(.*)\\/(.*) /),5:r(/^(.*)\\/(.*) /)},!h.y&&/(1H)?1d/i.7(t)?(h.8=h.8||"1J",h.1d=e,!h.5&&f&&(h.5=f)):!h.m&&/P\\//i.7(t)&&(h.8=h.8||"1L",h.P=e,h.5=h.5||n(/P\\/(\\d+(\\.\\d+)?)/i)),!h.y&&(o||h.E)?h.G=e:i&&(h[i]=e,h.L=e);b p="";h.W?p=n(/13 11 (?:D)?\\s?(\\d+(\\.\\d+)*)/i):i?(p=n(/D (\\d+([1g\\s]\\d+)*) 1h 1P D x/i),p=p.1R(/[1g\\s]/g,".")):o?p=n(/G[ \\/-](\\d+(\\.\\d+)*)/i):h.I?p=n(/(?:17|18)D\\/(\\d+(\\.\\d+)*)/i):h.q?p=n(/14\\16\\1S\\s(\\d+(\\.\\d+)*)/i):h.C?p=n(/C\\/(\\d+(\\.\\d+)*)/i):h.B&&(p=n(/B[\\/\\s](\\d+(\\.\\d+)*)/i)),p&&(h.v=p);b d=p.H(".")[0];T(l||i=="Q"||o&&(d==3||d==4&&!c)||h.E)h.J=e;1X T(c||i=="N"||i=="1i"||o||h.q||h.I||h.C)h.Z=e;j h.y||h.k&&h.5>=10||h.19&&h.5>=15||h.9&&h.5>=20||h.A&&h.5>=20||h.F&&h.5>=6||h.m&&h.5>=10||h.L&&h.v&&h.v.H(".")[0]>=6||h.q&&h.5>=10.1?h.a=e:h.k&&h.5<10||h.9&&h.5<20||h.A&&h.5<20||h.F&&h.5<6||h.m&&h.5<10||h.L&&h.v&&h.v.H(".")[0]<6?h.c=e:h.x=e,h}b e=!0,n=t(1k V!="23"?V.24:"");j n.7=z(e){25(b t=0;t<e.K;++t){b r=e[t];T(1k r=="26"&&r 27 n)j!0}j!1},n.28=t,n})()',62,133,'|||||version||test|name|chrome||var||||||||return|msie||opera||||blackberry|||||osversion|||msedge|function|firefox|tizen|bada|os|silk|safari|android|split|webos|tablet|length|ios|seamonkey|iphone|sailfish|gecko|ipad|crmo|crios|if|rv|navigator|windowsphone|browser|iceweasel|mobile||phone|phantom|windows|rim||stablet|web|hpw|yandexbrowser|Chrome|touchpad|yabrowser|webkit|opr|edge|_|like|ipod|match|typeof|osbrowser|phantomjs|Edge|bbb|iPhone|iPad|BlackBerry|iPod|Explorer|Sailfish|WebOS|Browser|eb|chromeBook|Phone|Yandex|Bada|dolfin|SeaMonkey|Tizen|Opera|Safari|apple|Windows|Webkit|Internet|Gecko|mobi|Firefox|trident|mac|firefoxos|replace|sos|CrOS|iemobile|Amazon|toLowerCase|else|Silk|Android||Microsoft|PhantomJS|undefined|userAgent|for|string|in|_detect'.split('|'),0,{}));
+        
+            
+        
+	</script>
+
+	<!--[if lt IE 9]>
+<script type="text/javascript" src="https://buyoncdn.ru/assets/global/globals_v1/js/html5.js?version=43698f3" data-type="1"></script>
+<![endif]-->
+<script type="text/javascript" src="https://buyoncdn.ru/themes/buyon/js/main-compressed.js?version=43698f3" data-type="5"></script>
+	</body>
+
+</html>
